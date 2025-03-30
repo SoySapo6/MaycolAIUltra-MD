@@ -46,6 +46,9 @@ let handler = async (m, { conn, args, usedPrefix, command, isPrems }) => {
   
   // Asegúrese de que la base de datos de grupos exista
   if (m.isGroup) {
+    if (!global.db.data.groups) {
+      global.db.data.groups = {}
+    }
     if (!global.db.data.groups[m.chat]) {
       global.db.data.groups[m.chat] = {
         // Datos de grupo para RPG
@@ -961,6 +964,10 @@ ${petRewards.map(item => `• ${item}`).join('\n')}
     case 'territorio':
       if (!user.clan) {
         return conn.reply(m.chat, `🏞️ Necesitas pertenecer a un clan para interactuar con territorios. Únete a uno con ${usedPrefix}joinclan [nombre] o crea el tuyo con ${usedPrefix}createclan [nombre].`, m)
+      }
+      
+      if (!global.db.data.clans) {
+        global.db.data.clans = {}
       }
       
       let clan = global.db.data.clans[user.clan]
