@@ -1291,7 +1291,7 @@ function getAccessoryEmoji(accessoryId) {
 }
 
 handler.help = ['mascota', 'mascota <opción>']
-handler.tags = ['juegos', 'entretenimiento', 'rpg']
+handler.tags = ['mascotas', 'entretenimiento']
 handler.command = /^(mascota|pet|mascot)$/i
 
 export default handler
