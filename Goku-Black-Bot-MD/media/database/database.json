@@ -165,7 +165,7 @@
       "lastrob": 0,
       "level": 0,
       "moras": 10,
-      "money": null,
+      "money": 200,
       "muto": false,
       "premium": false,
       "premiumTime": 0,
@@ -184,12 +184,12 @@
         "soal": null
       },
       "role": "*𝗡𝗼𝘃𝗮𝘁𝗼 V* 🍷",
-      "exp": 5067,
+      "exp": 5117,
       "lastcodereg": 0,
       "crime": 0,
       "lastmining": 0,
       "warn": 0,
-      "spam": 1743303647724,
+      "spam": 1743304228324,
       "estrellas": null
     },
     "50581559086@s.whatsapp.net": {
@@ -607,7 +607,7 @@
         "soal": null
       },
       "role": "*𝗡𝗼𝘃𝗮𝘁𝗼 V* 🍷",
-      "exp": 3212,
+      "exp": 3269,
       "lastcodereg": 0,
       "crime": 0,
       "lastmining": 0,
@@ -655,7 +655,7 @@
         "soal": null
       },
       "role": "*𝗡𝗼𝘃𝗮𝘁𝗼 V* 🍷",
-      "exp": 3951,
+      "exp": 4003,
       "lastcodereg": 0,
       "crime": 0,
       "lastmining": 0,
@@ -2798,7 +2798,7 @@
       "modoia": false,
       "jadibotmd": true,
       "autobio": false,
-      "status": 1743303946004
+      "status": 1743304228249
     }
   }
 }

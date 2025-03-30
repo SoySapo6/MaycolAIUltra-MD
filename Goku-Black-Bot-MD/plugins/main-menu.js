@@ -157,14 +157,10 @@ text = text.replace(new RegExp(`%(${Object.keys(replace).sort((a, b) => b.length
 
 const who = m.mentionedJid && m.mentionedJid[0] ? m.mentionedJid[0] : m.fromMe ? conn.user.jid : m.sender
 
-const pp = await conn.profilePictureUrl(who, 'image').catch(_ => 'https://i.postimg.cc/XYtG0Q0M/hanako1.jpg')
+const pp = await conn.profilePictureUrl(who, 'image').catch(_ => 'https://i.postimg.cc/0NMqyt9Q/descarga-1.jpg')
 
   let category = "imagen"
-  const db = './media/database/db.json'
-  const db_ = JSON.parse(fs.readFileSync(db))
-  const random = Math.floor(Math.random() * db_.links[category].length)
-  const rlink = db_.links[category][random]
-  global.vid = rlink
+  global.vid = 'https://i.postimg.cc/0NMqyt9Q/descarga-1.jpg'
  // const img = imagen1
 
 /*await conn.reply(m.chat, '╭ׅׄ̇─ׅ̻ׄ╮۪̇߭︹ׅ̟ׄ̇︹ׅ۪ׄ̇߭︹ׅ̟ׄ̇⊹۪̇߭︹ׅ̟ׄ̇︹ׅ۪ׄ̇߭︹ׅ̟ׄ̇⊹۪̇߭︹ׅ̟ׄ̇︹ׅ۪ׄ̇߭︹ׅ̟ׄ̇⊹*\n├ ⚘݄𖠵⃕⁖𖥔.Ƈᴀʀɢᴀɴᴅᴏ,  ꪶꪾ❍̵̤̂̂ꫂ\n├Ąɢᴜᴀʀᴅᴇ ᴜɴ ᴍᴏᴍᴇɴᴛᴏ❞\n╰ׁ̻─ׅׄ─۪۬─۟─۪─۟─۪۬─۟─۪─۟─۪۬─۟─۪─۟┄۪۬┄۟┄۪┈۟┈۪', m, { contextInfo:{ forwardingScore: 2024, isForwarded: true, externalAdReply: {title: namechannel, body: '𝐃𝐞𝐯 𝐖𝐨𝐫𝐝 𝐓𝐞𝐚𝐦 𝐎𝐟𝐢𝐜𝐢𝐚𝐥', sourceUrl: channel, thumbnail: icons }}})*/
@@ -190,7 +186,7 @@ await conn.sendMessage(
     externalAdReply: {
       title: '𝗠𝗮𝘆𝗰𝗼𝗹𝗔𝗜𝗨𝗹𝘁𝗿𝗮-𝗠𝗗',
       body: dev,
-      thumbnailUrl: 'https://i.postimg.cc/ZRN2m20J/hanako2.jpg',
+      thumbnailUrl: 'https://i.postimg.cc/0NMqyt9Q/descarga-1.jpg',
       sourceUrl: 'https://whatsapp.com/channel/0029VayXJte65yD6LQGiRB0R',
       mediaType: 1,
       renderLargerThumbnail: true,
