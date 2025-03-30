@@ -39,24 +39,11 @@ botProcess.stdout.on('data', (data) => {
   const output = data.toString();
   logToFile(`Bot output [${new Date().toISOString()}]: ${output.trim()}`);
   
-  // Registrar absolutamente toda salida para diagnóstico
-  console.log(`DIAGNÓSTICO BOT - SALIDA COMPLETA: ${output.trim()}`);
+  // Solo registrar en el archivo, no en la consola
+  // console.log(`DIAGNÓSTICO BOT - SALIDA COMPLETA: ${output.trim()}`);
   
   // Guardar la última salida para análisis
   let lastOutput = output.trim();
-  
-  // Si la salida contiene texto relacionado con WhatsApp, logs especiales
-  if (output.includes('WhatsApp') || 
-      output.includes('Whatsapp') || 
-      output.includes('whatsapp') ||
-      output.includes('conexión') ||
-      output.includes('conectando') ||
-      output.includes('esperando') ||
-      output.includes('vinculación') ||
-      output.includes('código') ||
-      output.includes('Baileys')) {
-    logToFile(`🔄 ESTADO DE CONEXIÓN WHATSAPP: ${output.trim()}`);
-  }
   
   // Cuando se muestre el menú de selección, elegir automáticamente la opción 2
   if (output.includes('Seleccione una opción') || 
