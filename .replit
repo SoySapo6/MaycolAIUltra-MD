@@ -1,0 +1,69 @@
+modules = ["nodejs-20"]
+
+[nix]
+channel = "stable-24_05"
+
+[workflows]
+runButton = "Project"
+
+[[workflows.workflow]]
+name = "Project"
+mode = "parallel"
+author = "agent"
+
+[[workflows.workflow.tasks]]
+task = "workflow.run"
+args = "WhatsAppBotSetup"
+
+[[workflows.workflow.tasks]]
+task = "workflow.run"
+args = "setup_bot"
+
+[[workflows.workflow.tasks]]
+task = "workflow.run"
+args = "StartWhatsAppBot"
+
+[[workflows.workflow]]
+name = "WhatsAppBotSetup"
+author = "agent"
+
+[workflows.workflow.metadata]
+agentRequireRestartOnSave = false
+
+[[workflows.workflow.tasks]]
+task = "packager.installForAll"
+
+[[workflows.workflow.tasks]]
+task = "shell.exec"
+args = "node setup.js"
+
+[[workflows.workflow]]
+name = "setup_bot"
+author = "agent"
+
+[workflows.workflow.metadata]
+agentRequireRestartOnSave = false
+
+[[workflows.workflow.tasks]]
+task = "packager.installForAll"
+
+[[workflows.workflow.tasks]]
+task = "shell.exec"
+args = "node setup.js"
+
+[[workflows.workflow]]
+name = "StartWhatsAppBot"
+author = "agent"
+
+[workflows.workflow.metadata]
+agentRequireRestartOnSave = false
+
+[[workflows.workflow.tasks]]
+task = "packager.installForAll"
+
+[[workflows.workflow.tasks]]
+task = "shell.exec"
+args = "./run-bot.sh"
+
+[deployment]
+run = ["sh", "-c", "node setup.js"]

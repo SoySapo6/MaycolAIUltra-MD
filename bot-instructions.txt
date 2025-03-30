@@ -1,0 +1,20 @@
+GOKU BLACK BOT MD - INSTRUCCIONES
+
+Para configurar correctamente el bot:
+
+1. Edita el archivo config.js en la carpeta Goku-Black-Bot-MD para personalizar el bot
+   - Agrega tu número de WhatsApp en el formato: 'YOURNUMBER' (ej: '123456789012')
+   - Personaliza el nombre del bot y los mensajes
+
+2. Para iniciar el bot:
+   - Ejecuta: node start.js
+   - Escanea el código QR que aparece con WhatsApp
+   - El bot se conectará a tu cuenta de WhatsApp
+
+3. Comandos principales:
+   - .menu - Muestra el menú principal
+   - .help - Muestra ayuda
+   - .info - Información del bot
+
+Si necesitas más ayuda, consulta la documentación completa en:
+https://github.com/Eliasivan/Goku-Black-Bot-MD
