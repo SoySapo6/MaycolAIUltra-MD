@@ -4,7 +4,7 @@ modules = ["nodejs-20"]
 channel = "stable-24_05"
 
 [workflows]
-runButton = "Project"
+runButton = "StartWhatsAppBot"
 
 [[workflows.workflow]]
 name = "Project"
