@@ -186,7 +186,7 @@ await conn.sendMessage(
     externalAdReply: {
       title: '𝗠𝗮𝘆𝗰𝗼𝗹𝗔𝗜𝗨𝗹𝘁𝗿𝗮-𝗠𝗗',
       body: dev,
-      thumbnailUrl: 'https://i.postimg.cc/0NMqyt9Q/descarga-1.jpg',
+      thumbnailUrl: 'https://i.postimg.cc/dtsPyQJg/descarga-2.jpg',
       sourceUrl: 'https://whatsapp.com/channel/0029VayXJte65yD6LQGiRB0R',
       mediaType: 1,
       renderLargerThumbnail: true,

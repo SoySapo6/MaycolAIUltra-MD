@@ -42,7 +42,7 @@
         "soal": null
       },
       "role": "*𝗡𝗼𝘃𝗮𝘁𝗼 V* 🍷",
-      "exp": 3289,
+      "exp": 3397,
       "lastcodereg": 0,
       "crime": 0,
       "lastmining": 0,
@@ -165,7 +165,7 @@
       "lastrob": 0,
       "level": 0,
       "moras": 10,
-      "money": 200,
+      "money": null,
       "muto": false,
       "premium": false,
       "premiumTime": 0,
@@ -184,12 +184,12 @@
         "soal": null
       },
       "role": "*𝗡𝗼𝘃𝗮𝘁𝗼 V* 🍷",
-      "exp": 5117,
+      "exp": 5301,
       "lastcodereg": 0,
       "crime": 0,
       "lastmining": 0,
       "warn": 0,
-      "spam": 1743304228324,
+      "spam": 1743304566783,
       "estrellas": null
     },
     "50581559086@s.whatsapp.net": {
@@ -607,7 +607,7 @@
         "soal": null
       },
       "role": "*𝗡𝗼𝘃𝗮𝘁𝗼 V* 🍷",
-      "exp": 3269,
+      "exp": 3384,
       "lastcodereg": 0,
       "crime": 0,
       "lastmining": 0,
@@ -1739,6 +1739,49 @@
       },
       "role": "*𝗡𝗼𝘃𝗮𝘁𝗼 V* 🍷",
       "exp": null
+    },
+    "120363373392540171@g.us": {
+      "afk": -1,
+      "afkReason": "",
+      "name": {},
+      "age": 0,
+      "bank": 0,
+      "banned": false,
+      "BannedReason": "",
+      "Banneduser": false,
+      "coin": 0,
+      "diamond": 3,
+      "joincount": 1,
+      "lastadventure": 0,
+      "lastcoins": 0,
+      "lastclaim": 0,
+      "lastcode": 0,
+      "lastcofre": 0,
+      "lastdiamantes": 0,
+      "lastduel": 0,
+      "lastpago": 0,
+      "lastrob": 0,
+      "level": 0,
+      "moras": 10,
+      "money": 100,
+      "muto": false,
+      "premium": false,
+      "premiumTime": 0,
+      "registered": false,
+      "regTime": -1,
+      "rendang": 0,
+      "akinator": {
+        "sesi": false,
+        "server": null,
+        "frontaddr": null,
+        "session": null,
+        "signature": null,
+        "question": null,
+        "progression": null,
+        "step": null,
+        "soal": null
+      },
+      "role": "*𝗡𝗼𝘃𝗮𝘁𝗼 V* 🍷"
     }
   },
   "chats": {
@@ -2663,10 +2706,10 @@
   },
   "stats": {
     "main-menu.js": {
-      "total": 13,
-      "success": 11,
-      "last": 1743303648001,
-      "lastSuccess": 1743302822628
+      "total": 14,
+      "success": 12,
+      "last": 1743304567626,
+      "lastSuccess": 1743304567626
     },
     "rg-verificar.js": {
       "total": 4,
@@ -2798,7 +2841,7 @@
       "modoia": false,
       "jadibotmd": true,
       "autobio": false,
-      "status": 1743304228249
+      "status": 1743304621056
     }
   }
 }
