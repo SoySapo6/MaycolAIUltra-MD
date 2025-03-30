@@ -15,6 +15,10 @@ author = "agent"
 task = "workflow.run"
 args = "IniciarBot"
 
+[[workflows.workflow.tasks]]
+task = "workflow.run"
+args = "KeepAlive"
+
 [[workflows.workflow]]
 name = "IniciarBot"
 author = "agent"
@@ -29,5 +33,24 @@ task = "packager.installForAll"
 task = "shell.exec"
 args = "cd Goku-Black-Bot-MD && node index.js"
 
+[[workflows.workflow]]
+name = "KeepAlive"
+author = "agent"
+
+[workflows.workflow.metadata]
+agentRequireRestartOnSave = false
+
+[[workflows.workflow.tasks]]
+task = "packager.installForAll"
+
+[[workflows.workflow.tasks]]
+task = "shell.exec"
+args = "node keep-alive.js"
+waitForPort = 5000
+
 [deployment]
 run = ["sh", "-c", "node setup.js"]
+
+[[ports]]
+localPort = 5000
+externalPort = 80
