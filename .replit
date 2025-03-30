@@ -27,7 +27,7 @@ task = "packager.installForAll"
 
 [[workflows.workflow.tasks]]
 task = "shell.exec"
-args = "./run-bot.sh"
+args = "cd Goku-Black-Bot-MD && node index.js"
 
 [deployment]
 run = ["sh", "-c", "node setup.js"]

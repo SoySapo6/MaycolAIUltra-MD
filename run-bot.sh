@@ -1,5 +1,5 @@
 #!/bin/bash
 
-# Script que utiliza auto-input para automatizar la selección de opciones
-echo "✅ Iniciando MaycolAIUltra-MD con selección automática..."
-node auto-input.js
+# Script que ejecuta directamente el bot
+echo "✅ Iniciando MaycolAIUltra-MD sin automatización..."
+cd Goku-Black-Bot-MD && node index.js

@@ -14447,7 +14447,7 @@
       "lastrob": 0,
       "level": 0,
       "moras": 10,
-      "money": 100,
+      "money": null,
       "muto": false,
       "premium": false,
       "premiumTime": 0,
@@ -14465,7 +14465,12 @@
         "step": null,
         "soal": null
       },
-      "role": "*𝗡𝗼𝘃𝗮𝘁𝗼 V* 🍷"
+      "role": "*𝗡𝗼𝘃𝗮𝘁𝗼 V* 🍷",
+      "exp": 0,
+      "lastcodereg": 0,
+      "crime": 0,
+      "lastmining": 0,
+      "warn": 0
     },
     "51956376713@s.whatsapp.net": {
       "afk": -1,
@@ -15198,7 +15203,12 @@
         "step": null,
         "soal": null
       },
-      "exp": null
+      "exp": 0,
+      "role": "Novato",
+      "lastcodereg": 0,
+      "crime": 0,
+      "lastmining": 0,
+      "warn": 0
     },
     "50664325496@s.whatsapp.net": {
       "afk": -1,
