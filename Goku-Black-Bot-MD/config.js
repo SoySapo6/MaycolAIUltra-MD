@@ -25,18 +25,18 @@ global.suittag = ['595992667005']
 global.prems = []
 
 //• ↳ ◜𝑴𝑨𝑹𝑪𝑨𝑺 𝑫𝑬 𝑨𝑮𝑼𝑨◞ • 💌
-global.packsticker = '𝐆𝐎𝐊𝐔-𝐁𝐋𝐀𝐂𝐊-𝐁𝐎𝐓-𝐌𝐃'
-global.packname = '󠁖󠁖󠁖󠁖󠁖󠁖󠁻󠁻𝐆𝐎𝐊𝐔𝐁𝐋𝐀𝐂𝐊-𝐁𝐎𝐓-𝐌𝐃'
-global.author = '𝐺𝑂𝐾𝑈-𝐵𝐿𝐴𝐶𝐾-𝐵𝑂𝑇-𝑀𝐷 ´･ᴗ･`'
-global.wm = 'l ꙰ 𝙶𝙾𝙺𝚄-𝙱𝙻𝙰𝙲𝙺-𝙱𝙾𝚃-𝙼𝙳 l ꙰';
-global.titulowm = '𝘗𝘖𝘞𝘌𝘙 𝘉𝘠 𝘐𝘝𝘈𝘕';
-global.titulowm2 = 'GOKᑌ-ᗷᒪᗩᑕK-ᗷOT-ᗰᗪ'
-global.igfg = 'ɢ૦𝗞Ս-𝗕𐐛𝔸𐊢𝗞-𝗕૦𝚃-ᎷＤ '
-global.botname = '𝐺𝑂𝐾𝑈-𝐵𝐿𝐴𝐶𝐾-𝐵𝑂𝑇-𝑀𝐷 💥'
-global.dev = 'g᥆kᥙ-ᑲᥣᥲᥴk-ᑲ᥆𝗍-mძ ﾉ)ﾟДﾟ(ヽ'
-global.textbot = 'ɠσƙυ-Ⴆʅαƈƙ-Ⴆσƚ-ɱԃ ճվ íѵαղ'
-global.gt = '𝗚𝗢𝗞𝗨𝗕𝗟𝗔𝗖𝗞';
-global.namechannel = '𝗚𝗢𝗞𝗨-𝗕𝗟𝗔𝗖𝗞-𝗕𝗢𝗧-𝗠𝗗 🗻'
+global.packsticker = '𝐌𝐚𝐲𝐜𝐨𝐥𝐀𝐈𝐔𝐥𝐭𝐫𝐚-𝐌𝐃'
+global.packname = '󠁖󠁖󠁖󠁖󠁖󠁖󠁻󠁻𝐌𝐚𝐲𝐜𝐨𝐥𝐀𝐈𝐔𝐥𝐭𝐫𝐚-𝐌𝐃'
+global.author = '𝐌𝐚𝐲𝐜𝐨𝐥𝐀𝐈𝐔𝐥𝐭𝐫𝐚-𝐌𝐃 ´･ᴗ･`'
+global.wm = 'l ꙰ 𝐌𝐚𝐲𝐜𝐨𝐥𝐀𝐈𝐔𝐥𝐭𝐫𝐚-𝐌𝐃 l ꙰';
+global.titulowm = '𝘗𝘖𝘞𝘌𝘙 𝘉𝘠 𝘔𝘈𝘠𝘊𝘖𝘓';
+global.titulowm2 = '𝐌𝐚𝐲𝐜𝐨𝐥𝐀𝐈𝐔𝐥𝐭𝐫𝐚-𝐌𝐃'
+global.igfg = '𝐌𝐚𝐲𝐜𝐨𝐥𝐀𝐈𝐔𝐥𝐭𝐫𝐚-𝐌𝐃 '
+global.botname = '𝐌𝐚𝐲𝐜𝐨𝐥𝐀𝐈𝐔𝐥𝐭𝐫𝐚-𝐌𝐃 💥'
+global.dev = '𝐌𝐚𝐲𝐜𝐨𝐥𝐀𝐈𝐔𝐥𝐭𝐫𝐚-𝐌𝐃 ﾉ)ﾟДﾟ(ヽ'
+global.textbot = '𝐌𝐚𝐲𝐜𝐨𝐥𝐀𝐈𝐔𝐥𝐭𝐫𝐚-𝐌𝐃 ճվ Maycol'
+global.gt = '𝐌𝐚𝐲𝐜𝐨𝐥𝐀𝐈𝐔𝐥𝐭𝐫𝐚';
+global.namechannel = '𝐌𝐚𝐲𝐜𝐨𝐥𝐀𝐈𝐔𝐥𝐭𝐫𝐚-𝐌𝐃 🗻'
 global.vs = 'V2'
 global.vsJB = '5.0'
 
@@ -74,7 +74,7 @@ global.photoSity = [imagen8, imagen1, imagen4, imagen6]
 global.libreria = 'Baileys'
 global.baileys = 'V 6.7.8'
 global.languaje = 'Español'
-global.nameqr = 'GokuBlack-Bot'
+global.nameqr = 'MaycolAIUltra-MD'
 global.sessions = 'Blacksesion'
 global.jadi = 'jadibots'
 global.blackJadibts = true
@@ -86,21 +86,21 @@ ch1: '120363276986902836@newsletter',
 //• ↳ ◜𝑭𝑨𝑲𝑬 𝑬𝑺𝑻𝑰𝑳𝑶◞ • 🪩
 global.estilo = { key: {  fromMe: false, participant: `0@s.whatsapp.net`, ...(false ? { remoteJid: "5219992095479-1625305606@g.us" } : {}) }, message: { orderMessage: { itemCount : -999999, status: 1, surface : 1, message: '󠁖󠁖󠁖󠁖󠁖󠁖󠁻󠁻Goku-Black-Bot-MD', orderTitle: 'Bang', thumbnail: catalogo, sellerJid: '0@s.whatsapp.net'}}}
 
-global.fakegif2 = { key: { participant: `0@s.whatsapp.net`, ...(false ? { remoteJid: "5219992095479-1625305606@g.us" } : {}) }, message: { videoMessage: { title: 'GokuBlack', h: `Hmm`, seconds: '99999', gifPlayback: true, caption: '♡٨ﮩ٨ﮩﮩ٨ﮩﮩ٨ﮩ ᗷIEᑎᐯEᑎIᗪO ﮩ٨ﮩﮩ٨ﮩﮩ٨ﮩ٨♡', jpegThumbnail: logo5 }}};
+global.fakegif2 = { key: { participant: `0@s.whatsapp.net`, ...(false ? { remoteJid: "5219992095479-1625305606@g.us" } : {}) }, message: { videoMessage: { title: 'MaycolAIUltra-MD', h: `Hmm`, seconds: '99999', gifPlayback: true, caption: '♡٨ﮩ٨ﮩﮩ٨ﮩﮩ٨ﮩ ᗷIEᑎᐯEᑎIᗪO ﮩ٨ﮩﮩ٨ﮩﮩ٨ﮩ٨♡', jpegThumbnail: logo5 }}};
 
-global.fakegif3 = { key: { participant: `0@s.whatsapp.net`, ...(false ? { remoteJid: "5219992095479-1625305606@g.us" } : {}) }, message: { videoMessage: { title: 'Goku-Black-Bot-MD', h: `Hmm`, seconds: '99999', gifPlayback: true, caption: '⚘݄𖠵⃕Eres un sabio 💞', jpegThumbnail: logo3 }}};
+global.fakegif3 = { key: { participant: `0@s.whatsapp.net`, ...(false ? { remoteJid: "5219992095479-1625305606@g.us" } : {}) }, message: { videoMessage: { title: 'MaycolAIUltra-MD', h: `Hmm`, seconds: '99999', gifPlayback: true, caption: '⚘݄𖠵⃕Eres un sabio 💞', jpegThumbnail: logo3 }}};
 
-global.fakegif4 = { key: { participant: `0@s.whatsapp.net`, ...(false ? { remoteJid: "5219992095479-1625305606@g.us" } : {}) }, message: { videoMessage: { title: 'GokuBlack', h: `Hmm`, seconds: '99999', gifPlayback: true, caption: 'Goku-Black-Bot-MD', jpegThumbnail: logo5 }}};
+global.fakegif4 = { key: { participant: `0@s.whatsapp.net`, ...(false ? { remoteJid: "5219992095479-1625305606@g.us" } : {}) }, message: { videoMessage: { title: 'MaycolAIUltra-MD', h: `Hmm`, seconds: '99999', gifPlayback: true, caption: 'MaycolAIUltra-MD', jpegThumbnail: logo5 }}};
 
-global.estilo = { key: {  fromMe: false, participant: `0@s.whatsapp.net`, ...(false ? { remoteJid: "5219992095479-1625305606@g.us" } : {}) }, message: { orderMessage: { itemCount : -999999, status: 1, surface : 1, message: '󠁖󠁖󠁖󠁖󠁖󠁖󠁻󠁻Goku-Black-Bot-MD', orderTitle: 'Bang', thumbnail: catalogo, sellerJid: '0@s.whatsapp.net'}}}
+global.estilo = { key: {  fromMe: false, participant: `0@s.whatsapp.net`, ...(false ? { remoteJid: "5219992095479-1625305606@g.us" } : {}) }, message: { orderMessage: { itemCount : -999999, status: 1, surface : 1, message: '󠁖󠁖󠁖󠁖󠁖󠁖󠁻󠁻MaycolAIUltra-MD', orderTitle: 'Bang', thumbnail: catalogo, sellerJid: '0@s.whatsapp.net'}}}
 
-global.fgif2 = { key: {participant: `0@s.whatsapp.net`, ...(false ? { remoteJid: "6289643739077-1613049930@g.us" } : {})},message: {"videoMessage": { "title":'GokuBlack-Bot', "h": `Hmm`,'seconds': '99999', 'gifPlayback': 'true', 'caption': `Goku-Black-Bot-MD\n Ivan`, 'jpegThumbnail': logo4 }}}
+global.fgif2 = { key: {participant: `0@s.whatsapp.net`, ...(false ? { remoteJid: "6289643739077-1613049930@g.us" } : {})},message: {"videoMessage": { "title":'MaycolAIUltra-MD', "h": `Hmm`,'seconds': '99999', 'gifPlayback': 'true', 'caption': `MaycolAIUltra-MD\n Maycol`, 'jpegThumbnail': logo4 }}}
 
 //• ↳ ◜𝑳𝑰𝑵𝑲𝑺◞ • 🌿
-global.gp4 = 'https://chat.whatsapp.com/Igsky5kNI7cDMsBJU6gcKB' //Grupo Oficial De GokuBlack 
+global.gp4 = 'https://chat.whatsapp.com/Igsky5kNI7cDMsBJU6gcKB' //Grupo Oficial
 global.gp1 = 'https://chat.whatsapp.com/Igsky5kNI7cDMsBJU6gcKB' //Grupo 
 global.gp2 = 'https://chat.whatsapp.com/Igsky5kNI7cDMsBJU6gcKB' //Grupo
-global.comunidad1 = '' //Comunidad GokuBlack-Bot
+global.comunidad1 = '' //Comunidad MaycolAIUltra-MD
 global.channel = '' //Canal Oficial
 global.yt = 'https://youtube.com/@Ivamods15' //Canal De Youtube
 global.md = 'https://github.com/Eliasivan' //Github Oficial
@@ -120,7 +120,7 @@ global.mes = d.toLocaleDateString('es', {month: 'long'});
 global.año = d.toLocaleDateString('es', {year: 'numeric'});
 global.tiempo = d.toLocaleString('en-US', {hour: 'numeric', minute: 'numeric', second: 'numeric', hour12: true});
 //* ****************************
-global.wm2 = `${dia} ${fecha}\nGoku-Black-Bot-MD`;
+global.wm2 = `${dia} ${fecha}\nMaycolAIUltra-MD`;
 global.nomorown = '59169739411';
 global.pdoc = ['application/vnd.openxmlformats-officedocument.presentationml.presentation', 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet', 'application/vnd.openxmlformats-officedocument.wordprocessingml.document', 'application/vnd.ms-excel', 'application/msword', 'application/pdf', 'text/rtf'];
 global.cmenut = '❖––––––『';
