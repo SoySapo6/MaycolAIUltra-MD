@@ -23,7 +23,7 @@
       "lastrob": 0,
       "level": 0,
       "moras": 10,
-      "money": 200,
+      "money": null,
       "muto": false,
       "premium": false,
       "premiumTime": 0,
@@ -42,7 +42,7 @@
         "soal": null
       },
       "role": "*𝗡𝗼𝘃𝗮𝘁𝗼 V* 🍷",
-      "exp": 9910,
+      "exp": 10464,
       "lastcodereg": 0,
       "crime": 0,
       "lastmining": 0,
@@ -85,7 +85,7 @@
       "lastrob": 0,
       "level": 0,
       "moras": 10,
-      "money": 300,
+      "money": 350,
       "muto": false,
       "premium": false,
       "premiumTime": 0,
@@ -104,12 +104,12 @@
         "soal": null
       },
       "role": "*𝗡𝗼𝘃𝗮𝘁𝗼 V* 🍷",
-      "exp": 5896,
+      "exp": 5962,
       "lastcodereg": 0,
       "crime": 0,
       "lastmining": 0,
       "warn": 0,
-      "spam": 1743375230340,
+      "spam": 1743376834062,
       "estrellas": null,
       "appInterests": {
         "gaming": 0,
@@ -224,7 +224,7 @@
         "soal": null
       },
       "role": "*𝗡𝗼𝘃𝗮𝘁𝗼 V* 🍷",
-      "exp": 40571,
+      "exp": 41337,
       "lastcodereg": 0,
       "crime": 0,
       "lastmining": 0,
@@ -356,7 +356,7 @@
         "soal": null
       },
       "role": "*𝗡𝗼𝘃𝗮𝘁𝗼 V* 🍷",
-      "exp": 3631,
+      "exp": 3793,
       "spam": 1743374378821,
       "lastcodereg": 0,
       "crime": 0,
@@ -771,7 +771,7 @@
         "soal": null
       },
       "role": "*𝗡𝗼𝘃𝗮𝘁𝗼 V* 🍷",
-      "exp": 91566,
+      "exp": 94261,
       "lastcodereg": 0,
       "crime": 0,
       "lastmining": 0,
@@ -2228,7 +2228,7 @@
         "soal": null
       },
       "role": "*𝗡𝗼𝘃𝗮𝘁𝗼 V* 🍷",
-      "exp": 1280,
+      "exp": 1391,
       "lastcodereg": 0,
       "crime": 0,
       "lastmining": 0,
@@ -4456,7 +4456,7 @@
         "soal": null
       },
       "role": "*𝗡𝗼𝘃𝗮𝘁𝗼 V* 🍷",
-      "exp": 26546,
+      "exp": 26604,
       "lastcodereg": 0,
       "crime": 0,
       "lastmining": 0,
@@ -10099,7 +10099,7 @@
         "soal": null
       },
       "role": "*𝗡𝗼𝘃𝗮𝘁𝗼 V* 🍷",
-      "exp": 25016,
+      "exp": 25513,
       "lastcodereg": 0,
       "crime": 0,
       "lastmining": 0,
@@ -11677,7 +11677,7 @@
         "soal": null
       },
       "role": "*𝗡𝗼𝘃𝗮𝘁𝗼 V* 🍷",
-      "exp": 60,
+      "exp": 165,
       "lastcodereg": 0,
       "crime": 0,
       "lastmining": 0,
@@ -14362,7 +14362,7 @@
         "soal": null
       },
       "role": "*𝗡𝗼𝘃𝗮𝘁𝗼 V* 🍷",
-      "exp": 58,
+      "exp": 110,
       "lastcodereg": 0,
       "crime": 0,
       "lastmining": 0,
@@ -23545,7 +23545,7 @@
         "step": null,
         "soal": null
       },
-      "exp": null,
+      "exp": 1,
       "appInterests": {
         "gaming": 0,
         "social": 0,
@@ -23558,7 +23558,12 @@
         "health": 0,
         "communication": 0
       },
-      "searchHistory": []
+      "searchHistory": [],
+      "role": "Novato",
+      "lastcodereg": 0,
+      "crime": 0,
+      "lastmining": 0,
+      "warn": 0
     },
     "5218461130215@s.whatsapp.net": {
       "afk": -1,
@@ -23964,7 +23969,7 @@
         "soal": null
       },
       "role": "*𝗡𝗼𝘃𝗮𝘁𝗼 V* 🍷",
-      "exp": 1774,
+      "exp": 2066,
       "lastcodereg": 0,
       "crime": 0,
       "lastmining": 0,
@@ -24148,7 +24153,7 @@
         "soal": null
       },
       "role": "*𝗡𝗼𝘃𝗮𝘁𝗼 V* 🍷",
-      "exp": 3142,
+      "exp": 3538,
       "lastcodereg": 0,
       "crime": 0,
       "lastmining": 0,
@@ -24209,7 +24214,7 @@
         "soal": null
       },
       "role": "*𝗡𝗼𝘃𝗮𝘁𝗼 V* 🍷",
-      "exp": 3207,
+      "exp": 3547,
       "lastcodereg": 0,
       "crime": 0,
       "lastmining": 0,
@@ -24331,7 +24336,7 @@
         "soal": null
       },
       "role": "*𝗡𝗼𝘃𝗮𝘁𝗼 V* 🍷",
-      "exp": 279,
+      "exp": 438,
       "appInterests": {
         "gaming": 0,
         "social": 0,
@@ -24575,7 +24580,7 @@
         "soal": null
       },
       "role": "*𝗡𝗼𝘃𝗮𝘁𝗼 V* 🍷",
-      "exp": 947,
+      "exp": 1215,
       "lastcodereg": 0,
       "crime": 0,
       "lastmining": 0,
@@ -25049,7 +25054,7 @@
         "soal": null
       },
       "role": "*𝗡𝗼𝘃𝗮𝘁𝗼 V* 🍷",
-      "exp": null,
+      "exp": 346,
       "appInterests": {
         "gaming": 0,
         "social": 0,
@@ -25062,7 +25067,12 @@
         "health": 0,
         "communication": 0
       },
-      "searchHistory": []
+      "searchHistory": [],
+      "lastcodereg": 0,
+      "crime": 0,
+      "lastmining": 0,
+      "warn": 0,
+      "spam": 1743377266616
     },
     "5492616903888@s.whatsapp.net": {
       "afk": -1,
@@ -26109,7 +26119,7 @@
       "lastrob": 0,
       "level": 0,
       "moras": 10,
-      "money": 100,
+      "money": null,
       "muto": false,
       "premium": false,
       "premiumTime": 0,
@@ -26128,7 +26138,7 @@
         "soal": null
       },
       "role": "*𝗡𝗼𝘃𝗮𝘁𝗼 V* 🍷",
-      "exp": 0,
+      "exp": 110,
       "lastcodereg": 0,
       "crime": 0,
       "lastmining": 0,
@@ -26231,7 +26241,7 @@
       "lastrob": 0,
       "level": 0,
       "moras": 10,
-      "money": 100,
+      "money": null,
       "muto": false,
       "premium": false,
       "premiumTime": 0,
@@ -26249,7 +26259,7 @@
         "step": null,
         "soal": null
       },
-      "exp": 0,
+      "exp": 109,
       "role": "*𝗡𝗼𝘃𝗮𝘁𝗼 V* 🍷",
       "lastcodereg": 0,
       "crime": 0,
@@ -26714,7 +26724,7 @@
         "soal": null
       },
       "role": "*𝗡𝗼𝘃𝗮𝘁𝗼 V* 🍷",
-      "exp": 214,
+      "exp": 274,
       "lastcodereg": 0,
       "crime": 0,
       "lastmining": 0,
@@ -26892,7 +26902,7 @@
         "soal": null
       },
       "role": "*𝗡𝗼𝘃𝗮𝘁𝗼 V* 🍷",
-      "exp": 772,
+      "exp": 826,
       "lastcodereg": 0,
       "crime": 0,
       "lastmining": 0,
@@ -27401,7 +27411,7 @@
       "lastrob": 0,
       "level": 0,
       "moras": 10,
-      "money": 150,
+      "money": null,
       "muto": false,
       "premium": false,
       "premiumTime": 0,
@@ -27420,7 +27430,7 @@
         "soal": null
       },
       "role": "*𝗡𝗼𝘃𝗮𝘁𝗼 V* 🍷",
-      "exp": 441,
+      "exp": 493,
       "lastcodereg": 0,
       "crime": 0,
       "lastmining": 0,
@@ -27481,7 +27491,7 @@
         "soal": null
       },
       "role": "*𝗡𝗼𝘃𝗮𝘁𝗼 V* 🍷",
-      "exp": 329,
+      "exp": 662,
       "lastcodereg": 0,
       "crime": 0,
       "lastmining": 0,
@@ -28005,7 +28015,7 @@
         "soal": null
       },
       "role": "*𝗡𝗼𝘃𝗮𝘁𝗼 V* 🍷",
-      "exp": null,
+      "exp": 110,
       "appInterests": {
         "gaming": 0,
         "social": 0,
@@ -28018,7 +28028,11 @@
         "health": 0,
         "communication": 0
       },
-      "searchHistory": []
+      "searchHistory": [],
+      "lastcodereg": 0,
+      "crime": 0,
+      "lastmining": 0,
+      "warn": 0
     },
     "595975281252@s.whatsapp.net": {
       "afk": -1,
@@ -28062,11 +28076,24 @@
         "soal": null
       },
       "role": "*𝗡𝗼𝘃𝗮𝘁𝗼 V* 🍷",
-      "exp": 52,
+      "exp": 878,
       "lastcodereg": 0,
       "crime": 0,
       "lastmining": 0,
-      "warn": 0
+      "warn": 0,
+      "appInterests": {
+        "gaming": 0,
+        "social": 0,
+        "productivity": 0,
+        "education": 0,
+        "entertainment": 0,
+        "tools": 0,
+        "photography": 0,
+        "music": 0,
+        "health": 0,
+        "communication": 0
+      },
+      "searchHistory": []
     },
     "212684676170@s.whatsapp.net": {
       "afk": -1,
@@ -28091,7 +28118,7 @@
       "lastrob": 0,
       "level": 0,
       "moras": 10,
-      "money": 150,
+      "money": null,
       "muto": false,
       "premium": false,
       "premiumTime": 0,
@@ -28110,8 +28137,291 @@
         "soal": null
       },
       "role": "*𝗡𝗼𝘃𝗮𝘁𝗼 V* 🍷",
-      "exp": null,
-      "spam": 1743376621080
+      "exp": 269,
+      "spam": 1743376790023,
+      "appInterests": {
+        "gaming": 0,
+        "social": 0,
+        "productivity": 0,
+        "education": 0,
+        "entertainment": 0,
+        "tools": 0,
+        "photography": 0,
+        "music": 0,
+        "health": 0,
+        "communication": 0
+      },
+      "searchHistory": [],
+      "lastcodereg": 0,
+      "crime": 0,
+      "lastmining": 0,
+      "warn": 0
+    },
+    "51971694707@s.whatsapp.net": {
+      "afk": -1,
+      "afkReason": "",
+      "name": "۝💖✨Damaris✨💖۝",
+      "age": 0,
+      "bank": 0,
+      "banned": false,
+      "BannedReason": "",
+      "Banneduser": false,
+      "coin": 0,
+      "diamond": 3,
+      "joincount": 1,
+      "lastadventure": 0,
+      "lastcoins": 0,
+      "lastclaim": 0,
+      "lastcode": 0,
+      "lastcofre": 0,
+      "lastdiamantes": 0,
+      "lastduel": 0,
+      "lastpago": 0,
+      "lastrob": 0,
+      "level": 0,
+      "moras": 10,
+      "money": null,
+      "muto": false,
+      "premium": false,
+      "premiumTime": 0,
+      "registered": false,
+      "regTime": -1,
+      "rendang": 0,
+      "akinator": {
+        "sesi": false,
+        "server": null,
+        "frontaddr": null,
+        "session": null,
+        "signature": null,
+        "question": null,
+        "progression": null,
+        "step": null,
+        "soal": null
+      },
+      "role": "*𝗡𝗼𝘃𝗮𝘁𝗼 V* 🍷",
+      "exp": 51,
+      "lastcodereg": 0,
+      "crime": 0,
+      "lastmining": 0,
+      "warn": 0
+    },
+    "192947664461929@lid": {
+      "afk": -1,
+      "afkReason": "",
+      "age": 0,
+      "bank": 0,
+      "banned": false,
+      "BannedReason": "",
+      "Banneduser": false,
+      "coin": 0,
+      "diamond": 3,
+      "joincount": 1,
+      "lastadventure": 0,
+      "lastcoins": 0,
+      "lastclaim": 0,
+      "lastcode": 0,
+      "lastcofre": 0,
+      "lastdiamantes": 0,
+      "lastduel": 0,
+      "lastpago": 0,
+      "lastrob": 0,
+      "level": 0,
+      "moras": 10,
+      "money": 100,
+      "muto": false,
+      "premium": false,
+      "premiumTime": 0,
+      "registered": false,
+      "regTime": -1,
+      "rendang": 0,
+      "akinator": {
+        "sesi": false,
+        "server": null,
+        "frontaddr": null,
+        "session": null,
+        "signature": null,
+        "question": null,
+        "progression": null,
+        "step": null,
+        "soal": null
+      },
+      "role": "*𝗡𝗼𝘃𝗮𝘁𝗼 V* 🍷"
+    },
+    "5212383053660@s.whatsapp.net": {
+      "afk": -1,
+      "afkReason": "",
+      "name": "+52 238 305 3660",
+      "age": 0,
+      "bank": 0,
+      "banned": false,
+      "BannedReason": "",
+      "Banneduser": false,
+      "coin": 0,
+      "diamond": 3,
+      "joincount": 1,
+      "lastadventure": 0,
+      "lastcoins": 0,
+      "lastclaim": 0,
+      "lastcode": 0,
+      "lastcofre": 0,
+      "lastdiamantes": 0,
+      "lastduel": 0,
+      "lastpago": 0,
+      "lastrob": 0,
+      "level": 0,
+      "moras": 10,
+      "money": null,
+      "muto": false,
+      "premium": false,
+      "premiumTime": 0,
+      "registered": false,
+      "regTime": -1,
+      "rendang": 0,
+      "akinator": {
+        "sesi": false,
+        "server": null,
+        "frontaddr": null,
+        "session": null,
+        "signature": null,
+        "question": null,
+        "progression": null,
+        "step": null,
+        "soal": null
+      },
+      "role": "*𝗡𝗼𝘃𝗮𝘁𝗼 V* 🍷",
+      "exp": null
+    },
+    "9131620622350@lid": {
+      "afk": -1,
+      "afkReason": "",
+      "age": 0,
+      "bank": 0,
+      "banned": false,
+      "BannedReason": "",
+      "Banneduser": false,
+      "coin": 0,
+      "diamond": 3,
+      "joincount": 1,
+      "lastadventure": 0,
+      "lastcoins": 0,
+      "lastclaim": 0,
+      "lastcode": 0,
+      "lastcofre": 0,
+      "lastdiamantes": 0,
+      "lastduel": 0,
+      "lastpago": 0,
+      "lastrob": 0,
+      "level": 0,
+      "moras": 10,
+      "money": 100,
+      "muto": false,
+      "premium": false,
+      "premiumTime": 0,
+      "registered": false,
+      "regTime": -1,
+      "rendang": 0,
+      "akinator": {
+        "sesi": false,
+        "server": null,
+        "frontaddr": null,
+        "session": null,
+        "signature": null,
+        "question": null,
+        "progression": null,
+        "step": null,
+        "soal": null
+      },
+      "role": "*𝗡𝗼𝘃𝗮𝘁𝗼 V* 🍷"
+    },
+    "160881287639100@lid": {
+      "afk": -1,
+      "afkReason": "",
+      "age": 0,
+      "bank": 0,
+      "banned": false,
+      "BannedReason": "",
+      "Banneduser": false,
+      "coin": 0,
+      "diamond": 3,
+      "joincount": 1,
+      "lastadventure": 0,
+      "lastcoins": 0,
+      "lastclaim": 0,
+      "lastcode": 0,
+      "lastcofre": 0,
+      "lastdiamantes": 0,
+      "lastduel": 0,
+      "lastpago": 0,
+      "lastrob": 0,
+      "level": 0,
+      "moras": 10,
+      "money": 100,
+      "muto": false,
+      "premium": false,
+      "premiumTime": 0,
+      "registered": false,
+      "regTime": -1,
+      "rendang": 0,
+      "akinator": {
+        "sesi": false,
+        "server": null,
+        "frontaddr": null,
+        "session": null,
+        "signature": null,
+        "question": null,
+        "progression": null,
+        "step": null,
+        "soal": null
+      },
+      "role": "*𝗡𝗼𝘃𝗮𝘁𝗼 V* 🍷"
+    },
+    "229982630596653@lid": {
+      "afk": -1,
+      "afkReason": "",
+      "name": "メ ┆ㅤKrizzmodz ofc",
+      "age": 0,
+      "bank": 0,
+      "banned": false,
+      "BannedReason": "",
+      "Banneduser": false,
+      "coin": 0,
+      "diamond": 3,
+      "joincount": 1,
+      "lastadventure": 0,
+      "lastcoins": 0,
+      "lastclaim": 0,
+      "lastcode": 0,
+      "lastcofre": 0,
+      "lastdiamantes": 0,
+      "lastduel": 0,
+      "lastpago": 0,
+      "lastrob": 0,
+      "level": 0,
+      "moras": 10,
+      "money": 100,
+      "muto": false,
+      "premium": false,
+      "premiumTime": 0,
+      "registered": false,
+      "regTime": -1,
+      "rendang": 0,
+      "akinator": {
+        "sesi": false,
+        "server": null,
+        "frontaddr": null,
+        "session": null,
+        "signature": null,
+        "question": null,
+        "progression": null,
+        "step": null,
+        "soal": null
+      },
+      "role": "*𝗡𝗼𝘃𝗮𝘁𝗼 V* 🍷",
+      "exp": 0,
+      "lastcodereg": 0,
+      "crime": 0,
+      "lastmining": 0,
+      "warn": 0
     }
   },
   "chats": {
@@ -31977,10 +32287,10 @@
   },
   "stats": {
     "main-menu.js": {
-      "total": 93,
-      "success": 89,
-      "last": 1743375145537,
-      "lastSuccess": 1743375145537
+      "total": 94,
+      "success": 90,
+      "last": 1743376835405,
+      "lastSuccess": 1743376835405
     },
     "rg-verificar.js": {
       "total": 31,
@@ -31989,10 +32299,10 @@
       "lastSuccess": 1743375920239
     },
     "Pruebatesth.js": {
-      "total": 10,
-      "success": 10,
-      "last": 1743373584673,
-      "lastSuccess": 1743373584673
+      "total": 12,
+      "success": 12,
+      "last": 1743376784676,
+      "lastSuccess": 1743376784676
     },
     "info-speed.js": {
       "total": 5,
@@ -32451,10 +32761,16 @@
       "lastSuccess": 1743375230976
     },
     "roll-waifu.js": {
-      "total": 2,
-      "success": 2,
-      "last": 1743376375987,
-      "lastSuccess": 1743376375987
+      "total": 4,
+      "success": 4,
+      "last": 1743377267602,
+      "lastSuccess": 1743377267602
+    },
+    "descargas-play1.js": {
+      "total": 3,
+      "success": 3,
+      "last": 1743376811878,
+      "lastSuccess": 1743376811878
     }
   },
   "msgs": {},
@@ -32484,7 +32800,7 @@
       "modoia": false,
       "jadibotmd": true,
       "autobio": false,
-      "status": 1743376636513
+      "status": 1743377282204
     },
     "51916787717@s.whatsapp.net": {
       "self": false,
@@ -32497,7 +32813,7 @@
       "modoia": false,
       "jadibotmd": true,
       "autobio": false,
-      "status": 1743376636324
+      "status": 1743377342024
     },
     "5491133472641@s.whatsapp.net": {
       "self": false,
