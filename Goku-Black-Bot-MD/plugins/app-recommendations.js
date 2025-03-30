@@ -287,40 +287,40 @@ let handler = async (m, { conn, usedPrefix, command }) => {
   }
 };
 
-// Manejador para selección de aplicación recomendada
+// Manejador que se ejecuta antes de los comandos
 handler.before = async (m, { conn }) => {
   if (!m.message) return;
-  
+
+  // PARTE 1: Manejar la selección de aplicaciones recomendadas
   const selectedId = m.message?.buttonsResponseMessage?.selectedButtonId || 
                      m.message?.listResponseMessage?.singleSelectReply?.selectedRowId;
                      
-  if (!selectedId || !selectedId.startsWith('rec_app_')) return;
-  
-  // Extraer el índice de la app seleccionada
-  const index = parseInt(selectedId.split('_').pop());
-  
-  // Verificar si tenemos recomendaciones guardadas
-  if (!global.appRecommendations || !global.appRecommendations[m.chat]) {
-    return m.reply('⚠️ Las recomendaciones han expirado. Por favor solicita nuevas recomendaciones.');
-  }
-  
-  // Verificar si las recomendaciones han expirado (más de 5 minutos)
-  const now = new Date().getTime();
-  if (now - global.appRecommendations[m.chat].timestamp > 5 * 60 * 1000) {
-    delete global.appRecommendations[m.chat];
-    return m.reply('⚠️ Las recomendaciones han expirado. Por favor solicita nuevas recomendaciones.');
-  }
-  
-  // Obtener la app seleccionada
-  const apps = global.appRecommendations[m.chat].apps;
-  if (!apps || !apps[index]) {
-    return m.reply('⚠️ No se encontró la aplicación seleccionada.');
-  }
-  
-  const selectedApp = apps[index];
-  
-  // Mostrar detalles completos de la app seleccionada
-  let detailText = `
+  if (selectedId && selectedId.startsWith('rec_app_')) {
+    // Extraer el índice de la app seleccionada
+    const index = parseInt(selectedId.split('_').pop());
+    
+    // Verificar si tenemos recomendaciones guardadas
+    if (!global.appRecommendations || !global.appRecommendations[m.chat]) {
+      return m.reply('⚠️ Las recomendaciones han expirado. Por favor solicita nuevas recomendaciones.');
+    }
+    
+    // Verificar si las recomendaciones han expirado (más de 5 minutos)
+    const now = new Date().getTime();
+    if (now - global.appRecommendations[m.chat].timestamp > 5 * 60 * 1000) {
+      delete global.appRecommendations[m.chat];
+      return m.reply('⚠️ Las recomendaciones han expirado. Por favor solicita nuevas recomendaciones.');
+    }
+    
+    // Obtener la app seleccionada
+    const apps = global.appRecommendations[m.chat].apps;
+    if (!apps || !apps[index]) {
+      return m.reply('⚠️ No se encontró la aplicación seleccionada.');
+    }
+    
+    const selectedApp = apps[index];
+    
+    // Mostrar detalles completos de la app seleccionada
+    let detailText = `
 ╭━━━━━━━━━⬣
 ┃ 🍭 *App Recomendada Para Ti*
 ┃┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈
@@ -336,35 +336,37 @@ handler.before = async (m, { conn }) => {
 ┃ ${selectedApp.link}
 ╰━━━━━━━━━⬣`;
 
-  await conn.sendMessage(m.chat, { image: { url: selectedApp.image }, caption: detailText }, { quoted: m });
+    await conn.sendMessage(m.chat, { image: { url: selectedApp.image }, caption: detailText }, { quoted: m });
+    
+    return true; // Marcar como manejado
+  }
   
-  return true; // Marcar como manejado
+  // PARTE 2: Detectar y procesar búsquedas de HappyMod
+  if (m.text) {
+    const text = m.text.trim();
+    const prefixRegex = /^[./!#?]happymod(?:search)?|^[./!#?]hpmodsearch/i;
+    
+    // Si es un comando de búsqueda de happymod
+    if (prefixRegex.test(text)) {
+      // Extraer el texto de búsqueda (todo después del comando)
+      const searchQuery = text.replace(prefixRegex, '').trim();
+      
+      if (searchQuery && m.sender) {
+        // Actualizar el perfil de intereses del usuario
+        try {
+          updateUserInterests(m.sender, searchQuery);
+          console.log(`Perfil actualizado para ${m.sender} basado en: "${searchQuery}"`);
+        } catch (error) {
+          console.error('Error al actualizar perfil:', error);
+        }
+      }
+    }
+  }
+  
+  return false; // Continuar con el procesamiento normal
 };
 
-// Interceptar búsquedas de happymod para actualizar perfil de intereses
-const originalHappymodHandler = global.plugins.find(p => 
-  p.help && p.help.includes && (
-    p.help.includes('happymod') || 
-    p.help.includes('happymodsearch') || 
-    p.help.includes('hpmodsearch')
-  )
-);
-
-if (originalHappymodHandler && originalHappymodHandler.handler) {
-  const originalFunction = originalHappymodHandler.handler;
-  
-  originalHappymodHandler.handler = async (m, ctx) => {
-    // Llamar al manejador original
-    const result = await originalFunction(m, ctx);
-    
-    // Actualizar perfil de intereses si hay texto de búsqueda
-    if (ctx.text && m.sender) {
-      updateUserInterests(m.sender, ctx.text);
-    }
-    
-    return result;
-  };
-}
+// La función de integración con happymod está ahora directamente en handler.before
 
 handler.help = ['appperfil', 'intereses', 'misapps'];
 handler.tags = ['tools'];

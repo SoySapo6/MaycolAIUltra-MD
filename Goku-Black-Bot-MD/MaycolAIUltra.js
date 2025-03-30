@@ -214,7 +214,13 @@ await global.reloadHandler(true).catch(console.error)
 console.log(chalk.bold.yellowBright(`\n╭┄┄┄┄┄┄┄┄┄┄┄┄┄┄ • • • ┄┄┄┄┄┄┄┄┄┄┄┄┄┄ ▸\n┆ ⌛ TIEMPO DE CONEXIÓN AGOTADO, RECONECTANDO....\n╰┄┄┄┄┄┄┄┄┄┄┄┄┄┄ • • • ┄┄┄┄┄┄┄┄┄┄┄┄┄┄ ▸`))
 await global.reloadHandler(true).catch(console.error) //process.send('reset')
 } else {
-console.log(chalk.bold.redBright(`\n⚠️❗ RAZON DE DESCONEXIÓN DESCONOCIDA: ${reason || 'No encontrado'} >> ${connection || 'No encontrado'}`))
+  // Filtrar códigos de error comunes que no necesitamos mostrar constantemente
+  if (reason === 405 || reason === '405') {
+    // No mostrar el error 405 (muy común y no afecta la funcionalidad)
+    // console.debug(`Conexión 405 silenciada: ${connection}`);
+  } else {
+    console.log(chalk.bold.redBright(`\n⚠️❗ RAZON DE DESCONEXIÓN DESCONOCIDA: ${reason || 'No encontrado'} >> ${connection || 'No encontrado'}`));
+  }
 }}
 }
 process.on('uncaughtException', console.error)
