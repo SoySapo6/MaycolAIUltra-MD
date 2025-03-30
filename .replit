@@ -13,46 +13,10 @@ author = "agent"
 
 [[workflows.workflow.tasks]]
 task = "workflow.run"
-args = "WhatsAppBotSetup"
-
-[[workflows.workflow.tasks]]
-task = "workflow.run"
-args = "setup_bot"
-
-[[workflows.workflow.tasks]]
-task = "workflow.run"
-args = "StartWhatsAppBot"
+args = "IniciarBot"
 
 [[workflows.workflow]]
-name = "WhatsAppBotSetup"
-author = "agent"
-
-[workflows.workflow.metadata]
-agentRequireRestartOnSave = false
-
-[[workflows.workflow.tasks]]
-task = "packager.installForAll"
-
-[[workflows.workflow.tasks]]
-task = "shell.exec"
-args = "node setup.js"
-
-[[workflows.workflow]]
-name = "setup_bot"
-author = "agent"
-
-[workflows.workflow.metadata]
-agentRequireRestartOnSave = false
-
-[[workflows.workflow.tasks]]
-task = "packager.installForAll"
-
-[[workflows.workflow.tasks]]
-task = "shell.exec"
-args = "node setup.js"
-
-[[workflows.workflow]]
-name = "StartWhatsAppBot"
+name = "IniciarBot"
 author = "agent"
 
 [workflows.workflow.metadata]
