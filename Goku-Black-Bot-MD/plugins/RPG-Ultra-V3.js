@@ -2,6 +2,9 @@ import { xpRange } from '../lib/levelling.js'
 import fs from 'fs'
 import fetch from 'node-fetch'
 import { join } from 'path'
+import pkg from '@whiskeysockets/baileys';
+const { generateWAMessageFromContent, proto } = pkg;
+
 let handler = async (m, { conn, args, usedPrefix, command, isPrems }) => {
   
   // RPG-Ultra V3 - Sistema de Juego de Rol Avanzado
@@ -133,7 +136,189 @@ let handler = async (m, { conn, args, usedPrefix, command, isPrems }) => {
   let _uptime = process.uptime() * 1000
   
   // Comando principal y su procesamiento
-  if (!args[0]) return conn.reply(m.chat, helpText, m)
+  if (!args[0]) {
+    try {
+      // Creación de la lista interactiva de comandos RPG
+      const interactiveMessage = {
+        header: { title: '🌟 𝐑𝐏𝐆-𝐔𝐥𝐭𝐫𝐚 𝐕𝟑 - 𝐒𝐢𝐬𝐭𝐞𝐦𝐚 𝐝𝐞 𝐉𝐮𝐞𝐠𝐨 🌟' },
+        hasMediaAttachment: false,
+        body: { text: `¡Bienvenido al sistema RPG avanzado! Selecciona la categoría de comandos que deseas explorar.
+
+• Para usar un comando simplemente escribe: .rpg [comando]
+• Ejemplo: .rpg adventure, .rpg mine, .rpg profile
+
+💪 ¡Adelante aventurero, grandes desafíos te esperan!` },
+        nativeFlowMessage: {
+          buttons: [
+            {
+              name: 'single_select',
+              buttonParamsJson: JSON.stringify({
+                title: '𝐒𝐞𝐥𝐞𝐜𝐜𝐢𝐨𝐧𝐚 𝐮𝐧𝐚 𝐜𝐚𝐭𝐞𝐠𝐨𝐫í𝐚',
+                sections: [
+                  {
+                    title: '⚔️ COMANDOS DE ACCIÓN', 
+                    highlight_label: "Popular",
+                    rows: [
+                      {
+                        title: "│📊│PERFIL RPG", 
+                        description: "Ver tu perfil con estadísticas, recursos y propiedades",
+                        id: `${usedPrefix}rpg profile`
+                      },
+                      {
+                        title: "│🏕️│AVENTURA", 
+                        description: "Embárcate en una aventura para conseguir EXP y recursos",
+                        id: `${usedPrefix}rpg adventure`
+                      },
+                      {
+                        title: "│⛏️│MINAR", 
+                        description: "Mina en busca de piedras preciosas y minerales",
+                        id: `${usedPrefix}rpg mine`
+                      },
+                      {
+                        title: "│🏹│CAZAR", 
+                        description: "Caza animales para obtener comida y cuero",
+                        id: `${usedPrefix}rpg hunt`
+                      },
+                      {
+                        title: "│🌾│CULTIVAR", 
+                        description: "Trabaja en tu granja para obtener cultivos y hierbas",
+                        id: `${usedPrefix}rpg farm`
+                      },
+                      {
+                        title: "│🎣│PESCAR", 
+                        description: "Pesca una variedad de peces para alimento",
+                        id: `${usedPrefix}rpg fish`
+                      },
+                      {
+                        title: "│⚒️│FABRICAR", 
+                        description: "Convierte recursos básicos en objetos valiosos",
+                        id: `${usedPrefix}rpg craft`
+                      }
+                    ]
+                  },
+                  {
+                    title: '🏆 SISTEMA SOCIAL', 
+                    highlight_label: "Multijugador",
+                    rows: [
+                      {
+                        title: "│⚔️│DUELO", 
+                        description: "Desafía a otro jugador a un duelo de habilidades",
+                        id: `${usedPrefix}rpg duel`
+                      },
+                      {
+                        title: "│💰│ROBAR", 
+                        description: "Intenta robar recursos de otro jugador",
+                        id: `${usedPrefix}rpg rob`
+                      },
+                      {
+                        title: "│💍│MATRIMONIO", 
+                        description: "Propón matrimonio a otro jugador",
+                        id: `${usedPrefix}rpg marry`
+                      },
+                      {
+                        title: "│👨‍👩‍👧‍👦│FAMILIA", 
+                        description: "Gestiona tu familia o adopta a otros jugadores",
+                        id: `${usedPrefix}rpg family`
+                      },
+                      {
+                        title: "│🛡️│CLAN", 
+                        description: "Administra o únete a un clan de guerreros",
+                        id: `${usedPrefix}rpg clan`
+                      }
+                    ]
+                  },
+                  {
+                    title: '🏠 PROPIEDADES Y MASCOTAS', 
+                    highlight_label: "Gestión",
+                    rows: [
+                      {
+                        title: "│🏡│COMPRAR CASA", 
+                        description: "Adquiere o mejora tu vivienda",
+                        id: `${usedPrefix}rpg buyhouse`
+                      },
+                      {
+                        title: "│🌱│COMPRAR GRANJA", 
+                        description: "Adquiere o mejora tu granja para producir más cultivos",
+                        id: `${usedPrefix}rpg buyfarm`
+                      },
+                      {
+                        title: "│🔨│TALLER", 
+                        description: "Construye un taller para mejorar el crafteo",
+                        id: `${usedPrefix}rpg workshop`
+                      },
+                      {
+                        title: "│🐶│MASCOTAS", 
+                        description: "Gestiona tus mascotas que te ayudan en aventuras",
+                        id: `${usedPrefix}rpg pet`
+                      },
+                      {
+                        title: "│🦊│ADOPTAR MASCOTA", 
+                        description: "Adopta una nueva mascota para tu aventura",
+                        id: `${usedPrefix}rpg petadopt`
+                      }
+                    ]
+                  },
+                  {
+                    title: '📜 MISIONES Y ECONOMÍA', 
+                    highlight_label: "Diario",
+                    rows: [
+                      {
+                        title: "│📋│MISIONES", 
+                        description: "Acepta misiones para ganar recompensas especiales",
+                        id: `${usedPrefix}rpg quest`
+                      },
+                      {
+                        title: "│🌞│DIARIO", 
+                        description: "Reclama tu recompensa diaria de recursos",
+                        id: `${usedPrefix}rpg daily`
+                      },
+                      {
+                        title: "│📖│HISTORIA", 
+                        description: "Descubre la historia del mundo RPG",
+                        id: `${usedPrefix}rpg story`
+                      },
+                      {
+                        title: "│🏪│TIENDA", 
+                        description: "Compra equipamiento, semillas y otros recursos",
+                        id: `${usedPrefix}rpg shop`
+                      },
+                      {
+                        title: "│💱│VENDER", 
+                        description: "Vende tus recursos para obtener oro",
+                        id: `${usedPrefix}rpg sell`
+                      }
+                    ]
+                  }
+                ]
+              })
+            }
+          ],
+          messageParamsJson: ''
+        }
+      };
+
+      const message = generateWAMessageFromContent(m.chat, {
+        viewOnceMessage: {
+          message: {
+            messageContextInfo: {
+              deviceListMetadata: {},
+              deviceListMetadataVersion: 2
+            },
+            interactiveMessage: interactiveMessage
+          }
+        }
+      }, {
+        quoted: m
+      });
+
+      await conn.relayMessage(m.chat, message.message, { messageId: message.key.id });
+      return;
+    } catch (error) {
+      console.error('Error al generar menu RPG:', error);
+      return conn.reply(m.chat, helpText, m); // Fallback al texto de ayuda normal
+    }
+  }
+  
   let type = (args[0] || '').toLowerCase()
   
   //━━━━━━━━━[ IMPLEMENTACIÓN DE COMANDOS ]━━━━━━━━━//

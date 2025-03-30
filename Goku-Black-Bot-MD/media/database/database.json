@@ -165,7 +165,7 @@
       "lastrob": 0,
       "level": 0,
       "moras": 10,
-      "money": null,
+      "money": 200,
       "muto": false,
       "premium": false,
       "premiumTime": 0,
@@ -184,12 +184,12 @@
         "soal": null
       },
       "role": "*𝗡𝗼𝘃𝗮𝘁𝗼 V* 🍷",
-      "exp": 27590,
+      "exp": 27658,
       "lastcodereg": 0,
       "crime": 0,
       "lastmining": 0,
       "warn": 0,
-      "spam": 1743362298379,
+      "spam": 1743363093907,
       "estrellas": null,
       "Subs": 1743358965066,
       "gold": 1000,
@@ -10836,7 +10836,7 @@
         "soal": null
       },
       "role": "*𝗡𝗼𝘃𝗮𝘁𝗼 V* 🍷",
-      "exp": 109,
+      "exp": 168,
       "lastcodereg": 0,
       "crime": 0,
       "lastmining": 0,
@@ -16910,6 +16910,50 @@
         "soal": null
       },
       "role": "*𝗡𝗼𝘃𝗮𝘁𝗼 V* 🍷"
+    },
+    "51950902324@s.whatsapp.net": {
+      "afk": -1,
+      "afkReason": "",
+      "name": "Jhere",
+      "age": 0,
+      "bank": 0,
+      "banned": false,
+      "BannedReason": "",
+      "Banneduser": false,
+      "coin": 0,
+      "diamond": 3,
+      "joincount": 1,
+      "lastadventure": 0,
+      "lastcoins": 0,
+      "lastclaim": 0,
+      "lastcode": 0,
+      "lastcofre": 0,
+      "lastdiamantes": 0,
+      "lastduel": 0,
+      "lastpago": 0,
+      "lastrob": 0,
+      "level": 0,
+      "moras": 10,
+      "money": null,
+      "muto": false,
+      "premium": false,
+      "premiumTime": 0,
+      "registered": false,
+      "regTime": -1,
+      "rendang": 0,
+      "akinator": {
+        "sesi": false,
+        "server": null,
+        "frontaddr": null,
+        "session": null,
+        "signature": null,
+        "question": null,
+        "progression": null,
+        "step": null,
+        "soal": null
+      },
+      "role": "*𝗡𝗼𝘃𝗮𝘁𝗼 V* 🍷",
+      "exp": null
     }
   },
   "chats": {
@@ -20646,6 +20690,12 @@
       "success": 22,
       "last": 1743362274596,
       "lastSuccess": 1743362274596
+    },
+    "rpg-clicker.js": {
+      "total": 2,
+      "success": 2,
+      "last": 1743363094283,
+      "lastSuccess": 1743363094283
     }
   },
   "msgs": {},
@@ -20675,7 +20725,7 @@
       "modoia": false,
       "jadibotmd": true,
       "autobio": false,
-      "status": 1743362975028
+      "status": 1743363093822
     },
     "51916787717@s.whatsapp.net": {
       "self": false,
@@ -20688,7 +20738,7 @@
       "modoia": false,
       "jadibotmd": true,
       "autobio": false,
-      "status": 1743363030964
+      "status": 1743363094874
     },
     "5491133472641@s.whatsapp.net": {
       "self": false,
@@ -20739,6 +20789,17 @@
       "territory": "",
       "treasury": 1000,
       "founded": "Sun Mar 30 2025"
+    }
+  },
+  "clicker": {
+    "51921826291@s.whatsapp.net": {
+      "clicks": 0,
+      "lastClick": 0,
+      "multiplier": 1,
+      "upgrades": {
+        "autoClick": 0,
+        "multiplier": 0
+      }
     }
   }
 }
