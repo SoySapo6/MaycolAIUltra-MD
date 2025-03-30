@@ -27,7 +27,8 @@ let tags = {
   'audio': '𝘼𝙐𝘿𝙄𝙊𝙎', 
   'ai': '𝘼𝙄',
   'transformador': '𝘾𝙊𝙉𝙑𝙀𝙍𝙏𝙄𝘿𝙊𝙍𝙀𝙎',
-}
+  'font': '𝙁𝙊𝙉𝙏𝙎',
+} 
 
 const defaultMenu = {
   before: `╭══════════════ ⪩
@@ -40,13 +41,14 @@ const defaultMenu = {
 ║ ✧ 📚 Baileys: Multi Device
 ║ ✧ ⏱️ Tiempo Activo: %uptime
 ║ ✧ 👤 Usuarios registrados: %totalreg
+║ ✧ 💻 Host: Replit
 ╚═════════════════════✦
 %readmore
 ╔══✦「 Info del Usuario 」✦══╗
 ║ ✧ 💌 Cliente: %name
 ║ ✧ ⚡ Experiencia: %exp
 ║ ✧ 🍪 cookies: %estrellas
-║ ✧ 🫧 Nivel: %level
+║ ✧ 🤓 Nivel: %level
 ║ ✧ 🛡️ Rango: %role
 ╚═════════════════════✦
 
@@ -55,7 +57,7 @@ const defaultMenu = {
 
 \t*𝗟𝗜𝗦𝗧𝗔 𝗗𝗘 𝗖𝗢𝗠𝗔𝗡𝗗𝗢𝗦* 
 `.trimStart(),
-      header: '.    ╭─◉⧫┈⎯🫧⦿𖠙✦⧫◉─╮\n╭╼⬪࣪ꥈ𑁍⃪࣭۪ٜ݊݊݊݊݊໑ٜ࣪ %category ໑⃪࣭۪ٜ݊݊݊݊𑁍ꥈ࣪⬪\n┃֪࣪   ╰─◉⧫┈⎯🫧❈⧫⎯◉─╯',
+      header: '.    ╭─◉⧫┈⎯🤓⦿𖠙✦⧫◉─╮\n╭╼⬪࣪ꥈ𑁍⃪࣭۪ٜ݊݊݊݊݊໑ٜ࣪ %category ໑⃪࣭۪ٜ݊݊݊݊𑁍ꥈ࣪⬪\n┃֪࣪   ╰─◉⧫┈⎯🤓❈⧫⎯◉─╯',
   body: '├ׁ̟̇❍✎ %cmd\n',
   footer: '╚═⎯⧫❈⠄⭎⧫❈⠄⭎⧫❈⠄⭎⧫❈⎯═╝\n',
   after: `> ${dev}`
@@ -167,7 +169,7 @@ const pp = await conn.profilePictureUrl(who, 'image').catch(_ => 'https://i.post
 
 // await conn.reply(m.chat, '🍟 Enviando el menú.....', m, rcanal)
 
-await m.react('🫧') 
+await m.react('🤓') 
 
 //await conn.sendFile(m.chat, imagen1, 'yaemori.jpg', text.trim(), fkontak, null, rcanal)
 
