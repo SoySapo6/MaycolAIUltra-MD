@@ -1,4 +1,4 @@
-GOKU BLACK BOT MD - INSTRUCCIONES
+MAYCOLAIULTRA-MD - INSTRUCCIONES
 
 Para configurar correctamente el bot:
 
@@ -7,14 +7,14 @@ Para configurar correctamente el bot:
    - Personaliza el nombre del bot y los mensajes
 
 2. Para iniciar el bot:
-   - Ejecuta: node start.js
-   - Escanea el código QR que aparece con WhatsApp
-   - El bot se conectará a tu cuenta de WhatsApp
+   - Ejecuta: node start.js o ./run-bot.sh
+   - El bot usa autenticación con código de 8 dígitos
+   - El número configurado es 51921826291
 
 3. Comandos principales:
    - .menu - Muestra el menú principal
    - .help - Muestra ayuda
    - .info - Información del bot
 
-Si necesitas más ayuda, consulta la documentación completa en:
-https://github.com/Eliasivan/Goku-Black-Bot-MD
+Si necesitas más ayuda, consulta el canal de WhatsApp:
+https://whatsapp.com/channel/0029VayXJte65yD6LQGiRB0R

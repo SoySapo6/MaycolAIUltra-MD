@@ -12,8 +12,8 @@ const rl = readline.createInterface({
 
 const botDir = path.join(process.cwd(), 'Goku-Black-Bot-MD');
 
-console.log('🤖 Starting Goku Black Bot MD 🤖');
-console.log('=============================');
+console.log('🤖 Starting MaycolAIUltra-MD 🤖');
+console.log('==============================');
 
 /**
  * Check if setup is complete

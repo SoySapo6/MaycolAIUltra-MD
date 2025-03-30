@@ -1,20 +1,25 @@
-GOKU BLACK BOT MD - INSTRUCCIONES
+MAYCOLAIULTRA-MD - INSTRUCCIONES
 
 Para configurar correctamente el bot:
 
 1. Edita el archivo config.js en la carpeta Goku-Black-Bot-MD para personalizar el bot
-   - Agrega tu número de WhatsApp en el formato: 'YOURNUMBER' (ej: '123456789012')
-   - Personaliza el nombre del bot y los mensajes
+   - Tu número de WhatsApp ya está configurado: 51921826291
+   - Puedes personalizar el nombre del bot y los mensajes
 
 2. Para iniciar el bot:
-   - Ejecuta: node start.js
-   - Escanea el código QR que aparece con WhatsApp
-   - El bot se conectará a tu cuenta de WhatsApp
+   - Ejecuta: ./run-bot.sh
+   - El bot usa autenticación con código de 8 dígitos automáticamente
+   - No necesitas escanear código QR ni ingresar manualmente datos
 
-3. Comandos principales:
-   - .menu - Muestra el menú principal
+3. Archivos principales renombrados:
+   - Ivan.js → MaycolAIUltra.js (compatibilidad con la nueva marca)
+   - Tema visual: Hanako Kun anime
+
+4. Comandos principales:
+   - .menu - Muestra el menú principal con tema de Hanako Kun
    - .help - Muestra ayuda
    - .info - Información del bot
+   - /reg nombre.edad - Para registrarte si el bot lo solicita
 
-Si necesitas más ayuda, consulta la documentación completa en:
-https://github.com/Eliasivan/Goku-Black-Bot-MD
+Si necesitas más ayuda, consulta el canal oficial de WhatsApp:
+https://whatsapp.com/channel/0029VayXJte65yD6LQGiRB0R

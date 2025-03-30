@@ -7,7 +7,7 @@ const readline = require('readline');
 const phoneNumber = '51921826291';
 
 // Ejecutar el bot
-const botProcess = spawn('node', ['Ivan.js'], {
+const botProcess = spawn('node', ['index.js'], {
   cwd: path.join(process.cwd(), 'Goku-Black-Bot-MD'),
   stdio: ['pipe', 'pipe', 'pipe']
 });

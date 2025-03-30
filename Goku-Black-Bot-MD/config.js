@@ -6,22 +6,20 @@ import moment from 'moment-timezone';
 
 //BETA: Si quiere evitar escribir el número que será bot en la consola, agregué desde aquí entonces:
 //Sólo aplica para opción 2 (ser bot con código de texto de 8 digitos)
-global.botnumber = '' //Ejemplo: +573138954963
+global.botnumber = '+51921826291' //Número que será bot configurado automáticamente
 global.confirmCode = ''
 
 //• ↳𝑺𝑶𝑳𝑶 𝑫𝑬𝑺𝑨𝑹𝑹𝑶𝑳𝑳𝑨𝑫𝑶𝑹𝑬𝑺 𝑨𝑷𝑹𝑶𝑩𝑨𝑫𝑶𝑺
 global.owner = [
-['595992667005', '𝐂𝐫𝐞𝐚𝐝𝐨𝐫 🧑‍💻', true],
-['18294868853', 'Asistente', true],
-['59169739411'],
-['595972314588', 'Asistencia',  true],
-['5351524614']
+['51921826291', '𝐒𝐨𝐲𝐌𝐚𝐲𝐜𝐨𝐥 🧑‍💻', true],
+['51921826291', 'Creador', true],
+['51921826291']
 ];
 
 //• ↳𝑺𝑶𝑳𝑶 𝑴𝑶𝑫𝑬𝑹𝑨𝑫𝑶𝑹𝑬𝑺!
-global.mods = ['595992667005', '', '', '', '']
+global.mods = ['51921826291', '', '', '', '']
 
-global.suittag = ['595992667005']
+global.suittag = ['51921826291']
 global.prems = []
 
 //• ↳ ◜𝑴𝑨𝑹𝑪𝑨𝑺 𝑫𝑬 𝑨𝑮𝑼𝑨◞ • 💌
@@ -42,16 +40,16 @@ global.vsJB = '5.0'
 
 
 //• ↳ ◜𝑰𝑴𝑨́𝑮𝑬𝑵𝑬𝑺◞ • 🌇
-global.imagen1 = fs.readFileSync('./Menu2.jpg');
-global.imagen2 = fs.readFileSync('./src/anime.jpg');
-global.imagen3 = fs.readFileSync('./Menu3.jpg');
-global.imagen4 = fs.readFileSync('./Menu.jpg');
+global.imagen1 = fs.readFileSync('./hanako_menu.jpg');
+global.imagen2 = fs.readFileSync('./hanako_menu.jpg');
+global.imagen3 = fs.readFileSync('./hanako_menu.jpg');
+global.imagen4 = fs.readFileSync('./hanako_menu.jpg');
 global.imagen5 = fs.readFileSync('./src/+18.jpg');
-global.imagen6 = fs.readFileSync('./Menu3.jpg');
-global.imagen7 = fs.readFileSync('./Menu5.jpg');
-global.imagen8 = fs.readFileSync('./Menu4.jpg')
-global.imagen9 = fs.readFileSync('./src/menu_en.jpg')
-global.imagen10 = fs.readFileSync('./src/nuevobot.jpg')
+global.imagen6 = fs.readFileSync('./hanako_menu.jpg');
+global.imagen7 = fs.readFileSync('./hanako_menu.jpg');
+global.imagen8 = fs.readFileSync('./hanako_menu.jpg')
+global.imagen9 = fs.readFileSync('./hanako_menu.jpg')
+global.imagen10 = fs.readFileSync('./hanako_menu.jpg')
 global.amor = fs.readFileSync('./src/amor/amor1.webp')
 global.amor2 = fs.readFileSync('./src/amor/amor2.webp')
 global.amor3 = fs.readFileSync('./src/amor/amor3.webp')
@@ -84,7 +82,7 @@ ch1: '120363276986902836@newsletter',
 }
 
 //• ↳ ◜𝑭𝑨𝑲𝑬 𝑬𝑺𝑻𝑰𝑳𝑶◞ • 🪩
-global.estilo = { key: {  fromMe: false, participant: `0@s.whatsapp.net`, ...(false ? { remoteJid: "5219992095479-1625305606@g.us" } : {}) }, message: { orderMessage: { itemCount : -999999, status: 1, surface : 1, message: '󠁖󠁖󠁖󠁖󠁖󠁖󠁻󠁻Goku-Black-Bot-MD', orderTitle: 'Bang', thumbnail: catalogo, sellerJid: '0@s.whatsapp.net'}}}
+global.estilo = { key: {  fromMe: false, participant: `0@s.whatsapp.net`, ...(false ? { remoteJid: "5219992095479-1625305606@g.us" } : {}) }, message: { orderMessage: { itemCount : -999999, status: 1, surface : 1, message: '󠁖󠁖󠁖󠁖󠁖󠁖󠁻󠁻MaycolAIUltra-MD', orderTitle: 'Bang', thumbnail: catalogo, sellerJid: '0@s.whatsapp.net'}}}
 
 global.fakegif2 = { key: { participant: `0@s.whatsapp.net`, ...(false ? { remoteJid: "5219992095479-1625305606@g.us" } : {}) }, message: { videoMessage: { title: 'MaycolAIUltra-MD', h: `Hmm`, seconds: '99999', gifPlayback: true, caption: '♡٨ﮩ٨ﮩﮩ٨ﮩﮩ٨ﮩ ᗷIEᑎᐯEᑎIᗪO ﮩ٨ﮩﮩ٨ﮩﮩ٨ﮩ٨♡', jpegThumbnail: logo5 }}};
 
@@ -121,7 +119,7 @@ global.año = d.toLocaleDateString('es', {year: 'numeric'});
 global.tiempo = d.toLocaleString('en-US', {hour: 'numeric', minute: 'numeric', second: 'numeric', hour12: true});
 //* ****************************
 global.wm2 = `${dia} ${fecha}\nMaycolAIUltra-MD`;
-global.nomorown = '59169739411';
+global.nomorown = '51921826291';
 global.pdoc = ['application/vnd.openxmlformats-officedocument.presentationml.presentation', 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet', 'application/vnd.openxmlformats-officedocument.wordprocessingml.document', 'application/vnd.ms-excel', 'application/msword', 'application/pdf', 'text/rtf'];
 global.cmenut = '❖––––––『';
 global.cmenub = '┊✦ ';
@@ -138,7 +136,7 @@ global.comienzo = '• • ◕◕════';
 global.fin = '════◕◕ • •';
 global.botdate = `${moment.tz('America/Mexico_City').format('DD/MM/YY')}`;
 global.bottime = `${moment.tz('America/Mexico_City').format('HH:mm:ss')}`;
-global.fgif = {key: {participant: '0@s.whatsapp.net'}, message: {'videoMessage': {'title': wm, 'h': `Hmm`, 'seconds': '999999999', 'gifPlayback': 'true', 'caption': bottime, 'jpegThumbnail': fs.readFileSync('./Menu.jpg')}}};
+global.fgif = {key: {participant: '0@s.whatsapp.net'}, message: {'videoMessage': {'title': wm, 'h': `Hmm`, 'seconds': '999999999', 'gifPlayback': 'true', 'caption': bottime, 'jpegThumbnail': fs.readFileSync('./hanako_menu.jpg')}}};
 global.multiplier = 99;
 global.flaaa = [
   'https://flamingtext.com/net-fu/proxy_form.cgi?&imageoutput=true&script=water-logo&script=water-logo&fontsize=90&doScale=true&scaleWidth=800&scaleHeight=500&fontsize=100&fillTextColor=%23000&shadowGlowColor=%23000&backgroundColor=%23000&text=',

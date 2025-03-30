@@ -10,9 +10,9 @@ const rl = readline.createInterface({
   output: process.stdout
 });
 
-console.log('🤖 Welcome to Goku Black Bot MD Setup 🤖');
+console.log('🤖 Welcome to MaycolAIUltra-MD Setup 🤖');
 console.log('=======================================');
-console.log('This script will help you set up the Goku Black Bot MD WhatsApp bot.');
+console.log('This script will help you set up the MaycolAIUltra-MD WhatsApp bot.');
 
 // Define the repository URL
 const repoUrl = 'https://github.com/Eliasivan/Goku-Black-Bot-MD.git';
@@ -45,7 +45,7 @@ function cloneRepository() {
     return true;
   }
   
-  console.log('\n🔄 Cloning the Goku Black Bot MD repository...');
+  console.log('\n🔄 Cloning the MaycolAIUltra-MD repository...');
   return executeCommand(`git clone ${repoUrl}`);
 }
 
@@ -70,7 +70,7 @@ function setupConfiguration() {
   
   // Create a helper file with instructions
   const instructionsPath = path.join(process.cwd(), 'bot-instructions.txt');
-  const instructions = `GOKU BLACK BOT MD - INSTRUCCIONES
+  const instructions = `MAYCOLAIULTRA-MD - INSTRUCCIONES
 
 Para configurar correctamente el bot:
 
@@ -79,17 +79,17 @@ Para configurar correctamente el bot:
    - Personaliza el nombre del bot y los mensajes
 
 2. Para iniciar el bot:
-   - Ejecuta: node start.js
-   - Escanea el código QR que aparece con WhatsApp
-   - El bot se conectará a tu cuenta de WhatsApp
+   - Ejecuta: node start.js o ./run-bot.sh
+   - El bot usa autenticación con código de 8 dígitos
+   - El número configurado es 51921826291
 
 3. Comandos principales:
    - .menu - Muestra el menú principal
    - .help - Muestra ayuda
    - .info - Información del bot
 
-Si necesitas más ayuda, consulta la documentación completa en:
-https://github.com/Eliasivan/Goku-Black-Bot-MD
+Si necesitas más ayuda, consulta el canal de WhatsApp:
+https://whatsapp.com/channel/0029VayXJte65yD6LQGiRB0R
 `;
 
   try {
@@ -105,16 +105,20 @@ https://github.com/Eliasivan/Goku-Black-Bot-MD
     console.log('Creating default config.js file...');
     
     const defaultConfig = `
-// Config.js file for Goku Black Bot MD
-global.owner = ['YOURNUMBER', 'SECONDNUMBER']  // Example: ['123456789', '234567890']
-global.mods = ['YOURNUMBER', 'SECONDNUMBER']   
-global.prems = ['YOURNUMBER', 'SECONDNUMBER']
+// Config.js file for MaycolAIUltra-MD
+global.owner = ['51921826291']  // Your WhatsApp number
+global.mods = ['51921826291']   
+global.prems = []
 
-// Messages
-global.packname = 'Goku-Black-Bot'
-global.author = 'WhatsApp Bot'
-global.namebot = 'Goku Black Bot MD'
-global.wm = 'Goku Black © Bot'
+// Bot information
+global.packname = 'MaycolAIUltra-MD'
+global.author = 'SoyMaycol'
+global.namebot = 'MaycolAIUltra-MD'
+global.wm = 'MaycolAIUltra-MD © Bot'
+
+// BETA: Si quiere evitar escribir el número que será bot en la consola
+global.botnumber = '+51921826291' // Número que será bot configurado automáticamente
+global.confirmCode = ''
 
 // Links & API Keys
 global.APIs = {
@@ -128,19 +132,19 @@ global.APIKeys = {
 }
 
 // Sticker WM
-global.packname = 'Goku Black Bot MD'
-global.author = 'WhatsApp Bot'
+global.packname = 'MaycolAIUltra-MD'
+global.author = 'SoyMaycol'
 
 // Bot settings
 global.multiplier = 69
-global.footer = 'Goku Black © Bot'
-global.igfg = 'Follow on Instagram\\nhttps://www.instagram.com/yourhandle'
-global.fgsc = 'Join to the channel\\nhttps://t.me/yourchannel' 
-global.fgyt = 'Follow on YouTube\\nhttps://youtube.com/yourchannel'
-global.fgpyp = 'Follow on Facebook\\nhttps://facebook.com/yourpage'
-global.fglog = 'https://i.imgur.com/jLsXRll.jpg'
-global.thumb = 'https://i.imgur.com/KLHCWq5.jpeg'
-global.wait = '*⌛ _Charging..._*\\n*▰▰▰▱▱▱▱▱*'
+global.footer = 'MaycolAIUltra-MD © Bot'
+global.igfg = 'Follow on Instagram\\nhttps://www.instagram.com/soymaycol'
+global.fgsc = 'Join to the channel\\nhttps://whatsapp.com/channel/0029VayXJte65yD6LQGiRB0R' 
+global.fgyt = 'Follow on YouTube\\nhttps://youtube.com/@Ivamods15'
+global.fgpyp = 'Follow on Facebook\\nhttps://facebook.com/soymaycol'
+global.fglog = 'https://i.postimg.cc/k59W5ZDT/descarga-5.jpg'
+global.thumb = 'https://i.pinimg.com/564x/8b/a9/e0/8ba9e0ea1aca0dabc453b86e0b3fca07.jpg'
+global.wait = '*⌛ _Cargando..._*\\n*▰▰▰▱▱▱▱▱*'
 global.rwait = '⌛'
 global.dmoji = '🤭'
 global.done = '✅'
@@ -149,9 +153,9 @@ global.xmoji = '🔥'
 
 // Default settings
 global.owner = [
-  ['123456789', 'Owner', true]
+  ['51921826291', 'SoyMaycol', true]
 ]
-global.mods = [] 
+global.mods = ['51921826291'] 
 global.prems = [] 
 
 // Customization
@@ -161,7 +165,7 @@ global.dxlsx = 'application/vnd.openxmlformats-officedocument.spreadsheetml.shee
 global.dpdf = 'application/pdf'
 global.drtf = 'text/rtf'
 
-global.thumbdoc = 'https://i.imgur.com/0PrLKIv.jpeg'
+global.thumbdoc = 'https://i.pinimg.com/564x/99/33/a1/9933a1d926ef27b08c2ca36e5a411db0.jpg'
 
 global.flaaa = [
   'https://flamingtext.com/net-fu/proxy_form.cgi?&imageoutput=true&script=water-logo&script=water-logo&fontsize=90&doScale=true&scaleWidth=800&scaleHeight=500&fontsize=100&fillTextColor=%23000&shadowGlow=false&shadowOpacity=25&fillTextPattern=Warning!&fillColor1Color=%23333&fillColor2Color=%23333&fillColor3Color=%23333&fillColor4Color=%23333&fillColor5Color=%23333&fillColor6Color=%23333&fillColor7Color=%23333&fillColor8Color=%23333&fillColor9Color=%23333&fillColor10Color=%23333&fillOutlineColor=%23E4E4E4&fillOutline2Color=%23E4E4E4&backgroundColor=%23999999&text=']
@@ -210,10 +214,11 @@ async function main() {
     process.exit(1);
   }
   
-  console.log('\n✅ Goku Black Bot MD has been successfully set up!');
-  console.log('\n📱 To start the bot, run: node start.js');
-  console.log('\n⚠️ Remember to edit the config.js file to customize your bot before starting it.');
-  console.log('\n🌐 For more information, please refer to the README.md file.');
+  console.log('\n✅ MaycolAIUltra-MD has been successfully set up!');
+  console.log('\n📱 To start the bot, run: ./run-bot.sh');
+  console.log('\n⚠️ The bot is configured to use code authentication with number 51921826291');
+  console.log('\n📋 Main files have been renamed: Ivan.js → MaycolAIUltra.js for rebranding');
+  console.log('\n🌐 For more information, join the WhatsApp channel: https://whatsapp.com/channel/0029VayXJte65yD6LQGiRB0R');
   
   rl.close();
 }

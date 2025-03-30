@@ -31,11 +31,11 @@ let tags = {
 
 const defaultMenu = {
   before: `╭══════════════ ⪩
-“ Hola *Humano* mi nombre es *Goku-Black-Bot-MD*, %greeting ”
+" Hola *Humano* mi nombre es *MaycolAIUltra-MD*, %greeting "
 
 ╔══✦「 Info del Bot 」✦══╗
-║ ✧ 👨🏻‍💻 Creador: Ivan
-║ ✧ 🌀 Tipo Bot: Goku-Black-Bot-MD
+║ ✧ 👨🏻‍💻 Creador: SoyMaycol
+║ ✧ 🌀 Tipo Bot: MaycolAIUltra-MD
 ║ ✧ 🚩 Modo: Público
 ║ ✧ 📚 Baileys: Multi Device
 ║ ✧ ⏱️ Tiempo Activo: %uptime
@@ -55,8 +55,8 @@ const defaultMenu = {
 
 \t*𝗟𝗜𝗦𝗧𝗔 𝗗𝗘 𝗖𝗢𝗠𝗔𝗡𝗗𝗢𝗦* 
 `.trimStart(),
-      header: '.    ╭─◉⧫┈⎯🫧⦿𖠙✦⧫◉─╮\n╭╼⬪࣪ꥈ𑁍⃪࣭۪ٜ݊݊݊݊݊໑ٜ࣪ %category ໑⃪࣭۪ٜ݊݊݊݊𑁍ꥈ࣪⬪\n┃֪࣪   ╰─◉⧫┈⎯🫧❈⧫⎯◉─╯',
-  body: '├ׁ̟̇❍✎ %cmd\n',
+      header: '.    ╭─◉⧫┈⎯🫧⦿𖠙✦⧫◉─╮\n╭╼⬪࣪ꥈ𑁍⃪࣭۪ٜ݊݊݊݊݊໑ٜ࣪ %category ໑⃪࣭۪ٜ݊݊݊݊𑁍ꥈ࣪⬪\n┃֪࣪   ╰─◉⧫┈⎯🫧❈⧫⎯◉─╯',
+  body: '├ׁ̟̇❍✎ %cmd\n',
   footer: '╚═⎯⧫❈⠄⭎⧫❈⠄⭎⧫❈⠄⭎⧫❈⎯═╝\n',
   after: `> ${dev}`
 }
@@ -157,19 +157,17 @@ text = text.replace(new RegExp(`%(${Object.keys(replace).sort((a, b) => b.length
 
 const who = m.mentionedJid && m.mentionedJid[0] ? m.mentionedJid[0] : m.fromMe ? conn.user.jid : m.sender
 
-const pp = await conn.profilePictureUrl(who, 'image').catch(_ => 'https://telegra.ph/file/327f6ad853cb4f405aa80.jpg')
+const pp = await conn.profilePictureUrl(who, 'image').catch(_ => 'https://i.postimg.cc/XYtG0Q0M/hanako1.jpg')
 
-  let category = "video"
+  let category = "imagen"
   const db = './media/database/db.json'
   const db_ = JSON.parse(fs.readFileSync(db))
   const random = Math.floor(Math.random() * db_.links[category].length)
   const rlink = db_.links[category][random]
   global.vid = rlink
-  const response = await fetch(vid)
-  const gif = await response.buffer()
  // const img = imagen1
 
-/*await conn.reply(m.chat, '╭ׅׄ̇─ׅ̻ׄ╮۪̇߭︹ׅ̟ׄ̇︹ׅ۪ׄ̇߭︹ׅ̟ׄ̇⊹۪̇߭︹ׅ̟ׄ̇︹ׅ۪ׄ̇߭︹ׅ̟ׄ̇⊹۪̇߭︹ׅ̟ׄ̇︹ׅ۪ׄ̇߭︹ׅ̟ׄ̇⊹*\n├ ⚘݄𖠵⃕⁖𖥔.Ƈᴀʀɢᴀɴᴅᴏ,  ꪶꪾ❍̵̤̂̂ꫂ\n├Ąɢᴜᴀʀᴅᴇ ᴜɴ ᴍᴏᴍᴇɴᴛᴏ❞\n╰ׁ̻─ׅׄ─۪۬─۟─۪─۟─۪۬─۟─۪─۟─۪۬─۟─۪─۟┄۪۬┄۟┄۪┈۟┈۪', m, { contextInfo:{ forwardingScore: 2024, isForwarded: true, externalAdReply: {title: namechannel, body: '𝐃𝐞𝐯 𝐖𝐨𝐫𝐝 𝐓𝐞𝐚𝐦 𝐎𝐟𝐢𝐜𝐢𝐚𝐥', sourceUrl: channel, thumbnail: icons }}})*/
+/*await conn.reply(m.chat, '╭ׅׄ̇─ׅ̻ׄ╮۪̇߭︹ׅ̟ׄ̇︹ׅ۪ׄ̇߭︹ׅ̟ׄ̇⊹۪̇߭︹ׅ̟ׄ̇︹ׅ۪ׄ̇߭︹ׅ̟ׄ̇⊹۪̇߭︹ׅ̟ׄ̇︹ׅ۪ׄ̇߭︹ׅ̟ׄ̇⊹*\n├ ⚘݄𖠵⃕⁖𖥔.Ƈᴀʀɢᴀɴᴅᴏ,  ꪶꪾ❍̵̤̂̂ꫂ\n├Ąɢᴜᴀʀᴅᴇ ᴜɴ ᴍᴏᴍᴇɴᴛᴏ❞\n╰ׁ̻─ׅׄ─۪۬─۟─۪─۟─۪۬─۟─۪─۟─۪۬─۟─۪─۟┄۪۬┄۟┄۪┈۟┈۪', m, { contextInfo:{ forwardingScore: 2024, isForwarded: true, externalAdReply: {title: namechannel, body: '𝐃𝐞𝐯 𝐖𝐨𝐫𝐝 𝐓𝐞𝐚𝐦 𝐎𝐟𝐢𝐜𝐢𝐚𝐥', sourceUrl: channel, thumbnail: icons }}})*/
 
 // await conn.reply(m.chat, '🍟 Enviando el menú.....', m, rcanal)
 
@@ -179,27 +177,25 @@ await m.react('🫧')
 
 await conn.sendMessage(
   m.chat,
-  { video: { url: vid }, caption: text.trim(),
+  { image: { url: vid }, caption: text.trim(),
   contextInfo: {
     mentionedJid: [m.sender],
     isForwarded: true,
     forwardedNewsletterMessageInfo: {
-      newsletterJid: '120363276986902836@newsletter',
-      newsletterName: 'ᘜOKᑌ-ᗷᒪᗩᑕK-ᗷOT-ᗰᗪ',
+      newsletterJid: '0029VayXJte65yD6LQGiRB0R@newsletter',
+      newsletterName: '𝗠𝗮𝘆𝗰𝗼𝗹𝗔𝗜𝗨𝗹𝘁𝗿𝗮-𝗠𝗗',
       serverMessageId: -1,
     },
     forwardingScore: 999,
     externalAdReply: {
-      title: '𝐆𝐨𝐤𝐮-𝐁𝐥𝐚𝐜𝐤-𝐁𝐨𝐭-𝐌𝐃',
+      title: '𝗠𝗮𝘆𝗰𝗼𝗹𝗔𝗜𝗨𝗹𝘁𝗿𝗮-𝗠𝗗',
       body: dev,
-      thumbnailUrl: icono,
-      sourceUrl: redes,
+      thumbnailUrl: 'https://i.postimg.cc/ZRN2m20J/hanako2.jpg',
+      sourceUrl: 'https://whatsapp.com/channel/0029VayXJte65yD6LQGiRB0R',
       mediaType: 1,
-      renderLargerThumbnail: false,
+      renderLargerThumbnail: true,
     },
-  },
-
-  gifPlayback: true, gifAttribution: 0 },
+  }},
   { quoted: fkontak })
 
   } catch (e) {

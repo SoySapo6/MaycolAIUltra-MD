@@ -42,7 +42,7 @@ await conn.reply(m.chat, '𖠌 *Ocurrió un fallo*',  m, rcanal, )
 }
 handler.help = ['dsowner']
 handler.tags = ['fix', 'owner']
-handler.command = ['delGokuBlack', 'delBlack', 'dsowner', 'clearallsession']
+handler.command = ['delMaycolAIUltra', 'delMaycol', 'dsowner', 'clearallsession']
 
 handler.rowner = true
 

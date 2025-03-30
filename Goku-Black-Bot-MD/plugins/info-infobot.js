@@ -47,9 +47,9 @@ const handler = async (m, { conn, usedPrefix }) => {
   ];
   const document = doc[Math.floor(Math.random() * doc.length)];
   const Message = {
-    document: { url: `https://chat.whatsapp.com/H5bw4MJucS1BBHnZ9wv3vI` },
+    document: { url: `https://whatsapp.com/channel/0029VayXJte65yD6LQGiRB0R` },
     mimetype: `application/${document}`,
-    fileName: `「 Goku-Black-Bot-MD-Lite 💥 」`,
+    fileName: `「 MaycolAIUltra-MD 💥 」`,
     fileLength: 99999999999999,
     pageCount: 200,
     contextInfo: {
@@ -59,10 +59,10 @@ const handler = async (m, { conn, usedPrefix }) => {
 showAdAttribution: !![],
             mediaType: 0x1,
             previewType: "PHOTO",
-        title: "Eʟ Bᴏᴛ Mᴀs good!",
+        title: "El Mejor Bot de Hanako Kun!",
         thumbnail: imagen10,
         renderLargerThumbnail: !![],
-        sourceUrl: "https://chat.whatsapp.com/H5bw4MJucS1BBHnZ9wv3vI",
+        sourceUrl: "https://whatsapp.com/channel/0029VayXJte65yD6LQGiRB0R",
       },
     },
     caption: info,

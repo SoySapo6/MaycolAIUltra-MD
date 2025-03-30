@@ -1,5 +1,5 @@
 /**
- * Configuration helper for Goku Black Bot MD
+ * Configuration helper for MaycolAIUltra-MD
  * This file provides information about the configuration options
  * but doesn't replace the actual config.js in the bot directory
  */
@@ -7,20 +7,20 @@
 const configTemplate = {
   // Owner contact info
   owner: [
-    ['NUMBER', 'NAME', true]  // Example: ['1234567890', 'YourName', true]
+    ['51921826291', 'SoyMaycol', true]
   ],
   
   // Moderators
-  mods: [], 
+  mods: ['51921826291'], 
   
   // Premium users
   prems: [],
   
   // Bot identity settings
-  packname: 'Goku-Black-Bot',
-  author: 'Your Name',
-  namebot: 'Goku Black Bot MD',
-  wm: 'Goku Black © Bot',
+  packname: 'MaycolAIUltra-MD',
+  author: 'SoyMaycol',
+  namebot: 'MaycolAIUltra-MD',
+  wm: 'MaycolAIUltra-MD © Bot',
   
   // API Integration
   APIs: {
@@ -38,20 +38,20 @@ const configTemplate = {
   
   // Bot settings
   multiplier: 69,
-  footer: 'Goku Black © Bot',
+  footer: 'MaycolAIUltra-MD © Bot',
   
   // Social media links
-  igfg: 'Follow on Instagram\nhttps://www.instagram.com/yourhandle',
-  fgsc: 'Join to the channel\nhttps://t.me/yourchannel',
-  fgyt: 'Follow on YouTube\nhttps://youtube.com/yourchannel',
-  fgpyp: 'Follow on Facebook\nhttps://facebook.com/yourpage',
+  igfg: 'Follow on Instagram\nhttps://www.instagram.com/soymaycol',
+  fgsc: 'Join to the channel\nhttps://whatsapp.com/channel/0029VayXJte65yD6LQGiRB0R',
+  fgyt: 'Follow on YouTube\nhttps://youtube.com/@Ivamods15',
+  fgpyp: 'Follow on Facebook\nhttps://facebook.com/soymaycol',
   
   // Bot images and assets
-  fglog: 'https://i.imgur.com/jLsXRll.jpg',
-  thumb: 'https://i.imgur.com/KLHCWq5.jpeg',
+  fglog: 'https://i.postimg.cc/k59W5ZDT/descarga-5.jpg',
+  thumb: 'https://i.pinimg.com/564x/8b/a9/e0/8ba9e0ea1aca0dabc453b86e0b3fca07.jpg',
   
   // Status messages
-  wait: '*⌛ _Charging..._*\n*▰▰▰▱▱▱▱▱*',
+  wait: '*⌛ _Cargando..._*\n*▰▰▰▱▱▱▱▱*',
   rwait: '⌛',
   dmoji: '🤭',
   done: '✅',
@@ -66,12 +66,12 @@ const configTemplate = {
   drtf: 'text/rtf',
   
   // Miscellaneous settings
-  thumbdoc: 'https://i.imgur.com/0PrLKIv.jpeg',
+  thumbdoc: 'https://i.pinimg.com/564x/99/33/a1/9933a1d926ef27b08c2ca36e5a411db0.jpg',
   fileLength: 1024000,
   lenguajelatan: false
 };
 
-console.log('⚙️ Goku Black Bot MD Configuration Helper');
+console.log('⚙️ MaycolAIUltra-MD Configuration Helper');
 console.log('=====================================');
 console.log('\nThis is a configuration helper. To properly configure your bot:');
 console.log('\n1. Open the Goku-Black-Bot-MD/config.js file');

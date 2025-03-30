@@ -73,10 +73,10 @@ return resultado;
 const message = users.map((v, index) => `• 「 ${index + 1} 」\n📎 Wa.me/${v.user.jid.replace(/[^0-9]/g, '')}?text=${usedPrefix}estado\n👤 Usuario: ${v.user.name || 'Sub-Bot'}\n🕑 Online: ${ v.uptime ? convertirMsADiasHorasMinutosSegundos(Date.now() - v.uptime) : 'Desconocido'}`).join('\n\n__________________________\n\n');
 const replyMessage = message.length === 0 ? `No hay Sub-Bots disponible por el momento, verifique mas tarde.` : message;
 const totalUsers = users.length;
-const responseMessage = `*ᎪϘႮᏆ ͲᏆᎬΝᎬՏ ᏞᎪ ᏞᏆՏͲᎪ ᎠᎬ ՏႮᏴ ᏴϴͲՏ*\n\n habla con el propietario del sub bot y pidele permiso de entrar a tu grupo\n\n\`\`\`Cada sub bot es diferente y cada usuario/propietario usa el sub como quiera, El equipo de Goku-Black-Bot-MD no se hace responsable del uso que le den al mismo sub-bot \`\`\`\n\nSUBBOT CONECTADO: ${totalUsers || '0'}\n\n${replyMessage.trim()}`.trim();
+const responseMessage = `*ᎪϘႮᏆ ͲᏆᎬΝᎬՏ ᏞᎪ ᏞᏆՏͲᎪ ᎠᎬ ՏႮᏴ ᏴϴͲՏ*\n\n habla con el propietario del sub bot y pidele permiso de entrar a tu grupo\n\n\`\`\`Cada sub bot es diferente y cada usuario/propietario usa el sub como quiera, El equipo de MaycolAIUltra-MD no se hace responsable del uso que le den al mismo sub-bot \`\`\`\n\nSUBBOT CONECTADO: ${totalUsers || '0'}\n\n${replyMessage.trim()}`.trim();
 await _envio.sendMessage(m.chat, {text: responseMessage, mentions: _envio.parseMention(responseMessage)}, {quoted: m})
 break   
 }}
 
-handler.command = ['deletesesion', 'deletebot', 'deletesession', 'deletesession', 'stop', 'pausarblack', 'pausarbot', 'bots', 'lisgokublacksito', 'bots']
+handler.command = ['deletesesion', 'deletebot', 'deletesession', 'deletesession', 'stop', 'pausarmaycol', 'pausarbot', 'bots', 'lismaycolsito', 'bots']
 export default handler

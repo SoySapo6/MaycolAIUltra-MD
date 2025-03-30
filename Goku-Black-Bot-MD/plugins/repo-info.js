@@ -1,29 +1,19 @@
 import fetch from 'node-fetch';
 
 let handler = async (m, { conn, usedPrefix, command }) => {
-    const githubRepoURL = 'https://github.com/Ivanmods15/Goku-Black-Bot-MD-Lite';
-
     try {
-        const [, username, repoName] = githubRepoURL.match(/github\.com\/([^/]+)\/([^/]+)/);
-        const response = await fetch(`https://api.github.com/repos/${username}/${repoName}`);
-
-        if (!response.ok) {
-            throw new Error(`La solicitud a la API de GitHub falló con el estado ${response.status}`);
-        }
-
-        const repoData = await response.json();
-        let Codes = '`📂  I N F O R M A C I Ó N  D E  R E P O S I T O R I O`\n\n';
-        Codes += `    ✩  *NOMBRE DEL BOT* : ${repoData.name}\n`;
-        Codes += `    ✩  *NOMBRE DEL PROPIETARIO* : ${repoData.owner.login}\n`;
-        Codes += `    ✩  *ESTRELLAS* : ${repoData.stargazers_count}\n`;
-        Codes += `    ✩  *FORKS* : ${repoData.forks_count}\n`;
-        Codes += `    ✩  *ENLACE DE GITHUB* : ${repoData.html_url}\n`;
-        Codes += `    ✩  *DESCRIPCIÓN* : ${repoData.description || 'Sin descripción disponible'}\n\n`;
-        Codes += `*¡No olvides darle una estrella y hacer fork al repositorio!*\n\n`;
-        Codes += `> *Código creado por ivan y terminado por José Elver*`;
+        let Codes = '`📂  I N F O R M A C I Ó N  D E L  B O T`\n\n';
+        Codes += `    ✩  *NOMBRE DEL BOT* : MaycolAIUltra-MD\n`;
+        Codes += `    ✩  *CREADOR* : SoyMaycol\n`;
+        Codes += `    ✩  *NÚMERO DE CONTACTO* : +51 921 826 291\n`;
+        Codes += `    ✩  *CANAL DE WHATSAPP* : https://whatsapp.com/channel/0029VayXJte65yD6LQGiRB0R\n`;
+        Codes += `    ✩  *TEMA* : Hanako Kun Anime\n`;
+        Codes += `    ✩  *DESCRIPCIÓN* : Bot de WhatsApp con funciones avanzadas e inteligencia artificial\n\n`;
+        Codes += `*¡Gracias por usar MaycolAIUltra-MD!*\n\n`;
+        Codes += `> *Creado por SoyMaycol*`;
 
         await conn.sendMessage(m.chat, {
-            image: { url: 'https://files.catbox.moe/zhxljj.jpg' },
+            image: { url: 'https://i.postimg.cc/k59W5ZDT/descarga-5.jpg' },
             caption: Codes,
             contextInfo: { 
                 mentionedJid: [m.sender],
@@ -31,23 +21,7 @@ let handler = async (m, { conn, usedPrefix, command }) => {
                 isForwarded: true,
                 forwardedNewsletterMessageInfo: {
                     newsletterJid: '120363276986902836@newsletter',
-                    newsletterName: 'Power by ivan',
-                    serverMessageId: 143
-                }
-            }
-        }, { quoted: m });
-
-        await conn.sendMessage(m.chat, {
-            audio: { url: 'https://github.com/JawadYTX/KHAN-DATA/raw/refs/heads/main/autovoice/repo.m4a' },
-            mimetype: 'audio/mp4',
-            ptt: true,
-            contextInfo: { 
-                mentionedJid: [m.sender],
-                forwardingScore: 999,
-                isForwarded: true,
-                forwardedNewsletterMessageInfo: {
-                    newsletterJid: '120363276986902836@newsletter',
-                    newsletterName: 'Power by ivan',
+                    newsletterName: 'Power by SoyMaycol',
                     serverMessageId: 143
                 }
             }

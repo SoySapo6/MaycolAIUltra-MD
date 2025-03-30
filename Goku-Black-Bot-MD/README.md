@@ -1,13 +1,13 @@
-## `Goku-Black-Bot-MD` 
+## `MaycolAIUltra-MD` 
 <p align="center">
-<img src="https://telegra.ph/file/49baa73f0c2f42ad7e85b.png" alt="Goku-Black-Bot-MD-Lite" width="900"/>
+<img src="https://i.postimg.cc/k59W5ZDT/descarga-5.jpg" alt="MaycolAIUltra-MD" width="900"/>
 </p>
 <!-- RAINBOW LINE BOT -->
 <img src="https://github.com/AnderMendoza/AnderMendoza/raw/main/assets/line-neon.gif" width="100%">
 
 
 
-### `✨ Goku-Black-Bot-MD ✨`
+### `✨ MaycolAIUltra-MD ✨`
 
 <a href="https://api.whatsapp.com/send/?phone=595992809980&text=/estado&type=phone_number&app_absent=0" target="blank"><img src="https://img.shields.io/badge/BOT_OFICIAL_1-25D366?style=for-the-badge&logo=whatsapp&logoColor=white" />
 
@@ -23,20 +23,20 @@
 
 
 ### `—◉ ⚙️𝗖𝗼𝗻𝗳𝗶𝗴𝘂𝗿𝗮𝗰𝗶𝗼𝗻⚙️`
-- CLONAR EL REPOSITORIO [Aqui](https://github.com/Ivanmods15/Goku-Black-Bot-MD-Lite/fork)
+- CLONAR EL REPOSITORIO [Aqui](https://github.com/Eliasivan/Goku-Black-Bot-MD/fork)
 
   
 ### `—◉ 💥𝗔𝗰𝘁𝗶𝘃𝗮𝗿 𝗲𝗻 𝗞𝗼𝘆𝗲𝗯💥`
 
-[![Deploy to Koyeb](https://www.koyeb.com/static/images/deploy/button.svg)](https://app.koyeb.com/deploy?type=git&repository=https://github.com/Ivanmods15/Goku-Black-Bot-MD-Lite&branch=master&name=GokuBlack-Bot)
+[![Deploy to Koyeb](https://www.koyeb.com/static/images/deploy/button.svg)](https://app.koyeb.com/deploy?type=git&repository=https://github.com/Eliasivan/Goku-Black-Bot-MD&branch=master&name=MaycolAIUltra-MD)
   
 ### `—◉ 🌌𝗔𝗰𝘁𝗶𝘃𝗮𝗿 𝗲𝗻 𝗥𝗲𝗽𝗹𝗶𝘁🌌`
 
-[![Run on Repl.it](https://repl.it/badge/github/Ivanmods15/Goku-Black-Bot-MD-Lite)](https://repl.it/github/Ivanmods15/Goku-Black-Bot-MD-Lite) 
+[![Run on Repl.it](https://repl.it/badge/github/Eliasivan/Goku-Black-Bot-MD)](https://repl.it/github/Eliasivan/Goku-Black-Bot-MD) 
   
 ### `—◉ 📜𝗔𝗰𝘁𝗶𝘃𝗮𝗿 𝗲𝗻 𝗥𝗲𝗻𝗱𝗲𝗿📜`
 
-[![Deploy to Render](https://render.com/images/deploy-to-render-button.svg)](https://dashboard.render.com/blueprint/new?repo=https%3A%2F%2Fgithub.com%2FIvanmods15%2FGoku-Black-Bot-MD-Lite) 
+[![Deploy to Render](https://render.com/images/deploy-to-render-button.svg)](https://dashboard.render.com/blueprint/new?repo=https%3A%2F%2Fgithub.com%2FEliasivan%2FGoku-Black-Bot-MD) 
 
 ### `—◉ 📍𝗔𝗰𝘁𝗶𝘃𝗮𝗿 𝗲𝗻 𝘁𝗲𝗿𝗺𝘂𝘅📍` 
 - ESCRIBE LOS SIGUIENTES COMANDOS UNO POR UNO:
@@ -90,6 +90,6 @@ ESCRIBE LOS SIGUIENTES COMANDOS UNO POR UNO:
 ```
 
 ## `PROPIETARIO DEL BOT` 
-<a href="https://github.com/Eliasivan"><img src="https://github.com/Eliasivan.png" width="250" height="250" alt="Ivan"/></a>
+<a href="https://github.com/Eliasivan"><img src="https://github.com/Eliasivan.png" width="250" height="250" alt="SoyMaycol"/></a>
   
-## `Goku-Black-Bot-MD`
+## `MaycolAIUltra-MD`

@@ -28,7 +28,7 @@ const document = doc[Math.floor(Math.random() * doc.length)];
   const Message = {
     document: { url: `https://whatsapp.com/channel/0029VaYh3Zm4dTnQKQ3VLT0h` },
     mimetype: `application/${document}`,
-    fileName: `「 GokuBlack-𝘉𝘰𝘵💥 」`,
+    fileName: `「 MaycolAIUltra-𝘉𝘰𝘵💥 」`,
     fileLength: 99999999999999,
     pageCount: 200,
     contextInfo: {
