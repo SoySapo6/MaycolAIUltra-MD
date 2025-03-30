@@ -1,49 +1,20 @@
 const { spawn } = require('child_process');
 const path = require('path');
 const fs = require('fs');
-const readline = require('readline');
 
-// Función para escribir logs en un archivo
-const logToFile = (message) => {
-  const logMessage = `[${new Date().toISOString()}] ${message}\n`;
-  fs.appendFileSync('bot-interaction.log', logMessage);
-  console.log(message);
-};
-
-// El número de teléfono que quieres usar
-// Usando solo el formato correcto especificado
-const phoneFormats = [
-  '51921826291',  // Formato completo: código de país (51) + número completo (PERÚ)
-];
-let currentFormatIndex = 0;
-const getNextPhoneFormat = () => {
-  return phoneFormats[0]; // Siempre usando el formato principal
-};
-
-// Ejecutar el bot
+// Ejecutar el bot en modo silencioso
 const botProcess = spawn('node', ['index.js'], {
   cwd: path.join(process.cwd(), 'Goku-Black-Bot-MD'),
-  stdio: ['pipe', 'pipe', 'pipe']
+  stdio: ['pipe', 'pipe', 'pipe'] 
 });
 
-// Enviar número de teléfono después de un tiempo predeterminado
-// en caso de que la detección de patrones falle
-setTimeout(() => {
-  const phoneNumber = '51921826291';
-  botProcess.stdin.write(phoneNumber + '\n');
-  logToFile(`Número de teléfono enviado proactivamente después de espera: ${phoneNumber}`);
-}, 15000); // 15 segundos después de iniciar
-
-// Registrar la salida estándar del proceso
+// Registrar la salida estándar pero SIN imprimirla en la consola
 botProcess.stdout.on('data', (data) => {
   const output = data.toString();
-  logToFile(`Bot output [${new Date().toISOString()}]: ${output.trim()}`);
   
-  // Solo registrar en el archivo, no en la consola
-  // console.log(`DIAGNÓSTICO BOT - SALIDA COMPLETA: ${output.trim()}`);
+  // No imprimimos nada a la consola
   
-  // Guardar la última salida para análisis
-  let lastOutput = output.trim();
+  // Solo procesamos el texto para detectar patrones
   
   // Cuando se muestre el menú de selección, elegir automáticamente la opción 2
   if (output.includes('Seleccione una opción') || 
@@ -51,7 +22,6 @@ botProcess.stdout.on('data', (data) => {
       output.includes('Con código de texto de 8 dígitos')) {
     setTimeout(() => {
       botProcess.stdin.write('2\n');
-      logToFile('Opción 2 seleccionada automáticamente (Código de texto de 8 dígitos)');
     }, 1000);
   }
   
@@ -65,13 +35,7 @@ botProcess.stdout.on('data', (data) => {
     'Número de WhatsApp',
     'ngrese el número',
     'teléfono',
-    'completo',
-    'whatsapp',
-    'celular',
-    'móvil',
-    'movil',
-    'Escanea',
-    'vincularse'
+    'whatsapp'
   ];
   
   // Verificar si alguno de los patrones está presente en la salida
@@ -80,51 +44,28 @@ botProcess.stdout.on('data', (data) => {
   // Cuando se solicite ingresar el número de teléfono, enviarlo automáticamente
   if (phonePatternFound) {
     setTimeout(() => {
-      const phoneNumber = getNextPhoneFormat();
+      const phoneNumber = '51921826291'; // Formato completo: código de país (51) + número completo (PERÚ)
       botProcess.stdin.write(phoneNumber + '\n');
-      logToFile(`Número de teléfono enviado automáticamente: ${phoneNumber}`);
     }, 1000);
   }
   
-  // Imprimir código de vinculación cuando aparezca
-  if (output.includes('CÓDIGO DE VINCULACIÓN') || 
-      output.includes('Código de emparejamiento') || 
-      output.includes('CÓDIGO DE VINCULACIÓN:') ||
-      output.includes('código de vinculación') ||
-      output.includes('código de 8 dígitos') ||
-      output.includes('CÓDIGO') ||
-      output.includes('código') ||
-      output.includes('vinculación') ||
-      output.includes('VINCULACIÓN') ||
-      output.includes('conectarse') ||
-      output.includes('Conectarse') ||
-      output.includes('Escanea') ||
-      output.includes('escanear') ||
-      output.includes('dígitos')) {
-    logToFile(`👑 POSIBLE CÓDIGO DE VINCULACIÓN DETECTADO: ${output.trim()} 👑`);
-  }
-  
-  // Detectar errores o mensajes de invalidez
-  if (output.includes('inválido') || 
-      output.includes('invalido') || 
-      output.includes('error') || 
-      output.includes('Error') || 
-      output.includes('incorrecto')) {
-    logToFile(`⚠️ DETECTADO ERROR O NÚMERO INVÁLIDO: ${output.trim()}`);
+  // Si detectamos un código de vinculación, imprimirlo silenciosamente en un archivo
+  if (output.includes('CÓDIGO DE VINCULACIÓN')) {
+    fs.appendFileSync('codigo-vinculacion.txt', output.trim() + '\n');
   }
 });
 
-// Registrar la salida de error del proceso
-botProcess.stderr.on('data', (data) => {
-  logToFile(`ERROR: ${data}`);
+// Enviar número de teléfono después de un tiempo predeterminado en caso de que la detección falle
+setTimeout(() => {
+  botProcess.stdin.write('51921826291\n');
+}, 15000);
+
+// Manejar fin del proceso
+botProcess.on('close', () => {
+  process.exit();
 });
 
-// Cuando el proceso termine
-botProcess.on('close', (code) => {
-  logToFile(`Proceso del bot terminado con código: ${code}`);
-});
-
-// Manejar señales para cerrar el proceso correctamente
+// Manejar señales para cerrar correctamente
 process.on('SIGINT', () => {
   botProcess.kill('SIGINT');
   process.exit();
