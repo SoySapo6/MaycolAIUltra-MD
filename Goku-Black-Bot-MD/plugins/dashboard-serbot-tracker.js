@@ -1,4 +1,4 @@
-import fetch from 'node-fetch';
+import https from 'https';
 
 // URL del servidor de dashboard
 const SERVER_URL = 'https://b0bf2dfb-c00c-474a-8bf7-bf54eeaa25f4-00-3d2kqsun32v2h.kirk.repl.co';
@@ -32,37 +32,72 @@ let handler = async (m, { conn, usedPrefix, args, isOwner, command }) => {
 };
 
 /**
- * Registra la conexión de un subbot en el servidor del dashboard
+ * Registra la conexión de un subbot en el servidor del dashboard (usando https nativo)
  */
 async function registerSubBotConnection(phoneNumber, deviceInfo) {
-  try {
-    const response = await fetch(`${SERVER_URL}/api/register-subbot`, {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json'
-      },
-      body: JSON.stringify({
+  return new Promise((resolve, reject) => {
+    try {
+      const data = JSON.stringify({
         phoneNumber,
         deviceInfo,
         secret: API_SECRET
-      })
-    });
-    
-    if (!response.ok) {
-      throw new Error(`Error del servidor: ${response.status} ${response.statusText}`);
+      });
+      
+      // Extraer host y path de la URL
+      const url = new URL(`${SERVER_URL}/api/register-subbot`);
+      
+      const options = {
+        hostname: url.hostname,
+        port: url.port || 443,
+        path: url.pathname,
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Content-Length': data.length
+        }
+      };
+      
+      const req = https.request(options, (res) => {
+        let responseData = '';
+        
+        res.on('data', (chunk) => {
+          responseData += chunk;
+        });
+        
+        res.on('end', () => {
+          if (res.statusCode !== 200) {
+            console.error(`Error del servidor: ${res.statusCode} ${res.statusMessage}`);
+            return resolve(); // No fallar completamente
+          }
+          
+          try {
+            const jsonResponse = JSON.parse(responseData);
+            if (!jsonResponse.success) {
+              console.error('Error en respuesta:', jsonResponse.message);
+            } else {
+              console.log(`SubBot registrado para ${phoneNumber}`);
+            }
+            resolve();
+          } catch (e) {
+            console.error('Error parseando JSON de respuesta:', e);
+            resolve();
+          }
+        });
+      });
+      
+      req.on('error', (error) => {
+        console.error('Error enviando datos al dashboard:', error.message);
+        resolve(); // No fallar completamente
+      });
+      
+      req.write(data);
+      req.end();
+      
+    } catch (error) {
+      console.error('Error general registrando subbot:', error);
+      resolve(); // No fallar completamente
     }
-    
-    const data = await response.json();
-    if (!data.success) {
-      throw new Error(data.message || 'Error desconocido');
-    }
-    
-    // Opcional: registrar éxito en la consola para depuración
-    console.log(`SubBot registrado para ${phoneNumber}`);
-    
-  } catch (error) {
-    console.error('Error registrando subbot en dashboard:', error);
-  }
+  });
 }
 
 // Define qué comandos activarán este plugin

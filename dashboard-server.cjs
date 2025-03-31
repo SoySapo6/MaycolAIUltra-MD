@@ -6,7 +6,8 @@ const crypto = require('crypto');
 const dotenv = require('dotenv');
 const cookieParser = require('cookie-parser');
 const cors = require('cors');
-const fetch = require('node-fetch');
+// Node-fetch es un módulo ESM, usamos el módulo https nativo para las peticiones
+const https = require('https');
 
 // Cargar variables de entorno
 dotenv.config();
@@ -71,7 +72,7 @@ async function fetchUserDataFromBot(phoneNumber) {
   try {
     // Intentamos leer los datos del usuario desde los archivos de bot
     // Estos paths deberían ajustarse según la estructura de tu bot
-    const botDataPath = './Goku-Black-Bot-MD/data/database.json';
+    const botDataPath = './Goku-Black-Bot-MD/media/database/database.json';
     
     // Si el archivo existe, leemos los datos
     if (fs.existsSync(botDataPath)) {
@@ -161,8 +162,8 @@ function initializeCommandUsage(phoneNumber) {
  */
 function checkUserSubBot(phoneNumber) {
   try {
-    // Ruta donde se almacenan los datos de subbot
-    const subbotPath = `./Goku-Black-Bot-MD/BlackJadiBot/${phoneNumber}`;
+    // Ruta donde se almacenan los datos de subbot (ajustar según estructura)
+    const subbotPath = `./Goku-Black-Bot-MD/jadibots/${phoneNumber}`;
     
     // Verificar si existe la carpeta del subbot
     if (fs.existsSync(subbotPath)) {
