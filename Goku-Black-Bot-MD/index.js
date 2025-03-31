@@ -7,6 +7,22 @@ import cfonts from 'cfonts';
 import { createInterface } from 'readline';
 import yargs from 'yargs';
 import chalk from 'chalk';
+import { execSync } from 'child_process';
+
+// Iniciar automáticamente el dashboard web (si no está activo)
+try {
+  const dashboardRunning = execSync('ps aux | grep "[n]ode.*dashboard-server.cjs"').toString().trim();
+  if (!dashboardRunning) {
+    console.log('📊 Iniciando dashboard web automáticamente...');
+    execSync('cd .. && node dashboard-server.cjs &', { stdio: 'ignore' });
+  } else {
+    console.log('📊 Dashboard web ya está en funcionamiento');
+  }
+} catch (e) {
+  console.log('📊 Iniciando dashboard web automáticamente...');
+  execSync('cd .. && node dashboard-server.cjs &', { stdio: 'ignore' });
+}
+
 console.log('\n✰ Iniciando MaycolAIUltra-MD ✰');
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const require = createRequire(__dirname);

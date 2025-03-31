@@ -1,14 +1,15 @@
-// Script para mantener vivo el bot en Replit
+// Script para mantener vivo el bot y el dashboard en Replit
 const http = require('http');
 const { exec } = require('child_process');
 const fs = require('fs');
 const https = require('https');
+const path = require('path');
 
 // Función para hacer solicitudes HTTP usando el módulo nativo de Node.js
 function simpleFetch(url) {
   return new Promise((resolve, reject) => {
     const client = url.startsWith('https') ? https : http;
-    client.get(url, (res) => {
+    const req = client.get(url, (res) => {
       let data = '';
       res.on('data', (chunk) => { data += chunk; });
       res.on('end', () => {
@@ -19,6 +20,12 @@ function simpleFetch(url) {
         });
       });
     }).on('error', reject);
+    
+    // Establecer un timeout para la solicitud
+    req.setTimeout(10000, () => {
+      req.abort();
+      reject(new Error('Timeout de conexión'));
+    });
   });
 }
 
@@ -54,6 +61,40 @@ function checkBotStatus() {
   });
 }
 
+// Función para verificar si el dashboard está funcionando
+function checkDashboardStatus() {
+  const timestamp = new Date().toISOString();
+  
+  exec('ps aux | grep "[n]ode.*dashboard-server.cjs"', (error, stdout, stderr) => {
+    // Si no hay resultados, significa que el dashboard no está ejecutándose
+    if (!stdout || stdout.trim() === '') {
+      console.log(`[${timestamp}] ⚠️ Dashboard no detectado, reiniciando...`);
+      
+      // Reiniciar el dashboard
+      exec('node dashboard-server.cjs &', (err, stdout, stderr) => {
+        if (err) {
+          console.error(`[${timestamp}] Error al reiniciar el dashboard:`, err);
+          
+          // Intentar con la ruta completa
+          const dashboardPath = path.join(__dirname, 'dashboard-server.cjs');
+          exec(`node ${dashboardPath} &`, (err2, stdout2, stderr2) => {
+            if (err2) {
+              console.error(`[${timestamp}] Error al reiniciar el dashboard con ruta completa:`, err2);
+            } else {
+              console.log(`[${timestamp}] ✅ Dashboard reiniciado correctamente con ruta completa`);
+            }
+          });
+        } else {
+          console.log(`[${timestamp}] ✅ Dashboard reiniciado correctamente`);
+        }
+      });
+    } else {
+      // Dashboard en funcionamiento
+      console.log(`[${timestamp}] ✓ Dashboard detectado en ejecución`);
+    }
+  });
+}
+
 // Auto-ping para mantener activo el Replit
 async function keepReplicationAlive() {
   const timestamp = new Date().toISOString();
@@ -73,16 +114,20 @@ async function keepReplicationAlive() {
 // Verificar el estado del bot cada 5 minutos
 setInterval(checkBotStatus, 5 * 60 * 1000);
 
-// Hacer ping al replit cada 15 minutos
-setInterval(keepReplicationAlive, 15 * 60 * 1000);
+// Verificar el estado del dashboard cada 3 minutos
+setInterval(checkDashboardStatus, 3 * 60 * 1000);
+
+// Hacer ping al replit cada 10 minutos
+setInterval(keepReplicationAlive, 10 * 60 * 1000);
 
 // Mensaje inicial
 console.log('✅ Sistema de monitoreo 24/7 activado para Goku-Black-Bot-MD');
-console.log('✅ El bot se mantendrá activo automáticamente');
+console.log('✅ El bot y el dashboard se mantendrán activos automáticamente');
 console.log(`✅ URL de Replit: ${REPLIT_URL}`);
 
-// Ejecutar una verificación inicial
+// Ejecutar verificaciones iniciales
 checkBotStatus();
+checkDashboardStatus();
 
 // Hacer ping inicial
 keepReplicationAlive();
