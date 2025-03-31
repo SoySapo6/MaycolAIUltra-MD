@@ -1,13 +1,14 @@
-# Goku Black Bot MD - WhatsApp Bot
+# MaycolAIUltra-MD - WhatsApp Bot Avanzado
 
-Este proyecto configura y ejecuta Goku Black Bot MD, un bot avanzado para WhatsApp.
+Este proyecto configura y ejecuta MaycolAIUltra-MD, un bot avanzado para WhatsApp basado en Goku Black Bot MD.
 
 ## Características
 
-- Comandos multimedia
+- Comandos multimedia avanzados
 - Stickers, descargas de videos, música
 - Juegos y funciones interactivas
 - Administración de grupos
+- Inteligencia artificial
 - Y mucho más
 
 ## Requisitos
@@ -44,9 +45,9 @@ Edita el archivo `Goku-Black-Bot-MD/config.js` antes de iniciar:
 global.owner = ['TUNUMERO'] // Ejemplo: ['123456789012']
 
 // Configura nombre del bot y mensajes
-global.namebot = 'Goku Black Bot MD'
-global.packname = 'Goku-Black-Bot'
-global.author = 'WhatsApp Bot'
+global.namebot = 'MaycolAIUltra-MD'
+global.packname = 'MaycolAIUltra-MD'
+global.author = 'SoyMaycol'
 ```
 
 ## Primer inicio
@@ -72,4 +73,4 @@ Al iniciar el bot por primera vez:
 
 ## Repositorio original
 
-Este proyecto configura [Goku-Black-Bot-MD](https://github.com/Eliasivan/Goku-Black-Bot-MD).
+Este proyecto es una modificación basada en [Goku-Black-Bot-MD](https://github.com/Eliasivan/Goku-Black-Bot-MD).
