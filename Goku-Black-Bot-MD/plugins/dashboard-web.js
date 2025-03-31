@@ -27,7 +27,9 @@ let handler = async (m, { conn, usedPrefix, command }) => {
       const passwordHash = crypto.createHash('sha256').update(tempPassword).digest('hex');
       
       // Determinar si el usuario es owner
-      const isOwner = global.owner.map(v => v.replace(/[^0-9]/g, '') + '@s.whatsapp.net').includes(m.sender);
+      const isOwner = global.owner
+        .map(v => typeof v === 'string' ? v.replace(/[^0-9]/g, '') + '@s.whatsapp.net' : v)
+        .includes(m.sender);
       
       // Registrar la cuenta en el dashboard
       const response = await fetch(`${DASHBOARD_URL}/api/register-account`, {

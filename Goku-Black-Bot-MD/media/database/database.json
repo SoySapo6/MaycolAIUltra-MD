@@ -224,12 +224,12 @@
         "soal": null
       },
       "role": "*𝗡𝗼𝘃𝗮𝘁𝗼 V* 🍷",
-      "exp": 73139,
+      "exp": 73313,
       "lastcodereg": 0,
       "crime": 0,
       "lastmining": 0,
       "warn": 0,
-      "spam": 1743394295259,
+      "spam": 1743394453662,
       "estrellas": null,
       "Subs": 1743358965066,
       "gold": 1000,
@@ -4400,7 +4400,7 @@
         "soal": null
       },
       "role": "*𝗡𝗼𝘃𝗮𝘁𝗼 V* 🍷",
-      "exp": 19505,
+      "exp": 19837,
       "spam": 1743394263321,
       "lastcodereg": 0,
       "crime": 0,
@@ -17637,7 +17637,7 @@
         "soal": null
       },
       "role": "*𝗡𝗼𝘃𝗮𝘁𝗼 V* 🍷",
-      "exp": 2539,
+      "exp": 2594,
       "lastcodereg": 0,
       "crime": 0,
       "lastmining": 0,
@@ -23077,7 +23077,7 @@
         "soal": null
       },
       "role": "*𝗡𝗼𝘃𝗮𝘁𝗼 V* 🍷",
-      "exp": 440,
+      "exp": 601,
       "lastcodereg": 0,
       "crime": 0,
       "lastmining": 0,
@@ -33050,7 +33050,7 @@
         "soal": null
       },
       "role": "*𝗡𝗼𝘃𝗮𝘁𝗼 V* 🍷",
-      "exp": 221,
+      "exp": 331,
       "lastcodereg": 0,
       "crime": 0,
       "lastmining": 0,
@@ -33507,7 +33507,7 @@
       "lastrob": 0,
       "level": 0,
       "moras": 10,
-      "money": null,
+      "money": 150,
       "muto": false,
       "premium": false,
       "premiumTime": 0,
@@ -33526,7 +33526,7 @@
         "soal": null
       },
       "role": "*𝗡𝗼𝘃𝗮𝘁𝗼 V* 🍷",
-      "exp": 159,
+      "exp": 161,
       "lastcodereg": 0,
       "crime": 0,
       "lastmining": 0,
@@ -35956,7 +35956,20 @@
       },
       "role": "*𝗡𝗼𝘃𝗮𝘁𝗼 V* 🍷",
       "exp": null,
-      "spam": 1743394362072
+      "spam": 1743394362072,
+      "appInterests": {
+        "gaming": 0,
+        "social": 0,
+        "productivity": 0,
+        "education": 0,
+        "entertainment": 0,
+        "tools": 0,
+        "photography": 0,
+        "music": 0,
+        "health": 0,
+        "communication": 0
+      },
+      "searchHistory": []
     }
   },
   "chats": {
@@ -40714,10 +40727,10 @@
       "lastSuccess": 0
     },
     "dashboard-web.js": {
-      "total": 16,
-      "success": 15,
-      "last": 1743394295433,
-      "lastSuccess": 1743394295433
+      "total": 17,
+      "success": 16,
+      "last": 1743394454228,
+      "lastSuccess": 1743394454228
     },
     "owner-generarcuenta.js": {
       "total": 2,
@@ -40753,7 +40766,7 @@
       "modoia": false,
       "jadibotmd": true,
       "autobio": false,
-      "status": 1743394370477
+      "status": 1743394454491
     },
     "51916787717@s.whatsapp.net": {
       "self": false,
@@ -40766,7 +40779,7 @@
       "modoia": false,
       "jadibotmd": true,
       "autobio": false,
-      "status": 1743394396048
+      "status": 1743394691554
     },
     "5491133472641@s.whatsapp.net": {
       "self": false,

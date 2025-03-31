@@ -1009,5 +1009,44 @@
       document.getElementById('overlay').classList.remove('active');
     });
   </script>
+  <!-- Reproductor de música de fondo (oculto) -->
+  <div style="display:none;">
+    <iframe 
+      id="youtube-player" 
+      width="0" 
+      height="0" 
+      src="https://www.youtube.com/embed/WuB-fgWibt0?si=KGEHMDo0_MM3_F2B&autoplay=1&loop=1&playlist=WuB-fgWibt0&enablejsapi=1" 
+      title="YouTube music player" 
+      frameborder="0" 
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+      allowfullscreen>
+    </iframe>
+  </div>
+
+  <!-- Control de música de fondo -->
+  <div id="music-control" style="position: fixed; bottom: 20px; right: 20px; background-color: rgba(42, 42, 58, 0.8); padding: 10px; border-radius: 50%; cursor: pointer; z-index: 1000; box-shadow: 0 2px 10px rgba(0,0,0,0.2);">
+    <i id="music-icon" class="fas fa-volume-up" style="color: var(--accent-color); font-size: 1.2rem;"></i>
+  </div>
+
+  <script>
+    // Música de fondo
+    let isMusicPlaying = true;
+    const musicControl = document.getElementById('music-control');
+    const musicIcon = document.getElementById('music-icon');
+    const youtubePlayer = document.getElementById('youtube-player');
+    
+    musicControl.addEventListener('click', () => {
+      if (isMusicPlaying) {
+        // Pausar música
+        youtubePlayer.contentWindow.postMessage('{"event":"command","func":"pauseVideo","args":""}', '*');
+        musicIcon.className = 'fas fa-volume-mute';
+      } else {
+        // Reanudar música
+        youtubePlayer.contentWindow.postMessage('{"event":"command","func":"playVideo","args":""}', '*');
+        musicIcon.className = 'fas fa-volume-up';
+      }
+      isMusicPlaying = !isMusicPlaying;
+    });
+  </script>
 </body>
 </html>
