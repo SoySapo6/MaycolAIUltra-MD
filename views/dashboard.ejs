@@ -560,22 +560,37 @@
     
     <ul class="sidebar-nav">
       <li>
-        <a href="/dashboard" class="active">
+        <a href="/dashboard" class="<%= typeof activePage !== 'undefined' && activePage === 'dashboard' ? 'active' : (typeof activePage === 'undefined' ? 'active' : '') %>">
           <i class="fas fa-home"></i> Dashboard
         </a>
       </li>
       <li>
-        <a href="/profile">
+        <a href="/profile" class="<%= typeof activePage !== 'undefined' && activePage === 'profile' ? 'active' : '' %>">
           <i class="fas fa-user"></i> Mi Perfil
         </a>
       </li>
       <li>
-        <a href="/stats">
+        <a href="/stats" class="<%= typeof activePage !== 'undefined' && activePage === 'stats' ? 'active' : '' %>">
           <i class="fas fa-chart-line"></i> Estadísticas
         </a>
       </li>
       <li>
-        <a href="/commands">
+        <a href="/command-stats" class="<%= typeof activePage !== 'undefined' && activePage === 'command-stats' ? 'active' : '' %>">
+          <i class="fas fa-history"></i> Comandos Usados
+        </a>
+      </li>
+      <li>
+        <a href="/subbots" class="<%= typeof activePage !== 'undefined' && activePage === 'subbots' ? 'active' : '' %>">
+          <i class="fas fa-robot"></i> Mi Sub-Bot
+        </a>
+      </li>
+      <li>
+        <a href="/ai-chat" class="<%= typeof activePage !== 'undefined' && activePage === 'ai-chat' ? 'active' : '' %>">
+          <i class="fas fa-brain"></i> Chat con Gemini
+        </a>
+      </li>
+      <li>
+        <a href="/commands" class="<%= typeof activePage !== 'undefined' && activePage === 'commands' ? 'active' : '' %>">
           <i class="fas fa-terminal"></i> Comandos
         </a>
       </li>
@@ -618,6 +633,8 @@
       </div>
     </div>
     
+    <% if (typeof activePage === 'undefined' || activePage === 'dashboard') { %>
+    <!-- Dashboard Principal -->
     <div class="dashboard-cards">
       <div class="card">
         <span class="card-badge">Principal</span>
@@ -672,47 +689,310 @@
       </div>
       
       <ul class="activity-list">
-        <li class="activity-item">
-          <div class="activity-icon">
-            <i class="fas fa-level-up-alt"></i>
-          </div>
-          <div class="activity-content">
-            <div class="activity-title">Subiste de nivel</div>
-            <div class="activity-time"><i class="fas fa-clock"></i> Hace 2 días</div>
-          </div>
-        </li>
-        
-        <li class="activity-item">
-          <div class="activity-icon">
-            <i class="fas fa-coins"></i>
-          </div>
-          <div class="activity-content">
-            <div class="activity-title">Recibiste 100 monedas</div>
-            <div class="activity-time"><i class="fas fa-clock"></i> Hace 3 días</div>
-          </div>
-        </li>
-        
-        <li class="activity-item">
-          <div class="activity-icon">
-            <i class="fas fa-gamepad"></i>
-          </div>
-          <div class="activity-content">
-            <div class="activity-title">Jugaste una partida RPG</div>
-            <div class="activity-time"><i class="fas fa-clock"></i> Hace 4 días</div>
-          </div>
-        </li>
-        
-        <li class="activity-item">
-          <div class="activity-icon">
-            <i class="fas fa-user-plus"></i>
-          </div>
-          <div class="activity-content">
-            <div class="activity-title">Te registraste en el bot</div>
-            <div class="activity-time"><i class="fas fa-clock"></i> Hace 1 semana</div>
-          </div>
-        </li>
+        <% if (userData.activities && userData.activities.length > 0) { %>
+          <% userData.activities.forEach(activity => { %>
+            <li class="activity-item">
+              <div class="activity-icon">
+                <i class="fas fa-<%= activity.icon %>"></i>
+              </div>
+              <div class="activity-content">
+                <div class="activity-title"><%= activity.title %></div>
+                <div class="activity-time"><i class="fas fa-clock"></i> <%= activity.time %></div>
+              </div>
+            </li>
+          <% }); %>
+        <% } else { %>
+          <li class="activity-item">
+            <div class="activity-icon">
+              <i class="fas fa-info-circle"></i>
+            </div>
+            <div class="activity-content">
+              <div class="activity-title">No hay actividades recientes</div>
+              <div class="activity-time"><i class="fas fa-clock"></i> Ahora</div>
+            </div>
+          </li>
+        <% } %>
       </ul>
     </div>
+    <% } %>
+    
+    <% if (typeof activePage !== 'undefined' && activePage === 'subbots') { %>
+    <!-- Sección de Subbots -->
+    <div class="section-header">
+      <div class="section-title">Mi Sub-Bot</div>
+    </div>
+    
+    <div class="dashboard-cards">
+      <div class="card" style="grid-column: span 2;">
+        <div class="card-header">
+          <div class="card-icon">
+            <i class="fas fa-robot"></i>
+          </div>
+          <div class="card-title">Estado de tu Sub-Bot</div>
+        </div>
+        
+        <% if (typeof subbotInfo !== 'undefined' && subbotInfo.isConnected) { %>
+          <div class="card-value" style="color: #4CAF50;">CONECTADO</div>
+          <div class="card-description">
+            Tu sub-bot está activo desde <%= new Date(subbotInfo.connectedAt).toLocaleString() %><br>
+            Dispositivo: <%= subbotInfo.deviceName %>
+          </div>
+        <% } else { %>
+          <div class="card-value" style="color: #F44336;">DESCONECTADO</div>
+          <div class="card-description">
+            No tienes un sub-bot conectado actualmente.<br>
+            Usa el comando <strong>.serbot</strong> en WhatsApp para vincular un sub-bot.
+          </div>
+        <% } %>
+      </div>
+    </div>
+    
+    <div class="recent-activity">
+      <div class="section-header">
+        <div class="section-title">¿Cómo crear un Sub-Bot?</div>
+      </div>
+      
+      <div style="padding: 20px; background-color: var(--card-color); border-radius: var(--border-radius); margin-top: 10px;">
+        <ol style="padding-left: 20px; line-height: 1.7;">
+          <li>Envía el comando <strong>.serbot</strong> al bot en WhatsApp.</li>
+          <li>Escanea el código QR que aparecerá (tienes 45 segundos).</li>
+          <li>O utiliza el código de 8 dígitos con el comando <strong>.serbot --code</strong>.</li>
+          <li>Tu número se convertirá en un sub-bot temporal del bot principal.</li>
+          <li>Para desconectar, usa <strong>.delserbot</strong>.</li>
+        </ol>
+        
+        <div style="margin-top: 20px; padding: 15px; background-color: rgba(212, 63, 77, 0.1); border-radius: var(--border-radius); border-left: 3px solid var(--accent-color);">
+          <strong>⚠️ Importante:</strong> No es recomendable usar tu número principal para esto. Si el bot principal se reinicia, tu sub-bot se desconectará automáticamente.
+        </div>
+      </div>
+    </div>
+    <% } %>
+    
+    <% if (typeof activePage !== 'undefined' && activePage === 'command-stats') { %>
+    <!-- Sección de Estadísticas de Comandos -->
+    <div class="section-header">
+      <div class="section-title">Mis Comandos Más Usados</div>
+    </div>
+    
+    <div class="recent-activity">
+      <div style="padding: 20px; background-color: var(--card-color); border-radius: var(--border-radius); margin-top: 10px;">
+        <% if (typeof commandStats !== 'undefined' && commandStats.total > 0) { %>
+          <div style="margin-bottom: 20px;">
+            <h3 style="margin-bottom: 10px; font-size: 1.2rem;">Total de comandos ejecutados: <%= commandStats.total %></h3>
+            <p style="color: rgba(255, 255, 255, 0.7); font-size: 0.9rem;">
+              Último comando usado: <%= new Date(commandStats.lastUsed).toLocaleString() %>
+            </p>
+          </div>
+          
+          <div class="command-stats-grid" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 15px;">
+            <% Object.entries(commandStats.commands).forEach(([cmdName, count]) => { %>
+              <div class="command-stat-card" style="background-color: var(--secondary-color); padding: 15px; border-radius: var(--border-radius); border: 1px solid rgba(255, 255, 255, 0.05);">
+                <div style="font-weight: 600; font-size: 0.95rem; margin-bottom: 5px; color: var(--accent-color);">
+                  .<%= cmdName %>
+                </div>
+                <div style="font-size: 1.5rem; font-weight: 600; margin: 10px 0;">
+                  <%= count %>
+                </div>
+                <div style="font-size: 0.8rem; color: rgba(255, 255, 255, 0.6);">
+                  <%= Math.round((count / commandStats.total) * 100) %>% del total
+                </div>
+              </div>
+            <% }); %>
+          </div>
+        <% } else { %>
+          <div style="text-align: center; padding: 40px 20px;">
+            <i class="fas fa-clipboard-list" style="font-size: 3rem; color: rgba(255, 255, 255, 0.3); margin-bottom: 20px;"></i>
+            <h3 style="margin-bottom: 10px; font-size: 1.2rem;">No hay datos de comandos</h3>
+            <p style="color: rgba(255, 255, 255, 0.7); font-size: 0.9rem;">
+              Aún no has utilizado comandos con el bot o tus datos no han sido registrados.
+            </p>
+          </div>
+        <% } %>
+      </div>
+    </div>
+    <% } %>
+    
+    <% if (typeof activePage !== 'undefined' && activePage === 'ai-chat') { %>
+    <!-- Sección de Chat con Gemini AI -->
+    <div class="section-header">
+      <div class="section-title">Chat con Gemini AI</div>
+    </div>
+    
+    <div class="recent-activity">
+      <div style="padding: 20px; background-color: var(--card-color); border-radius: var(--border-radius); margin-top: 10px;">
+        <div id="chat-container" style="height: 400px; overflow-y: auto; margin-bottom: 20px; padding-right: 5px;">
+          <% if (typeof chatHistory !== 'undefined' && chatHistory.length > 0) { %>
+            <% chatHistory.forEach(msg => { %>
+              <div class="chat-message <%= msg.role === 'user' ? 'user-message' : 'assistant-message' %>" 
+                   style="margin-bottom: 15px; padding: 10px 15px; border-radius: 18px; 
+                          max-width: 80%; 
+                          <%= msg.role === 'user' ? 'background-color: var(--accent-color); margin-left: auto;' : 'background-color: var(--secondary-color);' %>">
+                <div style="font-size: 0.9rem; margin-bottom: 4px; color: rgba(255, 255, 255, 0.8);">
+                  <%= msg.role === 'user' ? 'Tú' : 'Gemini AI' %>
+                </div>
+                <div style="word-break: break-word;">
+                  <%= msg.content %>
+                </div>
+                <div style="font-size: 0.7rem; margin-top: 5px; text-align: right; color: rgba(255, 255, 255, 0.6);">
+                  <%= new Date(msg.timestamp).toLocaleTimeString() %>
+                </div>
+              </div>
+            <% }); %>
+          <% } else { %>
+            <div style="text-align: center; padding: 80px 20px;">
+              <i class="fas fa-robot" style="font-size: 3rem; color: rgba(255, 255, 255, 0.3); margin-bottom: 20px;"></i>
+              <h3 style="margin-bottom: 10px; font-size: 1.2rem;">¡Inicia una conversación!</h3>
+              <p style="color: rgba(255, 255, 255, 0.7); font-size: 0.9rem;">
+                Escribe un mensaje para comenzar a chatear con Gemini AI.
+              </p>
+            </div>
+          <% } %>
+        </div>
+        
+        <div id="chat-input-container" style="display: flex; gap: 10px;">
+          <input type="text" id="ai-message-input" placeholder="Escribe un mensaje para Gemini AI..." 
+                 style="flex: 1; padding: 12px 15px; border-radius: var(--border-radius); 
+                        background-color: var(--secondary-color); border: 1px solid rgba(255, 255, 255, 0.1); 
+                        color: white; font-size: 0.95rem;">
+          <button id="ai-send-button" 
+                  style="padding: 0 15px; background-color: var(--accent-color); color: white; 
+                         border: none; border-radius: var(--border-radius); cursor: pointer;">
+            <i class="fas fa-paper-plane"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+    
+    <script>
+      // Scroll al final del chat
+      function scrollChatToBottom() {
+        const chatContainer = document.getElementById('chat-container');
+        chatContainer.scrollTop = chatContainer.scrollHeight;
+      }
+      
+      // Ejecutar al cargar la página
+      scrollChatToBottom();
+      
+      // Función para enviar mensaje al AI
+      async function sendMessageToAI() {
+        const messageInput = document.getElementById('ai-message-input');
+        const message = messageInput.value.trim();
+        
+        if (!message) return;
+        
+        // Limpiar input
+        messageInput.value = '';
+        
+        // Crear elemento de mensaje del usuario
+        const userMessageElement = document.createElement('div');
+        userMessageElement.className = 'chat-message user-message';
+        userMessageElement.style = 'margin-bottom: 15px; padding: 10px 15px; border-radius: 18px; max-width: 80%; background-color: var(--accent-color); margin-left: auto;';
+        
+        const userNameElement = document.createElement('div');
+        userNameElement.style = 'font-size: 0.9rem; margin-bottom: 4px; color: rgba(255, 255, 255, 0.8);';
+        userNameElement.textContent = 'Tú';
+        
+        const userContentElement = document.createElement('div');
+        userContentElement.style = 'word-break: break-word;';
+        userContentElement.textContent = message;
+        
+        const userTimeElement = document.createElement('div');
+        userTimeElement.style = 'font-size: 0.7rem; margin-top: 5px; text-align: right; color: rgba(255, 255, 255, 0.6);';
+        userTimeElement.textContent = new Date().toLocaleTimeString();
+        
+        userMessageElement.appendChild(userNameElement);
+        userMessageElement.appendChild(userContentElement);
+        userMessageElement.appendChild(userTimeElement);
+        
+        document.getElementById('chat-container').appendChild(userMessageElement);
+        scrollChatToBottom();
+        
+        // Crear un elemento de carga
+        const loadingElement = document.createElement('div');
+        loadingElement.className = 'chat-message assistant-message';
+        loadingElement.style = 'margin-bottom: 15px; padding: 10px 15px; border-radius: 18px; max-width: 80%; background-color: var(--secondary-color);';
+        loadingElement.innerHTML = '<div style="font-size: 0.9rem; margin-bottom: 4px; color: rgba(255, 255, 255, 0.8);">Gemini AI</div><div>Pensando<span class="loading-dots">...</span></div>';
+        
+        document.getElementById('chat-container').appendChild(loadingElement);
+        scrollChatToBottom();
+        
+        try {
+          // Enviar mensaje al servidor
+          const response = await fetch('/api/ai-chat', {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({ message })
+          });
+          
+          const data = await response.json();
+          
+          // Eliminar elemento de carga
+          document.getElementById('chat-container').removeChild(loadingElement);
+          
+          if (data.success) {
+            // Crear elemento de respuesta del asistente
+            const assistantMessageElement = document.createElement('div');
+            assistantMessageElement.className = 'chat-message assistant-message';
+            assistantMessageElement.style = 'margin-bottom: 15px; padding: 10px 15px; border-radius: 18px; max-width: 80%; background-color: var(--secondary-color);';
+            
+            const assistantNameElement = document.createElement('div');
+            assistantNameElement.style = 'font-size: 0.9rem; margin-bottom: 4px; color: rgba(255, 255, 255, 0.8);';
+            assistantNameElement.textContent = 'Gemini AI';
+            
+            const assistantContentElement = document.createElement('div');
+            assistantContentElement.style = 'word-break: break-word;';
+            assistantContentElement.textContent = data.response;
+            
+            const assistantTimeElement = document.createElement('div');
+            assistantTimeElement.style = 'font-size: 0.7rem; margin-top: 5px; text-align: right; color: rgba(255, 255, 255, 0.6);';
+            assistantTimeElement.textContent = new Date().toLocaleTimeString();
+            
+            assistantMessageElement.appendChild(assistantNameElement);
+            assistantMessageElement.appendChild(assistantContentElement);
+            assistantMessageElement.appendChild(assistantTimeElement);
+            
+            document.getElementById('chat-container').appendChild(assistantMessageElement);
+            scrollChatToBottom();
+          } else {
+            // Mostrar error
+            alert('Error: ' + data.message);
+          }
+        } catch (error) {
+          // Eliminar elemento de carga
+          document.getElementById('chat-container').removeChild(loadingElement);
+          
+          // Mostrar error
+          console.error('Error:', error);
+          alert('Error al enviar el mensaje. Por favor, inténtalo de nuevo.');
+        }
+      }
+      
+      // Event listeners
+      document.getElementById('ai-send-button').addEventListener('click', sendMessageToAI);
+      
+      document.getElementById('ai-message-input').addEventListener('keypress', function(e) {
+        if (e.key === 'Enter') {
+          sendMessageToAI();
+        }
+      });
+      
+      // Animación de puntos para el "pensando..."
+      setInterval(() => {
+        const dots = document.querySelectorAll('.loading-dots');
+        dots.forEach(dot => {
+          if (dot.textContent === '...') {
+            dot.textContent = '.';
+          } else if (dot.textContent === '.') {
+            dot.textContent = '..';
+          } else if (dot.textContent === '..') {
+            dot.textContent = '...';
+          }
+        });
+      }, 500);
+    </script>
+    <% } %>
   </div>
   
   <div class="hanako-silhouette"></div>
