@@ -1,76 +1,115 @@
-# MaycolAIUltra-MD - WhatsApp Bot Avanzado
+‎ ‎ ‎ ‎ ‎ 🚀✨ **MaycolAIUltra-MD** ✨🚀
 
-Este proyecto configura y ejecuta MaycolAIUltra-MD, un bot avanzado para WhatsApp basado en Goku Black Bot MD.
+![MaycolAI](https://i.postimg.cc/dt8R6MGG/2-sin-t-tulo-20250329221756.png)
 
-## Características
+🌟 ¡Bienvenido a MaycolAIUltra-MD! 🌟
+Este bot de WhatsApp, basado en Baileys, está cargado de funciones avanzadas, inteligencia artificial y comandos útiles. LA VERCION MEJORADA DE MAYCOLAI 😎
 
-- Comandos multimedia avanzados
-- Stickers, descargas de videos, música
-- Juegos y funciones interactivas
-- Administración de grupos
-- Inteligencia artificial
-- Y mucho más
 
-## Requisitos
+---
 
-- Node.js (instalado en este entorno Replit)
-- Conexión a Internet
-- Número de WhatsApp para el bot
+🌟 Características 🌟
 
-## Instalación
+🎨 Stickers personalizados y QR
 
-El proyecto incluye scripts para facilitar la instalación:
+🎮 Juegos y simuladores
 
-1. **Configuración inicial:**
-   ```
-   node setup.js
-   ```
-   Este comando clona el repositorio y configura todo.
+🎬 Descarga de videos y música
 
-2. **Iniciar el bot:**
-   ```
-   node start.js
-   ```
-   O usa el script facilitado:
-   ```
-   ./run-bot.sh
-   ```
+🔍 Búsquedas avanzadas en Google y YouTube
 
-## Configuración
+🧠 Inteligencia artificial integrada (Gemini, OpenRouter, ChatGPT)
 
-Edita el archivo `Goku-Black-Bot-MD/config.js` antes de iniciar:
+⚙️ Administración de grupos
 
-```javascript
+📡 Noticias en tiempo real
+
+💻 Ejecución de código en múltiples lenguajes
+
+🔥 RPG-Ultra V3 En este Bot!
+
+¡Y mucho más! 🚀
+
+---
+
+<h1 align="center">
+  <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&size=30&pause=5&color=00F7FF&center=true&vCenter=true&width=650&lines=MaycolAIUltra-MD" alt="Typing SVG">
+</h1>
+
+Aprovecha al Maximo esto 🔥🔥, La mejor base para los bots 🤩
+     
+---
+
+🛠 Requisitos 🛠
+
+1. Replit
+
+---
+
+🔧 Instalación 🔧
+
+1. Haz remix a este Replit
+https://replit.com/@karatekidameric/MaycolAIUltra-MD?s=app
+
+2. Borra todo en JadiBots menos el numero 51921826291
+
+3. Ejecuta el Script y ve a este numero de WhatsApp, 51921826291 , Y escribe esto, .serbot code , y luego de eso vas a jadiBots y elimina 51921826291 y ya puedes comenzar
+-
+
+⚙️ Configuración
+
+Antes de iniciar, edita config.js:
+
 // Configura tu número como propietario del bot
-global.owner = ['TUNUMERO'] // Ejemplo: ['123456789012']
+global.owner = ['TUNUMERO'] // Ejemplo: ['123456789012'] y podras tener Muchas Cosas
 
 // Configura nombre del bot y mensajes
 global.namebot = 'MaycolAIUltra-MD'
 global.packname = 'MaycolAIUltra-MD'
 global.author = 'SoyMaycol'
-```
 
-## Primer inicio
 
-Al iniciar el bot por primera vez:
+---
 
-1. Se generará un código QR en la consola
-2. Escanea el código con WhatsApp (WhatsApp → Dispositivos vinculados → Vincular un dispositivo)
-3. El bot se conectará a tu WhatsApp
+📝 Comandos principales
 
-## Comandos principales
+.menu - Muestra el menú de comandos disponibles
 
-- `.menu` - Muestra el menú de comandos disponibles
-- `.help` - Muestra información de ayuda
-- `.info` - Información del bot
-- `.owner` - Información del propietario
+.help - Información de ayuda
 
-## Solución de problemas
+.info - Información del bot
 
-- **El código QR no aparece:** Asegúrate de haber ejecutado correctamente `node setup.js`
-- **El bot se desconecta:** Verifica tu conexión a internet
-- **Comandos no funcionan:** Asegúrate de haber configurado correctamente el config.js
+.owner - Información del propietario
 
-## Repositorio original
+.dashboardweb - Administar tu cuenta desde la web
 
-Este proyecto es una modificación basada en [Goku-Black-Bot-MD](https://github.com/Eliasivan/Goku-Black-Bot-MD).
+---
+
+🔍 Solución de problemas
+
+El bot se desconecta: Verifica tu conexión a Internet.
+
+Los comandos no funcionan: Revisa la configuración en config.js.
+
+---
+
+📜 Créditos
+
+🎩 Creador: SoyMaycol
+
+🤖 ChatGPT es Sigma: El Sigma del Proyecto
+
+😎 Ado: Me ayudó con la idea
+
+📌 Base: GokuBlackBotMD
+
+
+🌟 ¡Gracias por el apoyo! 🌟
+
+📌 Suscríbete a mi canal de YouTube:
+📺 Palito-100
+
+Si te preguntas porque es asi la instalación, Es porque replit no se puede escribir nada en la consola o segun yo
+
+---
+
