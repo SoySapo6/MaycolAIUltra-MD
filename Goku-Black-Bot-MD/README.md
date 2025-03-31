@@ -1,95 +1,78 @@
-## `MaycolAIUltra-MD` 
-<p align="center">
-<img src="https://i.postimg.cc/k59W5ZDT/descarga-5.jpg" alt="MaycolAIUltra-MD" width="900"/>
-</p>
-<!-- RAINBOW LINE BOT -->
-<img src="https://github.com/AnderMendoza/AnderMendoza/raw/main/assets/line-neon.gif" width="100%">
+‎ ‎ ‎ ‎ 🚀✨ **MaycolAIUltra-MD** ✨🚀  
 
-
-
-### `✨ MaycolAIUltra-MD ✨`
-
-<a href="https://api.whatsapp.com/send/?phone=595992809980&text=/estado&type=phone_number&app_absent=0" target="blank"><img src="https://img.shields.io/badge/BOT_OFICIAL_1-25D366?style=for-the-badge&logo=whatsapp&logoColor=white" />
-
-𝗦𝗜 𝗡𝗢 𝗥𝗘𝗦𝗣𝗢𝗡𝗗𝗘 𝗘𝗦 𝗣𝗢𝗥 𝗤𝗨𝗘 𝗘𝗟 𝗡𝗨𝗠𝗘𝗥𝗢 𝗘𝗦𝗧𝗔 𝗘𝗡 𝗦𝗢𝗣𝗢𝗥𝗧𝗘 𝗬 𝗘𝗡 𝗘𝗦𝗘 𝗖𝗔𝗦𝗢 𝗛𝗔𝗕𝗟𝗘 𝗖𝗢𝗡 𝗘𝗟 𝗦𝗧𝗔𝗙𝗙💖
-
-
-
- > NO SPAMEAR COMANDOS
-
-
-### `—◉ 🖍𝗟𝗲𝘁𝗿𝗮 𝗕𝗼𝘁🖍`
-- PAGINA USADA PARA LA LETRA [Aqui](https://smiley.cool/es/weirdmaker.php)
-
-
-### `—◉ ⚙️𝗖𝗼𝗻𝗳𝗶𝗴𝘂𝗿𝗮𝗰𝗶𝗼𝗻⚙️`
-- CLONAR EL REPOSITORIO [Aqui](https://github.com/Eliasivan/Goku-Black-Bot-MD/fork)
-
+<p align="center">  
+<img src="https://i.postimg.cc/k59W5ZDT/descarga-5.jpg" alt="MaycolAIUltra-MD" width="900"/>  
+</p>  
+<!-- RAINBOW LINE BOT -->  
+<img src="https://github.com/AnderMendoza/AnderMendoza/raw/main/assets/line-neon.gif" width="100%">  
   
-### `—◉ 💥𝗔𝗰𝘁𝗶𝘃𝗮𝗿 𝗲𝗻 𝗞𝗼𝘆𝗲𝗯💥`
 
-[![Deploy to Koyeb](https://www.koyeb.com/static/images/deploy/button.svg)](https://app.koyeb.com/deploy?type=git&repository=https://github.com/Eliasivan/Goku-Black-Bot-MD&branch=master&name=MaycolAIUltra-MD)
-  
-### `—◉ 🌌𝗔𝗰𝘁𝗶𝘃𝗮𝗿 𝗲𝗻 𝗥𝗲𝗽𝗹𝗶𝘁🌌`
+🚀 ¡El bot de WhatsApp más completo! 🚀
 
-[![Run on Repl.it](https://repl.it/badge/github/Eliasivan/Goku-Black-Bot-MD)](https://repl.it/github/Eliasivan/Goku-Black-Bot-MD) 
-  
-### `—◉ 📜𝗔𝗰𝘁𝗶𝘃𝗮𝗿 𝗲𝗻 𝗥𝗲𝗻𝗱𝗲𝗿📜`
+MaycolAIUltra-MD es una versión mejorada de MaycolAI, basado en Baileys, con inteligencia artificial avanzada y una gran variedad de comandos para entretenimiento, gestión y automatización.
 
-[![Deploy to Render](https://render.com/images/deploy-to-render-button.svg)](https://dashboard.render.com/blueprint/new?repo=https%3A%2F%2Fgithub.com%2FEliasivan%2FGoku-Black-Bot-MD) 
 
-### `—◉ 📍𝗔𝗰𝘁𝗶𝘃𝗮𝗿 𝗲𝗻 𝘁𝗲𝗿𝗺𝘂𝘅📍` 
-- ESCRIBE LOS SIGUIENTES COMANDOS UNO POR UNO:
-```bash
-cd && termux-setup-storage
-```
+---
 
-```bash
-apt-get update -y && apt-get upgrade -y
-```
+🌟 Características Destacadas 🌟
 
-```bash
-pkg install -y git nodejs ffmpeg imagemagick && pkg install yarn 
-```
+🎨 Stickers personalizados y generación de QR
 
-```bash
-git clone https://github.com/Eliasivan/Goku-Black-Bot-MD.git && cd Goku-Black-Bot-MD
-```
+🎮 Juegos y simuladores interactivos
 
-```bash
-yarn install
-```
+🎥 Descarga de videos y música de YouTube
 
-```bash
-npm install
-```
+🔍 Búsqueda avanzada en Google y YouTube
 
-```bash
-npm update
-```
+🤖 Inteligencia artificial integrada (Gemini, OpenRouter, ChatGPT)
 
-```bash
-npm start
-```
+⚙️ Administración completa de grupos
 
-### `—◉ ✔️ACTIVAR EN CASO DE DETENERSE EN TERMUX✔️`
-```bash
-ESCRIBE LOS SIGUIENTES COMANDOS UNO POR UNO:
-> cd 
-> cd Black-termux
-> npm start
-```
+📰 Noticias en tiempo real
 
-### `—◉ ❗OBTENER OTRO CODIGO QR EN TERMUX❗`
-- DETENER EL BOT DANDO CLICK EN EL SIMBOLO CTROL EN TERMUX MAS LA LETRA Z EN SU TECLADO MOVIL HASTA QUE SALGA ALGO EN VERDE SIMILAR A Black-termux $  
-```bash
-ESCRIBE LOS SIGUIENTES COMANDOS UNO POR UNO:
-> cd 
-> rm -rf Blacksession
-> npm start
-```
+💻 Ejecución de código en varios lenguajes
 
-## `PROPIETARIO DEL BOT` 
-<a href="https://github.com/Eliasivan"><img src="https://github.com/Eliasivan.png" width="250" height="250" alt="SoyMaycol"/></a>
-  
-## `MaycolAIUltra-MD`
+🐾 KarKat, tu mascota virtual
+
+🚀 ¡Y mucho más!
+
+---
+
+<a href="https://github.com/SoySapo6"><img src="https://github.com/SoySapo6.png" width="250" height="250" alt="SoyMaycol"/></a>  
+
+---
+
+🏰 Comandos Principales
+
+.menu - Muestra el menú de comandos
+
+.help - Información de ayuda
+
+.info - Detalles sobre el bot
+
+.owner - Información del creador
+
+.dashboardweb - Administración desde la web
+
+
+
+---
+
+🌟 Creditos 🌟
+
+🎩 Creador: SoyMaycol
+
+🤖 ChatGPT es Sigma: Inteligencia del proyecto
+
+😎 Ado: Inspiración y apoyo
+
+📌 Base: GokuBlackBotMD
+
+
+🎥 Sígueme en YouTube: Palito-100
+
+
+---
+
+🚀 ¡Gracias por tu apoyo! 🚀
+
