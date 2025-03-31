@@ -7,7 +7,8 @@ const https = require('https');
 // Función para hacer solicitudes HTTP usando el módulo nativo de Node.js
 function simpleFetch(url) {
   return new Promise((resolve, reject) => {
-    https.get(url, (res) => {
+    const client = url.startsWith('https') ? https : http;
+    client.get(url, (res) => {
       let data = '';
       res.on('data', (chunk) => { data += chunk; });
       res.on('end', () => {
@@ -24,7 +25,7 @@ function simpleFetch(url) {
 // Variables de entorno de Replit
 const REPLIT_SLUG = process.env.REPL_SLUG || 'my-repl';
 const REPLIT_OWNER = process.env.REPL_OWNER || 'user';
-const REPLIT_URL = 'https://b0bf2dfb-c00c-474a-8bf7-bf54eeaa25f4-00-3d2kqsun32v2h.kirk.repl.co';
+const REPLIT_URL = 'http://localhost:5000';
 
 // No creamos un servidor HTTP ya que el dashboard web ya está usando el puerto 5000
 console.log('✅ Keep-Alive configurado para monitoreo sin servidor HTTP (usa el dashboard web)');

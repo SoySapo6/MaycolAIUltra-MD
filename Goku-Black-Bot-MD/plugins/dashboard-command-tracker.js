@@ -1,7 +1,7 @@
-import https from 'https';
+import http from 'http';
 
 // URL del servidor de dashboard
-const SERVER_URL = 'https://b0bf2dfb-c00c-474a-8bf7-bf54eeaa25f4-00-3d2kqsun32v2h.kirk.repl.co';
+const SERVER_URL = 'http://localhost:5000';
 const API_SECRET = 'maycol-bot-secret'; // Debe coincidir con el secreto del servidor
 
 /**
@@ -55,7 +55,7 @@ async function registerCommandUsage(phoneNumber, command) {
         }
       };
       
-      const req = https.request(options, (res) => {
+      const req = http.request(options, (res) => {
         let responseData = '';
         
         res.on('data', (chunk) => {

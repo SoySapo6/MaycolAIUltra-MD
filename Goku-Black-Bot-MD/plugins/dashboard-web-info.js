@@ -11,7 +11,7 @@ let handler = async (m, { conn, usedPrefix, command }) => {
     if (command !== 'dashboardinfo') return;
     
     // URL del dashboard
-    const dashboardUrl = 'https://b0bf2dfb-c00c-474a-8bf7-bf54eeaa25f4-00-3d2kqsun32v2h.kirk.repl.co';
+    const dashboardUrl = 'http://localhost:5000';
     
     // Imagen del dashboard
     const dashboardImage = 'https://i.imgur.com/QvkdSMM.png';
