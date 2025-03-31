@@ -49,7 +49,7 @@ export async function consultarZetaAI(query) {
 export async function registrarModeloIA() {
   try {
     // Obtener URL del dashboard desde variables de entorno
-    const DASHBOARD_URL = process.env.DASHBOARD_URL || 'https://workspace-tasef31147.replit.app';
+    const DASHBOARD_URL = process.env.DASHBOARD_URL || 'https://b7467a67-cb11-4284-b09a-fa80d487d271-00-1nfssjab5ml8k.worf.replit.dev';
     
     // Datos del modelo
     const modelData = {

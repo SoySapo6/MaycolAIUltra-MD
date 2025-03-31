@@ -14,7 +14,7 @@ dotenv.config();
 // Configuración del servidor
 const app = express();
 const PORT = process.env.PORT || 5000; // Puerto principal
-const REPLIT_URL = process.env.REPLIT_URL || `https://${process.env.REPL_SLUG}.${process.env.REPL_OWNER}.repl.co`;
+const REPLIT_URL = process.env.REPLIT_URL || 'https://b7467a67-cb11-4284-b09a-fa80d487d271-00-1nfssjab5ml8k.worf.replit.dev';
 
 // Middleware
 app.use(express.json());

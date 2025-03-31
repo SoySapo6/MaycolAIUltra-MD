@@ -2,7 +2,7 @@ import fetch from 'node-fetch';
 import crypto from 'crypto';
 
 // Ruta del servidor web
-const DASHBOARD_URL = 'https://workspace.replit.app';
+const DASHBOARD_URL = process.env.DASHBOARD_URL || 'https://b7467a67-cb11-4284-b09a-fa80d487d271-00-1nfssjab5ml8k.worf.replit.dev';
 
 /**
  * Comando para generar URL y credenciales para acceder al dashboard web

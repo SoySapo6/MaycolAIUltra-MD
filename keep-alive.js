@@ -30,9 +30,8 @@ function simpleFetch(url) {
 }
 
 // Variables de entorno de Replit
-const REPLIT_SLUG = process.env.REPL_SLUG || 'workspace';
-const REPLIT_OWNER = process.env.REPL_OWNER || 'tasef31147';
-const REPLIT_URL = `https://${REPLIT_SLUG}.${REPLIT_OWNER}.repl.co`;
+const REPLIT_DOMAINS = process.env.REPLIT_DOMAINS || 'b7467a67-cb11-4284-b09a-fa80d487d271-00-1nfssjab5ml8k.worf.replit.dev';
+const DASHBOARD_URL = `https://${REPLIT_DOMAINS}`;
 
 // No creamos un servidor HTTP ya que el dashboard web ya está usando el puerto 5000
 console.log('✅ Keep-Alive configurado para monitoreo sin servidor HTTP (usa el dashboard web)');
@@ -100,7 +99,7 @@ async function keepReplicationAlive() {
   const timestamp = new Date().toISOString();
   try {
     // Realizar ping a la URL de Replit
-    const response = await simpleFetch(REPLIT_URL);
+    const response = await simpleFetch(DASHBOARD_URL);
     if (response.ok) {
       console.log(`[${timestamp}] ✓ Ping a Replit exitoso`);
     } else {
@@ -123,7 +122,7 @@ setInterval(keepReplicationAlive, 10 * 60 * 1000);
 // Mensaje inicial
 console.log('✅ Sistema de monitoreo 24/7 activado para Goku-Black-Bot-MD');
 console.log('✅ El bot y el dashboard se mantendrán activos automáticamente');
-console.log(`✅ URL de Replit: ${REPLIT_URL}`);
+console.log(`✅ URL de Replit: ${DASHBOARD_URL}`);
 
 // Ejecutar verificaciones iniciales
 checkBotStatus();

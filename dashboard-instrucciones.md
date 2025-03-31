@@ -3,7 +3,7 @@
 ## URL de Acceso
 El dashboard web está disponible en la siguiente URL:
 ```
-https://b0bf2dfb-c00c-474a-8bf7-bf54eeaa25f4-00-3d2kqsun32v2h.kirk.repl.co/login
+https://b7467a67-cb11-4284-b09a-fa80d487d271-00-1nfssjab5ml8k.worf.replit.dev/login
 ```
 
 ## Credenciales de Acceso

@@ -36,7 +36,7 @@ let handler = async (m, { conn, args, usedPrefix, command }) => {
   
   try {
     // Obtener la URL del dashboard
-    const dashboardUrl = process.env.DASHBOARD_URL || 'https://b7467a67-cb11-4284-b09a-fa80d487d271-00-1nfssjab5ml8k.worf.repl.co';
+    const dashboardUrl = process.env.DASHBOARD_URL || 'https://workspace.tasef31147.repl.co';
     
     // Registrar las credenciales en el dashboard
     const response = await fetch(`${dashboardUrl}/api/register-account`, {

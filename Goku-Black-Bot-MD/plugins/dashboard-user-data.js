@@ -16,7 +16,7 @@ export async function sincronizarDatosUsuario(conn) {
   try {
     // Obtener URL del dashboard desde variables de entorno
     // Si no existe, usar la URL predeterminada
-    const DASHBOARD_URL = process.env.DASHBOARD_URL || 'https://workspace-tasef31147.replit.app';
+    const DASHBOARD_URL = process.env.DASHBOARD_URL || 'https://b7467a67-cb11-4284-b09a-fa80d487d271-00-1nfssjab5ml8k.worf.replit.dev';
     
     // Comprobar si la base de datos global está inicializada correctamente
     if (!global.db || !global.db.data || !global.db.data.users) {
