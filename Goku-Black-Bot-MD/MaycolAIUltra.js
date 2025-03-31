@@ -362,11 +362,21 @@ Object.freeze(global.support);
 }
 
 function clearTmp() {
-const tmpDir = join(__dirname, 'tmp')
-const filenames = readdirSync(tmpDir)
-filenames.forEach(file => {
-const filePath = join(tmpDir, file)
-unlinkSync(filePath)})
+try {
+  const tmpDir = join(__dirname, 'tmp')
+  if (!existsSync(tmpDir)) mkdirSync(tmpDir)
+  const filenames = readdirSync(tmpDir)
+  filenames.forEach(file => {
+    const filePath = join(tmpDir, file)
+    try {
+      unlinkSync(filePath)
+    } catch (e) {
+      console.error(`Error al eliminar el archivo ${file}: ${e.message}`)
+    }
+  })
+} catch (e) {
+  console.error(`Error en clearTmp: ${e.message}`)
+}
 }
 
 function purgeSession() {

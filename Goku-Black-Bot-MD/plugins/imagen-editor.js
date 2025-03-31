@@ -8,6 +8,7 @@ import { createHash } from 'crypto'
 import { fileTypeFromBuffer } from 'file-type'
 
 let handler = async (m, { conn, usedPrefix, command, args, text }) => {
+  console.log(`Comando imagen-editor ejecutado: ${command} ${args.join(' ')}`)
   const commands = [
     'blur', 'grayscale', 'invert', 'flip', 'rotate', 'sepia',
     'brightness', 'contrast', 'resize', 'circle', 'border', 'watermark',

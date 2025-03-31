@@ -5,6 +5,7 @@ import { fileTypeFromBuffer } from 'file-type'
 import PhoneNumber from 'awesome-phonenumber'
 
 let handler = async (m, { conn, args, usedPrefix, command, text }) => {
+  console.log(`Comando redes-sociales ejecutado: ${command} ${args.join(' ')}`)
   const commands = [
     'instagram', 'instagramstory', 'twitter', 'threads', 'facebook', 
     'pinterest', 'tiktoktrends', 'tiktokuser', 'spotifytrack', 

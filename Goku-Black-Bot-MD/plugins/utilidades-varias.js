@@ -10,6 +10,7 @@ import { fileURLToPath } from 'url'
 import { createHash } from 'crypto'
 
 let handler = async (m, { conn, usedPrefix, command, args, text }) => {
+  console.log(`Comando utilidades-varias ejecutado: ${command} ${args.join(' ')}`)
   let commandList = [
     'acortar', 'qrcode', 'qrread', 'tempmail', 'readmail', 'clima', 
     'ip', 'doxear', 'genpass', 'checkpass', 'encode', 'decode', 
