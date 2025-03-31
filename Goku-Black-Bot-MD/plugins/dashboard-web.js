@@ -2,7 +2,7 @@ import fetch from 'node-fetch';
 import crypto from 'crypto';
 
 // Ruta del servidor web
-const DASHBOARD_URL = 'https://workspace-tasef31147.workspace.repl.co';
+const DASHBOARD_URL = 'https://workspace.replit.app';
 
 /**
  * Comando para generar URL y credenciales para acceder al dashboard web

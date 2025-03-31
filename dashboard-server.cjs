@@ -13,8 +13,8 @@ dotenv.config();
 
 // Configuración del servidor
 const app = express();
-const PORT = 5000; // Puerto principal
-const REPLIT_URL = process.env.REPLIT_URL || `https://workspace-tasef31147.workspace.repl.co`;
+const PORT = process.env.PORT || 5000; // Puerto principal
+const REPLIT_URL = process.env.REPLIT_URL || `https://${process.env.REPL_SLUG}.${process.env.REPL_OWNER}.repl.co`;
 
 // Middleware
 app.use(express.json());
@@ -73,24 +73,38 @@ const requireAuth = (req, res, next) => {
   res.redirect('/login');
 };
 
-// Generar datos de usuario
+// Obtener datos de usuario reales desde el almacenamiento sincronizado
 const createUserData = (phoneNumber) => {
+  // Si ya tenemos datos sincronizados para este usuario, los usamos
   if (userStore[phoneNumber]) {
-    return userStore[phoneNumber];
+    return {
+      ...userStore[phoneNumber],
+      // Añadimos el campo activities si no existe
+      activities: userStore[phoneNumber].activities || []
+    };
   }
 
-  // Crear datos de usuario simulados para pruebas
+  // Si no hay datos sincronizados, creamos un registro temporal básico
+  // Esto es un fallback mientras se sincronizan los datos reales
   const userData = {
     name: `Usuario ${phoneNumber.substring(0, 6)}`,
-    level: Math.floor(Math.random() * 10) + 1,
-    exp: Math.floor(Math.random() * 10000),
-    coins: Math.floor(Math.random() * 5000),
-    limit: Math.floor(Math.random() * 100),
+    level: 0,
+    exp: 0,
+    coins: 0,
+    limit: 10,
     role: "Usuario",
-    activities: []
+    premium: false,
+    registered: false,
+    activities: [],
+    lastUpdated: null
   };
 
+  // Almacenamos estos datos básicos para futuras consultas
   userStore[phoneNumber] = userData;
+  
+  // Registramos que este usuario necesita sincronización
+  console.log(`⚠️ Usuario ${phoneNumber} sin datos sincronizados, usando datos básicos`);
+  
   return userData;
 };
 
@@ -424,6 +438,53 @@ app.post('/api/register-account', (req, res) => {
   });
   
   return res.json({ success: true, message: 'Cuenta registrada con éxito' });
+});
+
+// Sincronización de datos de usuario desde el bot
+app.post('/api/sync-user-data', (req, res) => {
+  const { users, apiSecret } = req.body;
+  
+  // Verificar la clave secreta
+  if (apiSecret !== (process.env.API_SECRET || 'maycol-bot-secret')) {
+    return res.status(403).json({ success: false, message: 'Clave API no válida' });
+  }
+  
+  if (!users || !Array.isArray(users)) {
+    return res.status(400).json({ success: false, message: 'Datos de usuario no válidos' });
+  }
+  
+  try {
+    // Procesar cada usuario
+    let updatedCount = 0;
+    users.forEach(userData => {
+      if (!userData.phoneNumber) return;
+      
+      // Actualizar los datos en el userStore
+      userStore[userData.phoneNumber] = {
+        ...userStore[userData.phoneNumber] || {},
+        name: userData.name || `Usuario ${userData.phoneNumber.substring(0, 6)}`,
+        level: userData.level || 0,
+        exp: userData.exp || 0,
+        coins: userData.money || 0,
+        limit: userData.limit || 0,
+        role: userData.role || "Usuario",
+        premium: userData.premium || false,
+        premiumTime: userData.premiumTime || null,
+        registered: userData.registered || false,
+        registeredTime: userData.registeredTime || null,
+        lastUpdated: Date.now()
+      };
+      
+      updatedCount++;
+    });
+    
+    console.log(`🔄 Datos de ${updatedCount} usuarios sincronizados desde el bot`);
+    return res.json({ success: true, message: `Datos de ${updatedCount} usuarios sincronizados` });
+    
+  } catch (error) {
+    console.error('Error al sincronizar datos de usuario:', error);
+    return res.status(500).json({ success: false, message: `Error: ${error.message}` });
+  }
 });
 
 // Iniciar servidor
