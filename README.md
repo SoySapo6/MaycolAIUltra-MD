@@ -60,6 +60,8 @@ https://replit.com/@karatekidameric/MaycolAIUltra-MD?s=app
 
 Antes de iniciar, edita config.js:
 
+```
+
 // Configura tu número como propietario del bot
 global.owner = ['TUNUMERO'] // Ejemplo: ['123456789012'] y podras tener Muchas Cosas
 
@@ -67,7 +69,7 @@ global.owner = ['TUNUMERO'] // Ejemplo: ['123456789012'] y podras tener Muchas C
 global.namebot = 'MaycolAIUltra-MD'
 global.packname = 'MaycolAIUltra-MD'
 global.author = 'SoyMaycol'
-
+```
 
 ---
 
