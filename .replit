@@ -50,7 +50,6 @@ task = "packager.installForAll"
 [[workflows.workflow.tasks]]
 task = "shell.exec"
 args = "node keep-alive.js"
-waitForPort = 5000
 
 [[workflows.workflow]]
 name = "DashboardWeb"
@@ -65,7 +64,7 @@ task = "packager.installForAll"
 [[workflows.workflow.tasks]]
 task = "shell.exec"
 args = "node dashboard-server.cjs"
-waitForPort = 3001
+waitForPort = 5000
 
 [deployment]
 run = ["sh", "-c", "node setup.js"]

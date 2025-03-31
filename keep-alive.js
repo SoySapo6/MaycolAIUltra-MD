@@ -24,18 +24,10 @@ function simpleFetch(url) {
 // Variables de entorno de Replit
 const REPLIT_SLUG = process.env.REPL_SLUG || 'my-repl';
 const REPLIT_OWNER = process.env.REPL_OWNER || 'user';
-const REPLIT_URL = 'https://workspace.karatekidameric.repl.co';
+const REPLIT_URL = 'https://b0bf2dfb-c00c-474a-8bf7-bf54eeaa25f4-00-3d2kqsun32v2h.kirk.repl.co';
 
-// Crear un servidor HTTP simple para mantener activa la replit
-const server = http.createServer((req, res) => {
-  res.writeHead(200, { 'Content-Type': 'text/plain' });
-  res.end('Bot está funcionando 24/7\n');
-});
-
-// Escuchar en el puerto 5000 (importante para Replit)
-server.listen(5000, () => {
-  console.log('✅ Servidor keep-alive iniciado en el puerto 5000');
-});
+// No creamos un servidor HTTP ya que el dashboard web ya está usando el puerto 5000
+console.log('✅ Keep-Alive configurado para monitoreo sin servidor HTTP (usa el dashboard web)');
 
 // Función para verificar si el bot está funcionando
 function checkBotStatus() {

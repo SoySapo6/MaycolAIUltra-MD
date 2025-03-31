@@ -206,7 +206,7 @@ app.post('/api/generate-credentials', (req, res) => {
 });
 
 // Iniciar el servidor
-app.listen(PORT, '0.0.0.0', () => {
-  console.log(`🌐 Servidor del dashboard web iniciado en http://0.0.0.0:${PORT}`);
-  console.log(`📊 Accede al dashboard en http://0.0.0.0:${PORT}/login`);
+const server = app.listen(PORT, '0.0.0.0', () => {
+  console.log(`🌐 Servidor del dashboard web iniciado en el puerto ${PORT}`);
+  console.log(`📊 Accede al dashboard en https://b0bf2dfb-c00c-474a-8bf7-bf54eeaa25f4-00-3d2kqsun32v2h.kirk.repl.co/login`);
 });
