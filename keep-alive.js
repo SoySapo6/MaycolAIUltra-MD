@@ -24,7 +24,7 @@ function simpleFetch(url) {
 // Variables de entorno de Replit
 const REPLIT_SLUG = process.env.REPL_SLUG || 'my-repl';
 const REPLIT_OWNER = process.env.REPL_OWNER || 'user';
-const REPLIT_URL = `https://${REPLIT_SLUG}.${REPLIT_OWNER}.repl.co`;
+const REPLIT_URL = 'https://workspace.karatekidameric.repl.co';
 
 // Crear un servidor HTTP simple para mantener activa la replit
 const server = http.createServer((req, res) => {

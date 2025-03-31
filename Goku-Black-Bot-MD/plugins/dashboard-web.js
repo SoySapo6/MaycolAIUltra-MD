@@ -3,7 +3,7 @@ import fs from 'fs';
 import crypto from 'crypto';
 
 // Ruta del servidor web
-const SERVER_URL = 'https://' + process.env.REPL_ID + '.id.repl.co' || 'http://localhost:3001';
+const SERVER_URL = 'http://0.0.0.0:3001';
 const API_SECRET = 'maycol-bot-secret'; // Cambiar a una clave segura en producción
 
 let handler = async (m, { conn, usedPrefix, command }) => {

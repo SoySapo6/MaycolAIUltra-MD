@@ -182,6 +182,11 @@ app.get('/logout', (req, res) => {
   res.redirect('/login');
 });
 
+// Ruta de prueba para verificar que el servidor esté funcionando
+app.get('/api/check-server', (req, res) => {
+  res.json({ success: true, message: 'El servidor está funcionando correctamente', timestamp: new Date().toISOString() });
+});
+
 // API para generar credenciales
 app.post('/api/generate-credentials', (req, res) => {
   const { phoneNumber, secret } = req.body;
@@ -201,7 +206,7 @@ app.post('/api/generate-credentials', (req, res) => {
 });
 
 // Iniciar el servidor
-app.listen(PORT, () => {
-  console.log(`🌐 Servidor del dashboard web iniciado en http://localhost:${PORT}`);
-  console.log(`📊 Accede al dashboard en http://localhost:${PORT}/login`);
+app.listen(PORT, '0.0.0.0', () => {
+  console.log(`🌐 Servidor del dashboard web iniciado en http://0.0.0.0:${PORT}`);
+  console.log(`📊 Accede al dashboard en http://0.0.0.0:${PORT}/login`);
 });
