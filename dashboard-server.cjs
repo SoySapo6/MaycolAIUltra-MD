@@ -440,6 +440,37 @@ app.post('/api/register-account', (req, res) => {
   return res.json({ success: true, message: 'Cuenta registrada con éxito' });
 });
 
+// Endpoint para actualizar la contraseña de una cuenta existente
+app.post('/api/update-account-password', (req, res) => {
+  const { username, password, token, apiSecret } = req.body;
+  
+  // Verificar la clave secreta
+  if (apiSecret !== (process.env.API_SECRET || 'maycol-bot-secret')) {
+    return res.status(403).json({ success: false, message: 'Clave API no válida' });
+  }
+  
+  if (!username || !password) {
+    return res.status(400).json({ success: false, message: 'Usuario o contraseña no especificados' });
+  }
+  
+  // Buscar la cuenta
+  const accountIndex = accounts.findIndex(acc => acc.username === username);
+  
+  if (accountIndex === -1) {
+    return res.status(404).json({ success: false, message: 'Cuenta no encontrada' });
+  }
+  
+  // Actualizar la contraseña
+  accounts[accountIndex].passwordHash = password;
+  
+  // Actualizar el token si se proporciona
+  if (token) {
+    accounts[accountIndex].token = token;
+  }
+  
+  return res.json({ success: true, message: 'Contraseña actualizada con éxito' });
+});
+
 // Sincronización de datos de usuario desde el bot
 app.post('/api/sync-user-data', (req, res) => {
   const { users, apiSecret } = req.body;

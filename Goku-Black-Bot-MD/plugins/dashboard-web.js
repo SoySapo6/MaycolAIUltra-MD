@@ -89,20 +89,65 @@ let handler = async (m, { conn, usedPrefix, command }) => {
         }, { quoted: m });
         
       } else if (data.message && data.message.includes('ya existe')) {
-        // Si la cuenta ya existe, enviar mensaje alternativo
+        // Si la cuenta ya existe, generar una nueva contraseña para el usuario
+        const newPassword = generatePassword(8);
+        const newPasswordHash = crypto.createHash('sha256').update(newPassword).digest('hex');
+        
+        try {
+          // Intentar actualizar la contraseña (esto es opcional, depende de tu implementación del API)
+          await fetch(`${DASHBOARD_URL}/api/update-account-password`, {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({
+              username: phoneNumber,
+              password: newPasswordHash,
+              token: generateToken(),
+              apiSecret: process.env.API_SECRET || 'maycol-bot-secret'
+            }),
+          }).catch(() => {
+            // Ignorar errores para no bloquear el flujo
+            console.log('Actualización de contraseña no soportada, se entrega la URL solamente');
+          });
+        } catch (e) {
+          console.log('Error al actualizar contraseña:', e);
+        }
+        
+        // Obtener datos del usuario para personalizar el mensaje
+        const userData = global.db.data.users[m.sender];
+        const userName = userData.name || phoneNumber;
+        
+        // Imagen para el mensaje
+        const dashboardPic = 'https://i.imgur.com/QvkdSMM.png';
+        
+        // Enviar mensaje con enlace de acceso y credenciales
         await conn.sendMessage(m.chat, {
-          text: `
+          image: { url: dashboardPic },
+          caption: `
 📱 *ACCESO AL DASHBOARD WEB* 📱
 
-Ya tienes una cuenta registrada en el dashboard.
+¡Hola ${userName}! Aquí tienes tu acceso al dashboard:
 
 🌐 *URL:* ${DASHBOARD_URL}/login
 👤 *Usuario:* ${phoneNumber}
+🔑 *Contraseña:* ${newPassword}
 
-Si olvidaste tu contraseña, contacta con el administrador.
+📊 *Desde el dashboard podrás:*
+• Ver estadísticas de uso del bot
+• Verificar el estado de tus subbots
+• Utilizar la IA de Zeta directamente
+• Canjear códigos de recompensa
+• Jugar a la ruleta
+• Y mucho más...
 
-⚠️ El dashboard está funcionando correctamente.
-`
+⚠️ *IMPORTANTE:*
+- No compartas estas credenciales con nadie
+- Tu actividad queda registrada en el sistema
+
+✨ Disfruta de tu experiencia personalizada!
+`,
+          mentions: [m.sender]
         }, { quoted: m });
         
       } else {
