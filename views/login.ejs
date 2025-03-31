@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login - MaycolAIUltra-MD</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary-color: #1a1a25;
+      --secondary-color: #222233;
+      --accent-color: #D43F4D;
+      --accent-light: #f25d6b;
+      --text-color: #ffffff;
+      --border-radius: 8px;
+      --box-shadow: 0 8px 16px rgba(0, 0, 0, 0.25);
+      --transition: all 0.3s ease;
+    }
+    
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+    
+    body {
+      background-color: var(--primary-color);
+      color: var(--text-color);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      padding: 20px;
+      background-image: url('https://i.imgur.com/lX7hU5a.jpg');
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+    }
+    
+    body::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.65);
+      z-index: -1;
+    }
+    
+    .login-container {
+      background-color: var(--secondary-color);
+      border-radius: var(--border-radius);
+      box-shadow: var(--box-shadow);
+      padding: 2rem;
+      width: 100%;
+      max-width: 400px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+      border: 2px solid rgba(255, 255, 255, 0.1);
+    }
+    
+    .login-container::before {
+      content: '';
+      position: absolute;
+      top: -100px;
+      right: -100px;
+      width: 200px;
+      height: 200px;
+      background: linear-gradient(
+        to bottom left,
+        rgba(212, 63, 77, 0.2),
+        rgba(212, 63, 77, 0)
+      );
+      border-radius: 50%;
+      z-index: -1;
+    }
+    
+    .login-container::after {
+      content: '';
+      position: absolute;
+      bottom: -100px;
+      left: -100px;
+      width: 200px;
+      height: 200px;
+      background: linear-gradient(
+        to top right,
+        rgba(212, 63, 77, 0.2),
+        rgba(212, 63, 77, 0)
+      );
+      border-radius: 50%;
+      z-index: -1;
+    }
+    
+    .login-header {
+      margin-bottom: 2rem;
+    }
+    
+    .login-logo {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      background-color: var(--secondary-color);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 0 auto 1rem;
+      box-shadow: 0 0 20px rgba(212, 63, 77, 0.4);
+      border: 2px solid var(--accent-color);
+      overflow: hidden;
+    }
+    
+    .login-logo img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    
+    h1 {
+      font-size: 1.8rem;
+      margin-bottom: 0.5rem;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+    }
+    
+    p {
+      color: rgba(255, 255, 255, 0.7);
+      margin-bottom: 1.5rem;
+      font-size: 0.9rem;
+    }
+    
+    .login-form {
+      display: flex;
+      flex-direction: column;
+      gap: 1.2rem;
+    }
+    
+    .form-group {
+      position: relative;
+    }
+    
+    .form-group i {
+      position: absolute;
+      left: 15px;
+      top: 50%;
+      transform: translateY(-50%);
+      color: rgba(255, 255, 255, 0.6);
+    }
+    
+    input {
+      width: 100%;
+      padding: 12px 15px 12px 45px;
+      border: 2px solid rgba(255, 255, 255, 0.1);
+      background-color: rgba(255, 255, 255, 0.05);
+      color: white;
+      border-radius: var(--border-radius);
+      font-size: 1rem;
+      transition: var(--transition);
+    }
+    
+    input:focus {
+      outline: none;
+      border-color: var(--accent-color);
+      background-color: rgba(255, 255, 255, 0.1);
+    }
+    
+    button {
+      background-color: var(--accent-color);
+      color: white;
+      border: none;
+      padding: 12px;
+      border-radius: var(--border-radius);
+      cursor: pointer;
+      font-size: 1rem;
+      font-weight: 500;
+      transition: var(--transition);
+      margin-top: 0.5rem;
+      letter-spacing: 0.5px;
+      position: relative;
+      overflow: hidden;
+    }
+    
+    button::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(
+        90deg,
+        transparent,
+        rgba(255, 255, 255, 0.2),
+        transparent
+      );
+      transition: 0.5s;
+    }
+    
+    button:hover {
+      background-color: var(--accent-light);
+      transform: translateY(-2px);
+      box-shadow: 0 5px 15px rgba(212, 63, 77, 0.4);
+    }
+    
+    button:hover::before {
+      left: 100%;
+    }
+    
+    .help-text {
+      margin-top: 1.5rem;
+      font-size: 0.85rem;
+      color: rgba(255, 255, 255, 0.6);
+    }
+    
+    .error-message {
+      background-color: rgba(212, 63, 77, 0.1);
+      color: var(--accent-light);
+      padding: 10px;
+      border-radius: var(--border-radius);
+      margin-bottom: 1rem;
+      font-size: 0.9rem;
+      border-left: 3px solid var(--accent-color);
+    }
+    
+    .seal {
+      position: absolute;
+      width: 60px;
+      height: 60px;
+      opacity: 0.1;
+      background-image: url('https://i.imgur.com/QvkdSMM.png');
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+    
+    .seal-1 {
+      top: 10px;
+      right: 10px;
+      transform: rotate(15deg);
+    }
+    
+    .seal-2 {
+      bottom: 10px;
+      left: 10px;
+      transform: rotate(-15deg);
+    }
+    
+    @media (max-width: 480px) {
+      .login-container {
+        padding: 1.5rem;
+      }
+      
+      h1 {
+        font-size: 1.5rem;
+      }
+      
+      .login-logo {
+        width: 80px;
+        height: 80px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="login-container">
+    <div class="seal seal-1"></div>
+    <div class="seal seal-2"></div>
+    
+    <div class="login-header">
+      <div class="login-logo">
+        <img src="https://i.imgur.com/QvkdSMM.png" alt="Hanako-kun Logo">
+      </div>
+      <h1>MaycolAIUltra-MD</h1>
+      <p>Ingresa con las credenciales proporcionadas por el bot</p>
+    </div>
+    
+    <% if (error) { %>
+      <div class="error-message">
+        <%= error %>
+      </div>
+    <% } %>
+    
+    <form class="login-form" action="/login" method="POST">
+      <div class="form-group">
+        <i class="fas fa-user"></i>
+        <input type="text" id="username" name="username" placeholder="Número de teléfono" required>
+      </div>
+      
+      <div class="form-group">
+        <i class="fas fa-lock"></i>
+        <input type="password" id="password" name="password" placeholder="Contraseña" required>
+      </div>
+      
+      <button type="submit">Iniciar Sesión</button>
+    </form>
+    
+    <p class="help-text">
+      Para obtener credenciales, envía <b>.dashboardweb</b> al bot en WhatsApp
+    </p>
+  </div>
+</body>
+</html>

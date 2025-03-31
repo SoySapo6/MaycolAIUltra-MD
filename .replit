@@ -19,6 +19,10 @@ args = "IniciarBot"
 task = "workflow.run"
 args = "KeepAlive"
 
+[[workflows.workflow.tasks]]
+task = "workflow.run"
+args = "DashboardWeb"
+
 [[workflows.workflow]]
 name = "IniciarBot"
 author = "agent"
@@ -48,8 +52,27 @@ task = "shell.exec"
 args = "node keep-alive.js"
 waitForPort = 5000
 
+[[workflows.workflow]]
+name = "DashboardWeb"
+author = "agent"
+
+[workflows.workflow.metadata]
+agentRequireRestartOnSave = false
+
+[[workflows.workflow.tasks]]
+task = "packager.installForAll"
+
+[[workflows.workflow.tasks]]
+task = "shell.exec"
+args = "node dashboard-server.cjs"
+waitForPort = 3001
+
 [deployment]
 run = ["sh", "-c", "node setup.js"]
+
+[[ports]]
+localPort = 3001
+externalPort = 3001
 
 [[ports]]
 localPort = 5000

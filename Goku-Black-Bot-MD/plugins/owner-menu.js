@@ -1,177 +1,155 @@
-import { createHash } from 'crypto'
-import PhoneNumber from 'awesome-phonenumber'
-import { promises as fs } from 'fs'
-import fetch from 'node-fetch'
-import moment from 'moment-timezone'
+import fs from 'fs'
 
-let handler = async (m, { conn, usedPrefix, command, text, args, isOwner }) => {
-  // Solo permitir acceso al owner
-  if (!isOwner) return conn.reply(m.chat, '❌ *Este menú es exclusivo para el creador del bot*', m)
+let handler = async (m, { conn, usedPrefix }) => {
+  // Verificar si es el owner (número específico 51921826291 o owner general)
+  const isDueño = m.sender === '51921826291@s.whatsapp.net' || global.owner.map(v => v.replace(/[^0-9]/g, '') + '@s.whatsapp.net').includes(m.sender)
+  if (!isDueño) return conn.reply(m.chat, '❌ *Este comando solo puede ser utilizado por el dueño del bot*', m)
   
-  // Obtener datos del usuario
-  let user = global.db.data.users[m.sender]
-  let name = await conn.getName(m.sender)
-  let pp = await conn.profilePictureUrl(m.sender, 'image').catch(_ => './Menu.jpg')
-  let { premium, level, limit, exp, lastclaim, registered, regTime, age } = global.db.data.users[m.sender]
+  // Ruta al archivo GIF
+  const ownerGif = './menuowner.gif'
   
-  // Preparar información de fecha y tiempo
-  let time = moment.tz('America/Lima').format('HH:mm:ss')
-  let date = moment.tz('America/Lima').format('DD/MM/YYYY')
+  // Verificar si existe el GIF personalizado
+  const useCustomGif = fs.existsSync(ownerGif)
   
-  // Personalización del menú
-  let rtotalreg = Object.values(global.db.data.users).filter(user => user.registered == true).length
-  let more = String.fromCharCode(8206)
-  let readMore = more.repeat(850)
+  // Texto del menú
+  let text = `
+╭━━━━━━━━━━━━━━━╮
+┃ ╭━━━━━━━━━━━━╮
+┃ ┃ *🌌 𝙼𝙴𝙽𝚄 𝙾𝚆𝙽𝙴𝚁 🌌*
+┃ ╰━━━━━━━━━━━━╯
+╰━━━━━━━━━━━━━━━╯
+
+*👑 EXCLUSIVO PARA:* @${global.owner[0]}
+
+╭━━━━━━━━━━━━━━━╮
+┃ ╭━━━━━━━━━━━━╮
+┃ ┃ *ℹ️ INFORMACIÓN*
+┃ ╰━━━━━━━━━━━━╯
+┃ • ${usedPrefix}infobot
+┃ • ${usedPrefix}actividad
+┃ • ${usedPrefix}checkserver
+┃ • ${usedPrefix}checkapi
+┃ • ${usedPrefix}grouplist
+╰━━━━━━━━━━━━━━━╯
+
+╭━━━━━━━━━━━━━━━╮
+┃ ╭━━━━━━━━━━━━╮
+┃ ┃ *⚙️ CONFIGURACIÓN*
+┃ ╰━━━━━━━━━━━━╯
+┃ • ${usedPrefix}setbotname
+┃ • ${usedPrefix}setbotbio
+┃ • ${usedPrefix}setprefix
+┃ • ${usedPrefix}resetprefix
+┃ • ${usedPrefix}setwelcome
+┃ • ${usedPrefix}setbye
+┃ • ${usedPrefix}settextmenu
+┃ • ${usedPrefix}settextowner
+┃ • ${usedPrefix}setdbname
+┃ • ${usedPrefix}setfakeimg
+┃ • ${usedPrefix}setapikey
+┃ • ${usedPrefix}resetapikey
+┃ • ${usedPrefix}getapikey
+┃ • ${usedPrefix}autoread <on/off>
+╰━━━━━━━━━━━━━━━╯
+
+╭━━━━━━━━━━━━━━━╮
+┃ ╭━━━━━━━━━━━━╮
+┃ ┃ *🗄️ BASE DE DATOS*
+┃ ╰━━━━━━━━━━━━╯
+┃ • ${usedPrefix}getdb
+┃ • ${usedPrefix}backup
+┃ • ${usedPrefix}resetuser
+┃ • ${usedPrefix}resetalldb
+┃ • ${usedPrefix}addxp
+┃ • ${usedPrefix}addlimit
+┃ • ${usedPrefix}resetlimit
+┃ • ${usedPrefix}addprem
+┃ • ${usedPrefix}delprem
+┃ • ${usedPrefix}listprem
+┃ • ${usedPrefix}ban
+┃ • ${usedPrefix}unban
+┃ • ${usedPrefix}banlist
+╰━━━━━━━━━━━━━━━╯
+
+╭━━━━━━━━━━━━━━━╮
+┃ ╭━━━━━━━━━━━━╮
+┃ ┃ *👥 GRUPOS*
+┃ ╰━━━━━━━━━━━━╯
+┃ • ${usedPrefix}promote | promover
+┃ • ${usedPrefix}demote | degradar
+┃ • ${usedPrefix}setgroupname | setname
+┃ • ${usedPrefix}setgroupdesc | setdesc
+┃ • ${usedPrefix}resetlink | resetgrouplink
+┃ • ${usedPrefix}grupo <open/close>
+┃ • ${usedPrefix}kickall
+┃ • ${usedPrefix}todos | tagall
+┃ • ${usedPrefix}totalmsgs
+┃ • ${usedPrefix}join
+┃ • ${usedPrefix}joinall
+┃ • ${usedPrefix}bcgc
+┃ • ${usedPrefix}bcbot
+╰━━━━━━━━━━━━━━━╯
+
+╭━━━━━━━━━━━━━━━╮
+┃ ╭━━━━━━━━━━━━╮
+┃ ┃ *🔧 AVANZADO*
+┃ ╰━━━━━━━━━━━━╯
+┃ • ${usedPrefix}addcmd
+┃ • ${usedPrefix}delcmd
+┃ • ${usedPrefix}listcmd
+┃ • ${usedPrefix}eval
+┃ • ${usedPrefix}readqr
+┃ • ${usedPrefix}createqr
+┃ • ${usedPrefix}translate
+┃ • ${usedPrefix}fetch
+╰━━━━━━━━━━━━━━━╯
+
+╭━━━━━━━━━━━━━━━╮
+┃ ╭━━━━━━━━━━━━╮
+┃ ┃ *💻 SISTEMA*
+┃ ╰━━━━━━━━━━━━╯
+┃ • ${usedPrefix}cmd
+┃ • ${usedPrefix}update
+┃ • ${usedPrefix}restart
+┃ • ${usedPrefix}cleartmp
+┃ • ${usedPrefix}cleartemp
+┃ • ${usedPrefix}clearallsessions
+┃ • ${usedPrefix}getfile
+┃ • ${usedPrefix}getplugin
+╰━━━━━━━━━━━━━━━╯
+
+╭━━━━━━━━━━━━━━━╮
+┃ ╭━━━━━━━━━━━━╮
+┃ ┃ *🔎 COMANDO BUSCAR*
+┃ ╰━━━━━━━━━━━━╯
+┃ Para buscar un comando,
+┃ usa:
+┃ *${usedPrefix}listcmd <texto>*
+╰━━━━━━━━━━━━━━━╯
+
+_Un total de 70 comandos exclusivos_
+_⚠️ Usar con responsabilidad_
+`
   
-  // Caracteres especiales para decoración
-  let titleBot = '🌟 𝙼𝙴𝙽𝚄 𝙴𝚇𝙲𝙻𝚄𝚂𝙸𝚅𝙾 𝙳𝙴𝙻 𝚂𝚃𝙰𝙵𝙵 🌟'
-  let sectionTitle = '┏━━━━━━━━━━━━━━━┓'
-  let sectionEnd = '┗━━━━━━━━━━━━━━━┛'
-  let lineStart = '┃ ➤ '
-  let special = '꧁༺♛༻꧂'
-  
-  // Crear el mensaje del menú con los 70 comandos
-  let menu = `${special} ${titleBot} ${special}
-  
-⋆⁺₊⋆ ⋆⁺₊⋆ ⋆⁺₊⋆ ⋆⁺₊⋆ ⋆⁺₊⋆ ⋆⁺₊⋆ ⋆⁺₊⋆
-👑 𝐎𝐖𝐍𝐄𝐑: ${name}
-⌚ 𝐇𝐎𝐑𝐀: ${time}
-📅 𝐅𝐄𝐂𝐇𝐀: ${date}
-🌍 𝐔𝐒𝐔𝐀𝐑𝐈𝐎𝐒: ${rtotalreg}
-⋆⁺₊⋆ ⋆⁺₊⋆ ⋆⁺₊⋆ ⋆⁺₊⋆ ⋆⁺₊⋆ ⋆⁺₊⋆ ⋆⁺₊⋆
-${readMore}
-
-${sectionTitle}
-     🔒 GESTIÓN DEL BOT 🔒
-${sectionEnd}
-
-${lineStart}${usedPrefix}modo publico
-${lineStart}${usedPrefix}modo privado
-${lineStart}${usedPrefix}autoadmin
-${lineStart}${usedPrefix}setppbot
-${lineStart}${usedPrefix}setprefix <prefijo>
-${lineStart}${usedPrefix}resetprefix
-${lineStart}${usedPrefix}autoread <on/off>
-${lineStart}${usedPrefix}ban @usuario
-${lineStart}${usedPrefix}unban @usuario
-${lineStart}${usedPrefix}banlist
-${lineStart}${usedPrefix}cleartmp
-${lineStart}${usedPrefix}restart
-${lineStart}${usedPrefix}update
-${lineStart}${usedPrefix}backup
-
-${sectionTitle}
-     ⚙️ CONFIGURACIÓN ⚙️
-${sectionEnd}
-
-${lineStart}${usedPrefix}settextmenu <texto>
-${lineStart}${usedPrefix}settextowner <texto>
-${lineStart}${usedPrefix}setbotname <nombre>
-${lineStart}${usedPrefix}setbotbio <texto>
-${lineStart}${usedPrefix}setwelcome <texto>
-${lineStart}${usedPrefix}setbye <texto>
-${lineStart}${usedPrefix}setprofilebot <imagen>
-${lineStart}${usedPrefix}setthumb <imagen>
-${lineStart}${usedPrefix}setfakeimg <imagen>
-${lineStart}${usedPrefix}sethttps <on/off>
-${lineStart}${usedPrefix}setapikey <key>
-${lineStart}${usedPrefix}resetapikey
-${lineStart}${usedPrefix}getapikey
-
-${sectionTitle}
-     💾 BASE DE DATOS 💾
-${sectionEnd}
-
-${lineStart}${usedPrefix}resetuser @usuario
-${lineStart}${usedPrefix}resetalldb
-${lineStart}${usedPrefix}getdb
-${lineStart}${usedPrefix}setdb
-${lineStart}${usedPrefix}addprem @usuario <días>
-${lineStart}${usedPrefix}delprem @usuario
-${lineStart}${usedPrefix}listprem
-${lineStart}${usedPrefix}resetprem
-${lineStart}${usedPrefix}addxp @usuario <cantidad>
-${lineStart}${usedPrefix}addlimit @usuario <cantidad>
-${lineStart}${usedPrefix}resetlimit @usuario
-
-${sectionTitle}
-     📊 ESTADÍSTICAS 📊
-${sectionEnd}
-
-${lineStart}${usedPrefix}stats
-${lineStart}${usedPrefix}botstat
-${lineStart}${usedPrefix}checkapi
-${lineStart}${usedPrefix}totalmsgs
-${lineStart}${usedPrefix}actividad
-${lineStart}${usedPrefix}checkserver
-${lineStart}${usedPrefix}infobot
-${lineStart}${usedPrefix}speedtest
-
-${sectionTitle}
-     🔄 GRUPOS & DIFUSIÓN 🔄
-${sectionEnd}
-
-${lineStart}${usedPrefix}promote @usuario
-${lineStart}${usedPrefix}demote @usuario
-${lineStart}${usedPrefix}grouplist
-${lineStart}${usedPrefix}setgroupname <texto>
-${lineStart}${usedPrefix}setgroupdesc <texto>
-${lineStart}${usedPrefix}resetlink
-${lineStart}${usedPrefix}todos <texto>
-${lineStart}${usedPrefix}kickall
-${lineStart}${usedPrefix}grupo close/open
-${lineStart}${usedPrefix}bc <texto>
-${lineStart}${usedPrefix}bcgc <texto>
-${lineStart}${usedPrefix}bcbot <texto>
-${lineStart}${usedPrefix}joinall <grupos>
-
-${sectionTitle}
-     🔍 AVANZADO 🔍
-${sectionEnd}
-
-${lineStart}${usedPrefix}addcmd <texto> <respuesta>
-${lineStart}${usedPrefix}delcmd <texto>
-${lineStart}${usedPrefix}listcmd
-${lineStart}${usedPrefix}exec <código>
-${lineStart}${usedPrefix}eval <código>
-${lineStart}${usedPrefix}terminal <comando>
-${lineStart}${usedPrefix}readqr <imagen>
-${lineStart}${usedPrefix}createqr <texto>
-${lineStart}${usedPrefix}translate <lang> <texto>
-${lineStart}${usedPrefix}fetch <url>
-
-✧ *Estos comandos son exclusivos del creador*
-✧ *Su mal uso puede causar inestabilidad*
-
-${special} *ᴘᴏᴡᴇʀᴇᴅ ʙʏ ᴍᴀʏᴄᴏʟᴀɪᴜʟᴛʀᴀ-ᴍᴅ* ${special}`
-
-  // Usar la API de WhatsApp para un mensaje con formato avanzado
-  const pp2 = './Goku-Black-Bot-MD/menuowner.gif'
-  
-  // Enviamos el menú con un mensaje elegante
-  await conn.sendMessage(m.chat, {
-    video: { url: pp2 },
-    caption: menu,
-    gifPlayback: true,
-    gifAttribution: 2,
-    contextInfo: {
-      mentionedJid: [m.sender],
-      externalAdReply: {
-        title: `👑 MENÚ EXCLUSIVO STAFF 👑`,
-        body: `🛡️ COMANDOS ESPECIALES`,
-        thumbnailUrl: pp,
-        sourceUrl: 'https://whatsapp.com/channel/0029VayXJte65yD6LQGiRB0R',
-        mediaType: 1,
-        renderLargerThumbnail: true,
-        showAdAttribution: true
-      }
-    }
-  }, { quoted: m })
+  // Enviar mensaje con GIF o imagen por defecto
+  if (useCustomGif) {
+    await conn.sendMessage(m.chat, {
+      video: fs.readFileSync(ownerGif),
+      caption: text,
+      gifPlayback: true,
+      mentions: [global.owner[0] + '@s.whatsapp.net']
+    }, { quoted: m })
+  } else {
+    // Si no hay GIF, enviar como mensaje normal
+    await conn.sendMessage(m.chat, {
+      text,
+      mentions: [global.owner[0] + '@s.whatsapp.net']
+    }, { quoted: m })
+  }
 }
 
-handler.help = ['menuowner', 'ownermenu', 'staffmenu']
+handler.help = ['ownermenu', 'menuowner']
 handler.tags = ['owner']
-handler.command = /^(menuowner|ownermenu|staffmenu)$/i
-handler.owner = true
+handler.command = /^(ownermenu|menuowner)$/i
 
 export default handler
