@@ -25,7 +25,7 @@ function simpleFetch(url) {
 // Variables de entorno de Replit
 const REPLIT_SLUG = process.env.REPL_SLUG || 'my-repl';
 const REPLIT_OWNER = process.env.REPL_OWNER || 'user';
-const REPLIT_URL = 'http://localhost:5000';
+const REPLIT_URL = 'https://b7467a67-cb11-4284-b09a-fa80d487d271-00-1nfssjab5ml8k.worf.repl.co';
 
 // No creamos un servidor HTTP ya que el dashboard web ya está usando el puerto 5000
 console.log('✅ Keep-Alive configurado para monitoreo sin servidor HTTP (usa el dashboard web)');

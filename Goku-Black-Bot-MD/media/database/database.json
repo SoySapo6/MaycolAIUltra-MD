@@ -224,12 +224,12 @@
         "soal": null
       },
       "role": "*𝗡𝗼𝘃𝗮𝘁𝗼 V* 🍷",
-      "exp": 70029,
+      "exp": 70259,
       "lastcodereg": 0,
       "crime": 0,
       "lastmining": 0,
       "warn": 0,
-      "spam": 1743391435448,
+      "spam": 1743391642833,
       "estrellas": null,
       "Subs": 1743358965066,
       "gold": 1000,
@@ -2233,7 +2233,7 @@
         "soal": null
       },
       "role": "*𝗡𝗼𝘃𝗮𝘁𝗼 V* 🍷",
-      "exp": 1607,
+      "exp": 1716,
       "lastcodereg": 0,
       "crime": 0,
       "lastmining": 0,
@@ -3557,7 +3557,7 @@
         "soal": null
       },
       "role": "*𝗡𝗼𝘃𝗮𝘁𝗼 V* 🍷",
-      "exp": 341,
+      "exp": 399,
       "lastcodereg": 0,
       "crime": 0,
       "lastmining": 0,
@@ -5734,7 +5734,7 @@
         "soal": null
       },
       "role": "*𝗡𝗼𝘃𝗮𝘁𝗼 V* 🍷",
-      "exp": 322,
+      "exp": 549,
       "appInterests": {
         "gaming": 0,
         "social": 0,
@@ -34619,7 +34619,20 @@
         "step": null,
         "soal": null
       },
-      "role": "*𝗡𝗼𝘃𝗮𝘁𝗼 V* 🍷"
+      "role": "*𝗡𝗼𝘃𝗮𝘁𝗼 V* 🍷",
+      "appInterests": {
+        "gaming": 0,
+        "social": 0,
+        "productivity": 0,
+        "education": 0,
+        "entertainment": 0,
+        "tools": 0,
+        "photography": 0,
+        "music": 0,
+        "health": 0,
+        "communication": 0
+      },
+      "searchHistory": []
     },
     "246909465833655@lid": {
       "afk": -1,
@@ -34661,7 +34674,20 @@
         "step": null,
         "soal": null
       },
-      "role": "*𝗡𝗼𝘃𝗮𝘁𝗼 V* 🍷"
+      "role": "*𝗡𝗼𝘃𝗮𝘁𝗼 V* 🍷",
+      "appInterests": {
+        "gaming": 0,
+        "social": 0,
+        "productivity": 0,
+        "education": 0,
+        "entertainment": 0,
+        "tools": 0,
+        "photography": 0,
+        "music": 0,
+        "health": 0,
+        "communication": 0
+      },
+      "searchHistory": []
     },
     "51904644051@s.whatsapp.net": {
       "afk": -1,
@@ -34709,7 +34735,62 @@
       "lastcodereg": 0,
       "crime": 0,
       "lastmining": 0,
-      "warn": 0
+      "warn": 0,
+      "appInterests": {
+        "gaming": 0,
+        "social": 0,
+        "productivity": 0,
+        "education": 0,
+        "entertainment": 0,
+        "tools": 0,
+        "photography": 0,
+        "music": 0,
+        "health": 0,
+        "communication": 0
+      },
+      "searchHistory": []
+    },
+    "134153622261922@lid": {
+      "afk": -1,
+      "afkReason": "",
+      "age": 0,
+      "bank": 0,
+      "banned": false,
+      "BannedReason": "",
+      "Banneduser": false,
+      "coin": 0,
+      "diamond": 3,
+      "joincount": 1,
+      "lastadventure": 0,
+      "lastcoins": 0,
+      "lastclaim": 0,
+      "lastcode": 0,
+      "lastcofre": 0,
+      "lastdiamantes": 0,
+      "lastduel": 0,
+      "lastpago": 0,
+      "lastrob": 0,
+      "level": 0,
+      "moras": 10,
+      "money": 100,
+      "muto": false,
+      "premium": false,
+      "premiumTime": 0,
+      "registered": false,
+      "regTime": -1,
+      "rendang": 0,
+      "akinator": {
+        "sesi": false,
+        "server": null,
+        "frontaddr": null,
+        "session": null,
+        "signature": null,
+        "question": null,
+        "progression": null,
+        "step": null,
+        "soal": null
+      },
+      "role": "*𝗡𝗼𝘃𝗮𝘁𝗼 V* 🍷"
     }
   },
   "chats": {
@@ -39343,10 +39424,10 @@
       "lastSuccess": 0
     },
     "dashboard-web.js": {
-      "total": 9,
-      "success": 9,
-      "last": 1743391436640,
-      "lastSuccess": 1743391436640
+      "total": 10,
+      "success": 10,
+      "last": 1743391644880,
+      "lastSuccess": 1743391644880
     }
   },
   "msgs": {},
@@ -39376,7 +39457,7 @@
       "modoia": false,
       "jadibotmd": true,
       "autobio": false,
-      "status": 1743391565506
+      "status": 1743391797597
     },
     "51916787717@s.whatsapp.net": {
       "self": false,
@@ -39389,7 +39470,7 @@
       "modoia": false,
       "jadibotmd": true,
       "autobio": false,
-      "status": 1743391194230
+      "status": 1743391771511
     },
     "5491133472641@s.whatsapp.net": {
       "self": false,

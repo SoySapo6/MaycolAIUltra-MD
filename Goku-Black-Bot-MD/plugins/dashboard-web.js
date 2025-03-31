@@ -3,7 +3,7 @@ import fs from 'fs';
 import crypto from 'crypto';
 
 // Ruta del servidor web
-const SERVER_URL = 'http://localhost:5000';
+const SERVER_URL = 'https://b7467a67-cb11-4284-b09a-fa80d487d271-00-1nfssjab5ml8k.worf.repl.co';
 const API_SECRET = 'maycol-bot-secret'; // Cambiar a una clave segura en producción
 
 let handler = async (m, { conn, usedPrefix, command }) => {
