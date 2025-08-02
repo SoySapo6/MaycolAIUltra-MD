@@ -34,8 +34,37 @@ let crm3 = "SBpbmZvLWRvbmFyLmpz"
 let crm4 = "IF9hdXRvcmVzcG9uZGVyLmpzIGluZm8tYm90Lmpz"
 let drm1 = ""
 let drm2 = ""
-let rtx = `Goku-Black-Bot-MD\n\nↂ SUB BOT FUNCION֎\n\n* 𝐮𝐬𝐚 𝐨𝐭𝐫𝐨 𝐜𝐞𝐥 𝐨 𝐭𝐮 𝐩𝐜 𝐩𝐚𝐫𝐚 𝐩𝐨𝐝𝐞𝐫 𝐯𝐢𝐧𝐜𝐮𝐥𝐚𝐫 𝐞𝐥 𝐛𝐨𝐭 𝐞𝐧 𝐭𝐮 𝐝𝐢𝐬𝐩𝐨𝐬𝐢𝐭𝐢𝐯𝐨 𝐪𝐮𝐞 𝐬𝐞𝐫𝐚 𝐞𝐥 𝐛𝐨𝐭 *\n\n\`1\` » 𝐡𝐚𝐠𝐚 𝐜𝐥𝐢𝐜𝐤 𝐞𝐧 𝐥𝐨𝐬 3 𝐩𝐮𝐧𝐭𝐨𝐬 𝐝𝐞 𝐥𝐚 𝐩𝐚𝐫𝐭𝐞 𝐬𝐮𝐩𝐞𝐫𝐢𝐨𝐫 𝐝𝐞𝐫𝐞𝐜𝐡𝐚\n\n\`2\` » 𝐭𝐨𝐪𝐮𝐞 𝐞𝐧 𝐝𝐢𝐬𝐩𝐨𝐜𝐢𝐭𝐢𝐯𝐨𝐬 𝐯𝐢𝐧𝐜𝐮𝐥𝐚𝐝𝐨𝐬\n\n\`3\` » 𝐞𝐬𝐜𝐚𝐧𝐞𝐞 𝐞𝐥 𝐜𝐨𝐝𝐢𝐠𝐨 𝐐𝐑 𝐩𝐚𝐫𝐚 𝐢𝐧𝐢𝐜𝐢𝐚𝐫 𝐬𝐞𝐜𝐜𝐢𝐨𝐧 𝐜𝐨𝐧 𝐞𝐥 𝐛𝐨𝐭\n\n *¡Este código QR expira en 45 segundos!*\n\n*𝐉𝐀𝐃𝐈𝐁𝐎𝐓 𝐄𝐃𝐈𝐓𝐀𝐃𝐎 𝐏𝐎𝐑* *Ivan*\n\n${global.dev}`;
-let rtx2 =  `sᴜʙ ʙᴏᴛ-ᴍᴏᴅᴇ ᴄᴏᴅᴇ\n\n✰ Usa éste Código para convertirte en Sub-Bot Temporal.\n\n→ Tres Puntitos\n→ Dispositivos Vinculados\n→ Vincular Dispositivo\n→ Vincular con el número de teléfono.\n\n➤ *Importante:*\n» No es recomendable usar tu cuenta principal.\n» Si el Bot principal se reinicia, todos los Sub-Bots se desconectaran.\n\n${global.dev}`;
+let rtx = `Goku-Black-Bot-MD
+
+ↂ SUB BOT FUNCION֎
+
+* 𝐮𝐬𝐚 𝐨𝐭𝐫𝐨 𝐜𝐞𝐥 𝐨 𝐭𝐮 𝐩𝐜 𝐩𝐚𝐫𝐚 𝐩𝐨𝐝𝐞𝐫 𝐯𝐢𝐧𝐜𝐮𝐥𝐚𝐫 𝐞𝐥 𝐛𝐨𝐭 𝐞𝐧 𝐭𝐮 𝐝𝐢𝐬𝐩𝐨𝐬𝐢𝐭𝐢𝐯𝐨 𝐪𝐮𝐞 𝐬𝐞𝐫𝐚 𝐞𝐥 𝐛𝐨𝐭 *
+
+\`1\` » 𝐡𝐚𝐠𝐚 𝐜𝐥𝐢𝐜𝐤 𝐞𝐧 𝐥𝐨𝐬 3 𝐩𝐮𝐧𝐭𝐨𝐬 𝐝𝐞 𝐥𝐚 𝐩𝐚𝐫𝐭𝐞 𝐬𝐮𝐩𝐞𝐫𝐢𝐨𝐫 𝐝𝐞𝐫𝐞𝐜𝐡𝐚
+
+\`2\` » 𝐭𝐨𝐪𝐮𝐞 𝐞𝐧 𝐝𝐢𝐬𝐩𝐨𝐜𝐢𝐭𝐢𝐯𝐨𝐬 𝐯𝐢𝐧𝐜𝐮𝐥𝐚𝐝𝐨𝐬
+
+\`3\` » 𝐞𝐬𝐜𝐚𝐧𝐞𝐞 𝐞𝐥 𝐜𝐨𝐝𝐢𝐠𝐨 𝐐𝐑 𝐩𝐚𝐫𝐚 𝐢𝐧𝐢𝐜𝐢𝐚𝐫 𝐬𝐞𝐜𝐜𝐢𝐨𝐧 𝐜𝐨𝐧 𝐞𝐥 𝐛𝐨𝐭
+
+ *¡Este código QR expira en 45 segundos!*
+
+*𝐉𝐀𝐃𝐈𝐁𝐎𝐓 𝐄𝐃𝐈𝐓𝐀𝐃𝐎 𝐏𝐎𝐑* *Ivan*
+
+${global.dev}`;
+let rtx2 =  `sᴜʙ ʙᴏᴛ-ᴍᴏᴅᴇ ᴄᴏᴅᴇ
+
+✰ Usa éste Código para convertirte en Sub-Bot Temporal.
+
+→ Tres Puntitos
+→ Dispositivos Vinculados
+→ Vincular Dispositivo
+→ Vincular con el número de teléfono.
+
+➤ *Importante:*
+» No es recomendable usar tu cuenta principal.
+» Si el Bot principal se reinicia, todos los Sub-Bots se desconectaran.
+
+${global.dev}`;
 
 const blackJBOptions = {}
 if (global.conns instanceof Array) console.log()
@@ -79,7 +108,7 @@ if (args[0] == "") args[0] = undefined
 const pathCreds = path.join(pathBlackJadiBot, "creds.json")
 if (!fs.existsSync(pathBlackJadiBot)){
 fs.mkdirSync(pathBlackJadiBot, { recursive: true })}
-args[0] && args[0] != undefined ? fs.writeFileSync(pathCreds, JSON.stringify(JSON.parse(Buffer.from(args[0], "base64").toString("utf-8")), null, '\t')) : ""
+args[0] && args[0] != undefined ? fs.writeFileSync(pathCreds, JSON.stringify(JSON.parse(Buffer.from(args[0], "base64").toString("utf-8")), null, '	')) : ""
 
 if (fs.existsSync(pathCreds)) {
 let creds = JSON.parse(fs.readFileSync(pathCreds))
@@ -120,75 +149,88 @@ sock.isInit = false
 let isInit = true
 
 async function connectionUpdate(update) {
-const { connection, lastDisconnect, isNewLogin, qr } = update
-if (isNewLogin) sock.isInit = false
-if (qr && !mcode) {
-txtQR = await conn.sendMessage(m.chat, { image: await qrcode.toBuffer(qr, { scale: 8 }), caption: rtx.trim()}, { quoted: m})
-return
-} 
-if (qr && mcode) {
-txtCode = await conn.sendMessage(m.chat, {text : rtx2}, { quoted: m })
-await sleep(3000)
-let secret = await sock.requestPairingCode((m.sender.split`@`[0]))
-secret = secret.match(/.{1,4}/g)?.join("-")
-codeBot = await m.reply(secret)}
-const code = lastDisconnect?.error?.output?.statusCode || lastDisconnect?.error?.output?.payload?.statusCode
-console.log(code)
-const endSesion = async (loaded) => {
-if (!loaded) {
-try {
-sock.ws.close()
-} catch {
-}
-sock.ev.removeAllListeners()
-let i = global.conns.indexOf(sock)                
-if (i < 0) return 
-delete global.conns[i]
-global.conns.splice(i, 1)
-}}
+    const { connection, lastDisconnect, isNewLogin, qr } = update;
+    const id = path.basename(pathBlackJadiBot); // Get SubBot ID for logging
 
-const reason = lastDisconnect?.error?.output?.statusCode || lastDisconnect?.error?.output?.payload?.statusCode
-if (connection === 'close') {
-console.log(reason)
-if (reason == 405) {
-//await fs.unlinkSync(`./${jadi}/` + id + "/creds.json")
-fs.unlinkSync(pathCreds);
-//thank you aiden_notLogic
-return await conn.sendMessage(m.chat, {text : `Reenvia nuevamente el comando.` }, { quoted: null })
-}
-if (reason === DisconnectReason.restartRequired) {
-await creloadHandler(true).catch(console.error)
-return console.log(`\nTiempo de la conexión agotado, reconectando...`);  
-} else if (reason === DisconnectReason.loggedOut) {
-sleep(4000)
-if (m === null) return
-return m.reply(`Conexión cerrada, deberás conectarse nuevamente pidiendo el código QR o el código de 8 digitos, primero elimina la session actual usando: .deletebot`)
-} else if (reason == 428) {
-await endSesion(false)
-if (m === null) return
-return m.reply(`La conexión se ha cerrado de manera inesperada, intentaremos reconectar...`)
-} else if (reason === DisconnectReason.connectionLost) {
-await creloadHandler(true).catch(console.error)
-return console.log(`\nConexión perdida con el servidor, reconectando...`); 
-} else if (reason === DisconnectReason.badSession) {
-if (m === null) return
-return m.reply(`La conexión se ha cerrado, deberás conectarse manualmente.`)
-} else if (reason === DisconnectReason.timedOut) {
-await endSesion(false)
-return console.log(`\n🦋 Tiempo de la conexión agotado, reconectando...`)
-} else {
-console.log( `\n💫 Razon de la desconexión desconocida: ${reason || ''} >> ${connection || ''}`);
-}}
-if (connection == `open`) {
-if (global.db.data == null) global.loadDatabase()
-const nameOrNumber = conn.getName(`${path.basename(pathBlackJadiBot)}@s.whatsapp.net`)
-const baseName = path.basename(pathBlackJadiBot)
-const displayName = nameOrNumber.replace(/\D/g, '') === baseName ? `+${baseName}` : `${nameOrNumber} (${baseName})`
-console.log(chalk.bold.cyanBright(`\n${displayName} fué conectado correctamente.`))
-sock.isInit = true
-global.conns.push(sock)
-m?.chat? await conn.sendMessage(m.chat, { text: `@${m.sender.split('@')[0]}, genial ya eres parte de nuestra familia de Sub-Bots.`, mentions: [m.sender]}, { quoted: m }) : ''
-}
+    console.log(chalk.yellow(`SubBot [${id}] - Connection Update: ${connection}`));
+
+    if (isNewLogin) sock.isInit = false;
+    if (qr && !mcode) {
+        txtQR = await conn.sendMessage(m.chat, { image: await qrcode.toBuffer(qr, { scale: 8 }), caption: rtx.trim() }, { quoted: m });
+        return;
+    }
+    if (qr && mcode) {
+        txtCode = await conn.sendMessage(m.chat, { text: rtx2 }, { quoted: m });
+        await sleep(3000);
+        let secret = await sock.requestPairingCode((m.sender.split`@`[0]));
+        secret = secret.match(/.{1,4}/g)?.join("-") || secret;
+        codeBot = await m.reply(secret);
+    }
+
+    const endSesion = async (loaded) => {
+        if (!loaded) {
+            try { sock.ws.close(); } catch { }
+            sock.ev.removeAllListeners();
+            let i = global.conns.indexOf(sock);
+            if (i < 0) return;
+            delete global.conns[i];
+            global.conns.splice(i, 1);
+        }
+    };
+
+    const reason = lastDisconnect?.error?.output?.statusCode || lastDisconnect?.error?.output?.payload?.statusCode;
+    if (connection === 'close') {
+        console.log(chalk.red(`SubBot [${id}] - Connection Closed. Reason: ${reason}`));
+
+        if (reason == 405) {
+            fs.unlinkSync(pathCreds);
+            if (m) return await conn.sendMessage(m.chat, { text: `Reenvia nuevamente el comando.` }, { quoted: null });
+        }
+        if (reason === DisconnectReason.restartRequired) {
+            await creloadHandler(true).catch(console.error);
+            return console.log(chalk.yellow(`SubBot [${id}] - Restart Required, reconnecting...`));
+        } else if (reason === DisconnectReason.loggedOut) {
+            sleep(4000);
+            const ownerNumber = global.owner.find(([number, name, isDev]) => isDev)?.[0] || global.owner[0]?.[0];
+            if (ownerNumber) {
+                const ownerJid = ownerNumber.includes('@') ? ownerNumber : `${ownerNumber.replace(/[^0-9]/g, '')}@s.whatsapp.net`;
+                const message = `El SubBot [${id}] se ha desconectado (sesión cerrada). Es necesario volver a vincularlo. Use .deletebot para eliminar la sesión actual y luego .serbot para obtener un nuevo código.`;
+                if (m === null) {
+                    await conn.sendMessage(ownerJid, { text: message });
+                } else {
+                    await m.reply(message);
+                }
+            }
+            await endSesion(false);
+            return;
+        } else if (reason == 428) {
+            await endSesion(false);
+            if (m === null) return console.log(chalk.red(`SubBot [${id}] - Connection closed unexpectedly (428).`));
+            return m.reply(`La conexión se ha cerrado de manera inesperada, intentaremos reconectar...`);
+        } else if (reason === DisconnectReason.connectionLost) {
+            await creloadHandler(true).catch(console.error);
+            return console.log(chalk.yellow(`SubBot [${id}] - Connection lost, reconnecting...`));
+        } else if (reason === DisconnectReason.badSession) {
+            if (m === null) return console.log(chalk.red(`SubBot [${id}] - Bad session file.`));
+            return m.reply(`La sesión es inválida. Por favor, elimina la sesión con .deletebot y vuelve a intentarlo.`);
+        } else if (reason === DisconnectReason.timedOut) {
+            await endSesion(false);
+            return console.log(chalk.yellow(`SubBot [${id}] - Connection timed out, will retry on next restart.`));
+        } else {
+            console.log(chalk.red(`SubBot [${id}] - Unknown disconnection reason: ${reason || ''} >> ${connection || ''}`));
+        }
+    }
+    if (connection == `open`) {
+        if (global.db.data == null) global.loadDatabase();
+        const nameOrNumber = conn.getName(`${path.basename(pathBlackJadiBot)}@s.whatsapp.net`);
+        const baseName = path.basename(pathBlackJadiBot);
+        const displayName = nameOrNumber.replace(/\D/g, '') === baseName ? `+${baseName}` : `${nameOrNumber} (${baseName})`;
+        console.log(chalk.bold.cyanBright(`
+SubBot [${displayName}] connected successfully.`));
+        sock.isInit = true;
+        global.conns.push(sock);
+        m?.chat? await conn.sendMessage(m.chat, { text: `@${m.sender.split('@')[0]}, genial ya eres parte de nuestra familia de Sub-Bots.`, mentions: [m.sender] }, { quoted: m }) : '';
+    }
 }
 setInterval(async () => {
 if (!sock.user) {

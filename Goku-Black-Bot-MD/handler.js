@@ -11,7 +11,7 @@ import ws from 'ws';
 /**
  * @type {import('@adiwajshing/baileys')}  
  */
-const { proto } = (await import('@whiskeysockets/baileys')).default
+const { proto, areJidsSameUser } = (await import('@whiskeysockets/baileys')).default
 const isNumber = x => typeof x === 'number' && !isNaN(x)
 const delay = ms => isNumber(ms) && new Promise(resolve => setTimeout(function () {
 clearTimeout(this)
@@ -252,11 +252,17 @@ autobio: false,
 console.error(e)
 }
 
-const isROwner = [conn.decodeJid(global.conn.user.id), ...global.owner.map(([number]) => number)].map(v => v.replace(/[^0-9]/g, '') + '@s.whatsapp.net').includes(m.sender)
-const isOwner = isROwner || m.fromMe
-const isMods = isOwner || global.mods.map(v => v.replace(/[^0-9]/g, '') + '@s.whatsapp.net').includes(m.sender)
-//const isPrems = isROwner || global.prems.map(v => v.replace(/[^0-9]/g, '') + '@s.whatsapp.net').includes(m.sender)
-const isPrems = isROwner || global.db.data.users[m.sender].premiumTime > 0
+const ownerJids = [global.conn.user.jid, ...global.owner.map(([number]) => number)].map(v =>
+    (v.includes('@') ? v : `${v.replace(/[^0-9]/g, '')}@s.whatsapp.net`)
+);
+const isROwner = ownerJids.some(v => areJidsSameUser(v, m.sender));
+const isOwner = isROwner || m.fromMe;
+
+const modsJids = global.mods.map(v =>
+    (v.includes('@') ? v : `${v.replace(/[^0-9]/g, '')}@s.whatsapp.net`)
+);
+const isMods = isOwner || modsJids.some(v => areJidsSameUser(v, m.sender));
+const isPrems = isROwner || (global.db.data.users[m.sender] && global.db.data.users[m.sender].premiumTime > 0);
 if (opts['queque'] && m.text && !(isMods || isPrems)) {
 let queque = this.msgqueque, time = 1000 * 5
 const previousID = queque[queque.length - 1]
